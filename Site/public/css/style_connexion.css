@@ -7,6 +7,12 @@ body {
     background-color: #f4f4f4;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .login-container {
     background: white;
     padding: 20px;
@@ -53,4 +59,153 @@ input[type="email"], input[type="password"] {
 .links a {
     color: #0056b3;
     text-decoration: none;
+}
+
+/* À déplacer prochainement */
+/* Bannière */
+.banner {
+    background-color: lightgray;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.logo img {
+    height: 100%;
+    width: 5%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.menu-icon {
+    font-size: 45px;
+    cursor: pointer;
+    color: black;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.banner-text {
+    color:black;
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.current-page {
+    padding-left: 50px;
+    margin-right: auto;
+}
+
+.titre {
+    padding-right: 150px;
+    margin-left: auto;
+}
+
+/* Menu déroulant */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond blanc semi-transparent */
+    z-index: 1000; /* Assure que l'overlay soit au-dessus de tout le reste */
+}
+
+#dropdown-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1001; /* Assure que le menu soit au-dessus de l'overlay */
+    overflow-y: auto; /* Permet le défilement si le contenu est trop long */
+}
+
+#dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#dropdown-menu ul li {
+    padding: 10px 0;
+}
+
+#dropdown-menu ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+}
+
+#dropdown-menu ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+.croix {
+    font-size: 45px;
+    cursor: pointer;
+    color: black;
+    margin-left: 20px;
+    padding-bottom: 7px;
+}
+
+/* Pied de page */
+.footer {
+    background-color: lightgray;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.footer p {
+    padding-left: 20px;
+    margin: 5px 0;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin-right: 50px;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.social-media {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media a {
+    color: rgb(44, 69, 184);
+    text-decoration: none;
+    margin-left: 20px;
 }

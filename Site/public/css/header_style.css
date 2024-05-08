@@ -1,0 +1,47 @@
+/* Bannière */
+.banner {
+    background-color: lightgray;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.logo img {
+    height: 100%;
+    width: 5%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.menu-icon {
+    font-size: 45px;
+    cursor: pointer;
+    color: black;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.banner-text {
+    color:black;
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.current-page {
+    padding-left: 50px;
+    margin-right: auto;
+}
+
+.titre {
+    padding-right: 150px;
+    margin-left: auto;
+}
