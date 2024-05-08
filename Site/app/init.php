@@ -15,3 +15,7 @@ spl_autoload_register(function($class) {
 
 // Configuration de la base de données ou autres configurations initiales
 require_once BASE_PATH . '/config/config.php';
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);

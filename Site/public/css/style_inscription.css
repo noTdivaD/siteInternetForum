@@ -1,0 +1,11 @@
+.error-message {
+    color: red;
+    display: none;
+    margin-bottom: 5px;
+}
+
+input {
+    border: 1px solid #ccc; /* Couleur normale de la bordure */
+    padding: 8px;
+    margin-top: 5px;
+}

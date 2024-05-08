@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Forum du Pays de Grasse</title>
+    <link rel="stylesheet" href="../../public/css/style_inscription.css">
+    <link rel="icon" type="/png" href="../../public/images/logo/logo-association-forum-onglet-t48.png">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Inscription</h2>
+        <form action="../controller/RegisterController.php" method="POST" id="registrationForm">
+
+            <div id="error_message" style="color: red;"></div>
+
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+            <div class="error-message" id="error-nom"></div><br>
+            
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required>
+            <div class="error-message" id="error-prenom"></div><br>
+
+            <label for="date_naissance">Date de naissance:</label>
+            <input type="date" id="date_naissance" name="date_naissance" required><br>
+
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse" name="adresse" required>
+            <div class="error-message" id="error-adresse"></div><br>
+
+            <label for="ville">Ville:</label>
+            <input type="text" id="ville" name="ville" required>
+            <div class="error-message" id="error-ville"></div><br>
+
+            <label for="code_postal">Code Postal:</label>
+            <input type="text" id="codePostal" name="codePostal" required>
+            <div class="error-message" id="error-codePostal"></div><br>
+
+            <label for="pays">Pays:</label>
+            <select id="pays" name="pays" required>
+                <option value="">Sélectionnez un pays</option>
+                <!-- Liste Générée dynamiquement via une API-->
+            </select><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error-message" id="error-email"></div><br>
+            
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+            <div class="error-message" id="error-password"></div><br>
+            
+            <label for="confirm_password">Confirmez le mot de passe:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            <div class="error-message" id="error-confirm_password"></div><br>
+
+            <p id="format_mdp">Attention, le mot de passe doit contenir au moins 8 caractères, incluant au moins une majuscule, un chiffre et un caractère spécial parmis ceux présentés ici : @ $ ! % * ? &.</p>
+
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>     
+    <script src="../../public/js/inscription.js"></script>
+</body>
+</html>
