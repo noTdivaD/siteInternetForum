@@ -9,10 +9,8 @@ window.addEventListener('load', function() {
 });
 
 function toggleMenu() {
-    var overlay = document.getElementById('overlay');
-    var dropdownMenu = document.getElementById('dropdown-menu');
-    overlay.style.display = 'block';
-    dropdownMenu.style.display = 'block';
+    var menu = document.getElementById("dropdown-menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
 }
 
 function closeMenu() {
