@@ -133,4 +133,14 @@ window.addEventListener('load', function() {
     .catch(error => console.error('Erreur lors du chargement des pays:', error));
 });
 
+function toggleMenu() {
+    var menu = document.getElementById("dropdown-menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
 
+function closeMenu() {
+    var overlay = document.getElementById('overlay');
+    var dropdownMenu = document.getElementById('dropdown-menu');
+    overlay.style.display = 'none';
+    dropdownMenu.style.display = 'none';
+}
