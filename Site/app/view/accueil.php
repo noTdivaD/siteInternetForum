@@ -1,11 +1,14 @@
 <?php
-$password = "Motdepasse123*"; // Changez ceci pour le mot de passe que vous voulez utiliser
-$hashed_password = password_hash($password, PASSWORD_DEFAULT);
-echo $hashed_password;
-$email = ".prank.pulse.2E2E_@free.fr.fr.fr";
-if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "L'adresse email est valide.";
-} else {
-    echo "L'adresse email n'est pas valide.";
-}
+    // Titre de la page
+    $pageTitle = "Accueil - Forum du Pays de Grasse";
+    $currentPage = "Accueil";
+    // Inclusion du header
+    include 'parts/header.php';
+?>
+
+<link rel="stylesheet" href="../../public/css/style_accueil.css">
+<script src="../../public/js/accueil.js"></script>
+<?php
+    // Inclusion du footer
+    include 'parts/footer.php';
 ?>

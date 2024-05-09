@@ -16,16 +16,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($isValid) {
             $_SESSION['user_email'] = $email; // Stockez l'email dans la session
             $userModel->updateLastLogin($email); // Mise à jour de la dernière connexion
-            header("Location: ../view/accueil.html"); // Redirigez vers la page d'accueil
+            header("Location: ../view/accueil.php"); // Redirigez vers la page d'accueil
             exit();
         } else {
             // Les identifiants ne correspondent pas, redirigez vers la page de connexion avec un message d'erreur
-            header("Location: ../view/connexion.html?error=" . urlencode("Identifiants invalides, veuillez réessayer."));
+            header("Location: ../view/connexion.php?error=" . urlencode("Identifiants invalides, veuillez réessayer."));
             exit();
         }
     } else {
         // Les champs sont vides, redirigez vers la page de connexion avec un message d'erreur
-        header("Location: ../view/connexion.html?error=" . urlencode("Email invalide ou champs vides, veuillez réessayer."));
+        header("Location: ../view/connexion.php?error=" . urlencode("Email invalide ou champs vides, veuillez réessayer."));
         exit();
     }
 }

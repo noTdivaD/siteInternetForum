@@ -1,89 +1,102 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription - Forum du Pays de Grasse</title>
-    <link rel="stylesheet" href="../../public/css/style_inscription.css">
-    <link rel="icon" type="/png" href="../../public/images/logo/logo-association-forum-onglet-t48.png">
-</head>
-<body>
-    <div class="register-container">
-        <h2>Inscription</h2>
-        <form action="../controller/RegisterController.php" method="POST" id="registrationForm">
+<?php
+    // Titre de la page
+    $pageTitle = "Inscription - Forum du Pays de Grasse";
+    $currentPage = "Inscription";
+    // Inclusion du header
+    include 'parts/header.php';
+?>
 
-            <div id="error_message" style="color: red;"></div>
+<!-- Formulaire d'inscription -->
+<div class="register-container">
+    <h2>Inscription</h2>
+    <form action="../controller/RegisterController.php" method="POST" id="registrationForm">
 
-            <div class="form-group">
+        <div id="error_message" style="color: red;"></div>
+
+        <div class="error-message" id="error-form"></div>
+
+        <div class="scrollable-content">
+
+            <div class="form-group-informations">
                 <label for="nom">Nom:</label>
                 <input type="text" id="nom" name="nom" required>
-                <div class="error-message" id="error-nom"></div>
-            <div class="form-group">    
-            
-            <div class="form-group">
+                <div class="error-message" id="error-nom"></div> 
+            </div>              
+                
+            <div class="form-group-informations">
                 <label for="prenom">Prénom:</label>
                 <input type="text" id="prenom" name="prenom" required>
                 <div class="error-message" id="error-prenom"></div>
             </div>    
 
-            <div class="form-group">
+            <div class="form-group-informations">
                 <label for="date_naissance">Date de naissance:</label>
                 <input type="date" id="date_naissance" name="date_naissance" required>
             </div>
 
-            <div class="form-group">
+            <div class="form-group-informations">
                 <label for="adresse">Adresse:</label>
                 <input type="text" id="adresse" name="adresse" required>
                 <div class="error-message" id="error-adresse"></div>
             </div>    
 
-            <div class="form-group">
+            <div class="form-group-informations">
                 <label for="ville">Ville:</label>
                 <input type="text" id="ville" name="ville" required>
                 <div class="error-message" id="error-ville"></div>
             </div>          
 
-            <div class="form-group">
-                <label for="code_postal">Code Postal:</label>
+            <div class="form-group-informations">
+                <label for="codePostal">Code Postal:</label>
                 <input type="text" id="codePostal" name="codePostal" required>
                 <div class="error-message" id="error-codePostal"></div>
             </div>      
 
-            <div class="form-group">
+            <div class="form-group-informations">
                 <label for="pays">Pays:</label>
                 <select id="pays" name="pays" required>
                     <option value="">Sélectionnez un pays</option>
-                    <!-- Liste Générée dynamiquement via une API-->
-                </select>
+                        <!-- Liste Générée dynamiquement via une API-->
+                    </select>
             </div>    
 
-            <div class="form-group">
+            <div class="form-group-informations">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 <div class="error-message" id="error-email"></div>
             </div>    
-            
-            <div class="form-group">
+                
+            <div class="form-group-informations">
                 <label for="password">Mot de passe:</label>
                 <input type="password" id="password" name="password" required>
                 <div class="error-message" id="error-password"></div>
             </div>
-            
+                
 
-            <div class="form-group">
+            <div class="form-group-informations">
                 <label for="confirm_password">Confirmez le mot de passe:</label>
                 <input type="password" id="confirm_password" name="confirm_password" required>
                 <div class="error-message" id="error-confirm_password"></div>
             </div>
 
             <p id="format_mdp">Attention, le mot de passe doit contenir au moins 8 caractères, incluant au moins une majuscule, un chiffre et un caractère spécial parmis ceux présentés ici : @ $ ! % * ? &.</p>
-            
-            <div class="form-group">
-                <button type="submit">S'inscrire</button>
-            </div>
 
-        </form>
-    </div>
-    <script src="../../public/js/inscriptions.js"></script>
-</body>
-</html>
+        </div>    
+
+        <div class="form-group-submit">
+            <button type="submit" class="register-button">S'inscrire</button>
+        </div>
+
+        <div class="links">
+            <a href="connexion.php">Déja Membre ? Se connecter</a>
+        </div>
+
+    </form>    
+</div>     
+<link rel="stylesheet" href="../../public/css/inscription_style.css">     
+<script src="../../public/js/inscription.js"></script>
+
+<?php
+    // Inclusion du footer
+    include 'parts/footer.php';
+?>

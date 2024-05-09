@@ -20,6 +20,6 @@
         </div>
     </footer>
     <!-- Fichier CSS du pied de page -->
-    <link rel="stylesheet" href="public/css/footer_style.css">
+    <script src="../../public/js/menu_deroulant.js"></script>
 </body>
 </html>

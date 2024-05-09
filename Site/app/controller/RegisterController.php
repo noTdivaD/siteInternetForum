@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Insertion dans la base de données
         if ($userModel->createUser($nom, $prenom, $email, $password, $date_naissance, $adresse, $ville, $code_postal, $pays)) {
             $_SESSION['user_id'] = $userModel->getLastInsertId(); // ou une autre méthode pour récupérer l'ID utilisateur
-            header('Location: ../view/connexion.html'); // Redirigez vers une page de succès ou de bienvenue
+            header('Location: ../view/connexion.php'); // Redirigez vers une page de succès ou de bienvenue
             exit();
         } else {
             $error = "Inscription Erreur. Utilisateur peut-être déjà existant ou problème avec la base de données.";
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (isset($error)) {
         // Afficher le message d'erreur sur la page d'inscription
-        header('Location: ../view/inscription.html?error=' . urlencode($error));
+        header('Location: ../view/inscription.php?error=' . urlencode($error));
         exit();
     }
 }

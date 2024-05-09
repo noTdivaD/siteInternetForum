@@ -1,0 +1,125 @@
+.register-container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px;
+    margin: auto; /* Centrage du conteneur sur la page */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrage des éléments dans le conteneur */
+}
+
+.registrationForm{
+    width: 100%; /* Assure que le groupe de formulaires utilise toute la largeur du conteneur */
+}
+
+.scrollable-content {
+    max-height: 300px;  /* Ajustez selon l'espace disponible ou vos préférences */
+    overflow-y: auto;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;  /* ou 'height' pour les scrollbar horizontales */
+    background-color: none;  /* couleur de fond de la scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0056b3;  /* couleur de fond du thumb */
+    border-radius: 5px;  /* bord arrondi pour le thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #033670;  /* couleur de fond du thumb lors du survol */
+}
+
+.form-group-informations{
+    width: 99%; /* Assure que le groupe de formulaires utilise toute la largeur du conteneur */
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Assure que les marges et padding sont inclus dans la largeur */
+}
+
+.form-group-submit {
+    width: 100%; /* Assure que le groupe de formulaires utilise toute la largeur du conteneur */
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Assure que les marges et padding sont inclus dans la largeur */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%; /* Utilise 100% de la largeur du conteneur parent */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur définie */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: block;
+}
+
+select {
+    width: 100%; /* Utilise toute la largeur disponible */
+    padding: 10px; /* Padding pour un meilleur aspect */
+    border-radius: 4px; /* Bordures arrondies pour harmoniser avec les inputs */
+    border: 1px solid #ddd; /* Bordure discrète comme pour les inputs */
+    background-color: white; /* Couleur de fond */
+    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
+    cursor: pointer; /* Change le curseur pour indiquer qu'il s'agit d'un élément interactif */
+}
+
+select:hover {
+    border-color: #0056b3; /* Change la couleur de la bordure au survol */
+}
+
+select:focus {
+    outline: none; /* Supprime l'outline par défaut */
+    box-shadow: 0 0 3px #0056b3; /* Ajoute un halo pour améliorer la visibilité lors de la sélection */
+}
+
+
+
+.register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: #004494;
+}
+
+.links {
+    text-align: center;
+    margin-top: 20px; /* Ajuste selon tes besoins pour plus d'espacement */
+}
+
+.links a {
+    color: #0056b3;
+    text-decoration: none;
+    display: block; /* Chaque lien prend sa propre ligne */
+    margin-bottom: 10px; /* Espacement entre les liens */
+    font-size: 90%;
+}
+
+h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.error-message {
+    color: red;
+    display: none;
+    margin-bottom: 5px;
+}
+
+p{
+    font-size: 80%;
+}
