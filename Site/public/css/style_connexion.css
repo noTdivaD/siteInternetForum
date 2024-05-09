@@ -16,7 +16,7 @@ html, body {
 
 .login-container {
     background: white;
-    padding: 20px;
+    padding: 25px 50px 25px 30px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 300px;
@@ -261,13 +261,6 @@ input[type="email"], input[type="password"] {
 .footer p {
     padding-left: 20px;
     margin: 5px 0;
-}
-
-@media screen and (max-width: 768px) {
-    /* Ajustement de la taille de la police pour les écrans plus petits si nécessaire */
-    .footer p {
-        font-size: 0.9em;
-    }
 }
 
 .footer-links ul {
