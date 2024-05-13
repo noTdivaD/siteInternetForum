@@ -7,7 +7,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Fond blanc semi-transparent */
-    z-index: 1000; /* Assure que l'overlay soit au-dessus de tout le reste */
+    z-index: 9999; /* Assure que l'overlay soit au-dessus de tout le reste */
 }
 
 #dropdown-menu {

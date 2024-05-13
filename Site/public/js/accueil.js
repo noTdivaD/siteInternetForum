@@ -29,3 +29,12 @@ document.addEventListener("DOMContentLoaded", function() {
         menus[i].style.display = 'none';
     }
 });
+
+var frame = document.getElementById('myFrame');
+
+frame.onload = function () {
+    var body = frame.contentWindow.document.querySelector('body');
+    body.style.color = 'red';
+    body.style.fontSize = '20px';
+    body.style.lineHeight = '20px';
+};
