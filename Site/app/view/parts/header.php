@@ -3,7 +3,9 @@
         <!-- Bannière -->
         <header class="banner">
             <div class="logo">
-                <img src="../../public/images/logo/Logo Association Forum.jpg" alt="Logo Association Forum">
+                <a href="accueil.php" class="facebook-logo">
+                    <img src="../../public/images/logo/Logo Association Forum.jpg" alt="Logo Association Forum">
+                </a>
             </div>
             <div class="banner-text">
                 <p class="titre">Forum Association de Grasse</p>
