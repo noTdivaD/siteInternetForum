@@ -7,7 +7,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Fond blanc semi-transparent */
-    z-index: 9999; /* Assure que l'overlay soit au-dessus de tout le reste */
+    z-index: 1001; /* Assure que l'overlay soit au-dessus de tout le reste */
 }
 
 #dropdown-menu {
@@ -19,7 +19,7 @@
     width: 100%;
     height: 100%;
     background-color: #b21f25;
-    z-index: 1001; /* Assure que le menu soit au-dessus de l'overlay */
+    z-index: 1002; /* Assure que le menu soit au-dessus de l'overlay */
     overflow-y: auto; /* Permet le défilement si le contenu est trop long */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
