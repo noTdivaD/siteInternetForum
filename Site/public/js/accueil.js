@@ -30,11 +30,25 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-var frame = document.getElementById('myFrame');
+// Wait for the DOM content to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Select all iframe elements on the page
+    var frames = document.querySelectorAll('iframe');
 
-frame.onload = function () {
-    var body = frame.contentWindow.document.querySelector('body');
-    body.style.color = 'red';
-    body.style.fontSize = '20px';
-    body.style.lineHeight = '20px';
-};
+    // Loop through each iframe
+    frames.forEach(function(frame) {
+        // Set the onload event handler for each frame
+        frame.onload = function () {
+            // Inside this function, the frame content is fully loaded
+            var body = frame.contentWindow.document.querySelector('body');
+            if (body) {
+                body.style.color = 'black';
+                body.style.fontSize = '20px';
+                body.style.lineHeight = '20px';
+                body.style.fontFamily = 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            } else {
+                console.error("Body element not found in iframe.");
+            }
+        };
+    });
+});
