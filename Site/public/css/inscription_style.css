@@ -10,7 +10,7 @@
     align-items: center; /* Centrage des éléments dans le conteneur */
 }
 
-.registrationForm{
+#registrationForm{
     width: 100%; /* Assure que le groupe de formulaires utilise toute la largeur du conteneur */
 }
 

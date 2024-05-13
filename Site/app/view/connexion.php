@@ -24,7 +24,7 @@
         </div>
         <div class="links">
             <a href="inscription.php">Pas Encore Membre ? Créer un compte</a>
-            <a href="motdepasse-oublie.html">Mot de passe oublié ?</a>
+            <a href="mdp_oublie.php">Mot de passe oublié ?</a>
         </div>
     </form>
 </div>

@@ -1,4 +1,4 @@
-.login-container {
+.reset-container {
     background: white;
     padding: 25px 50px 25px 50px;
     border-radius: 5px;
@@ -10,8 +10,8 @@
     align-items: center; /* Centrage des éléments dans le conteneur */
 }
 
-#form-login{
-    width: 64%; /* Assure que le groupe de formulaires utilise toute la largeur du conteneur 251.51 271.6*/ 
+#resetPasswordForm{
+    width: 80%; /* Assure que le groupe de formulaires utilise toute la largeur du conteneur 251.51 271.6*/ 
 }
 
 .form-group {
@@ -19,12 +19,7 @@
     margin-bottom: 15px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="email"], input[type="password"] {
+input[type="password"] {
     width: 100%; /* Réduit la largeur pour compter le padding */
     padding: 10px;
     border: 1px solid #ddd;
@@ -33,7 +28,7 @@ input[type="email"], input[type="password"] {
     box-sizing: border-box;
 }
 
-.login-button {
+button {
     width: 100%;
     padding: 10px;
     background-color: #0056b3;
@@ -43,19 +38,21 @@ input[type="email"], input[type="password"] {
     cursor: pointer;
 }
 
-.login-button:hover {
+button:hover {
     background-color: #004494;
 }
 
-.links {
+h2 {
     text-align: center;
-    margin-top: 20px; /* Ajuste selon tes besoins pour plus d'espacement */
+    width: 100%;
 }
 
-.links a {
-    color: #0056b3;
-    text-decoration: none;
-    display: block; /* Chaque lien prend sa propre ligne */
-    margin-bottom: 10px; /* Espacement entre les liens */
-    font-size: 90%;
+.error-message {
+    color: red;
+    display: none;
+    margin-bottom: 5px;
+}
+
+p{
+    font-size: 80%;
 }

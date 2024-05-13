@@ -1,17 +1,17 @@
-.login-container {
+.forgotpassword-container {
     background: white;
     padding: 25px 50px 25px 50px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 400px;
+    width: 300px;
     margin: auto; /* Centrage du conteneur sur la page */
     display: flex;
     flex-direction: column;
     align-items: center; /* Centrage des éléments dans le conteneur */
 }
 
-#form-login{
-    width: 64%; /* Assure que le groupe de formulaires utilise toute la largeur du conteneur 251.51 271.6*/ 
+#form-forgotpassword{
+    width: 100%;  /* Assure que le groupe de formulaires utilise toute la largeur du conteneur */
 }
 
 .form-group {
@@ -24,8 +24,8 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="email"], input[type="password"] {
-    width: 100%; /* Réduit la largeur pour compter le padding */
+input[type="email"] {
+    width: 100%;  /* Réduit la largeur pour compter le padding */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -33,7 +33,7 @@ input[type="email"], input[type="password"] {
     box-sizing: border-box;
 }
 
-.login-button {
+.forgotpassword-button {
     width: 100%;
     padding: 10px;
     background-color: #0056b3;
@@ -43,7 +43,7 @@ input[type="email"], input[type="password"] {
     cursor: pointer;
 }
 
-.login-button:hover {
+.forgotpassword-button:hover {
     background-color: #004494;
 }
 

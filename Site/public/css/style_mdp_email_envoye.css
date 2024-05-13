@@ -1,0 +1,50 @@
+.password-sent-email-container {
+    background: white;
+    padding: 25px 50px 25px 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 600px;
+    margin: auto; /* Centrage du conteneur sur la page */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrage des éléments dans le conteneur */   
+}
+
+.succes-container {
+    width: 100%; /* Utilise toute la largeur du conteneur parent */
+    text-align: center; /* Centre le texte à l'intérieur */
+}
+
+.succes-text-container {
+    margin: 20px 0; /* Espacement vertical pour séparer les éléments */
+}
+
+.succes-text-container img {
+    width: 100px; /* Taille fixe pour l'image */
+    margin: 0 auto 20px; /* Centrage horizontal de l'image et espace en dessous */
+    display: block; /* Assure que l'image est traitée comme un bloc pour le centrage */
+}
+
+.succes-text-container p {
+    font-size: 18px; /* Taille de police plus grande pour la visibilité */
+    color: #333; /* Couleur de texte plus foncée pour un meilleur contraste */
+    margin-bottom: 20px; /* Espacement sous le paragraphe */
+}
+
+.links a {
+    color: #0056b3; /* Couleur de thème pour les liens */
+    text-decoration: none; /* Aucun soulignement pour un style plus propre */
+    font-weight: bold; /* Rend le texte du lien en gras */
+    font-size: 16px; /* Légèrement plus grand pour une meilleure accessibilité */
+    margin-top: 20px; /* Espacement au-dessus du lien */
+    display: inline-block; /* Permet de contrôler la taille et le padding du lien */
+    padding: 10px 20px; /* Padding pour rendre le lien plus cliquable */
+    border-radius: 5px; /* Bord arrondi pour l'esthétique */
+    background-color: #f4f4f4; /* Léger fond pour le lien pour qu'il ressorte */
+    transition: background-color 0.3s, color 0.3s; /* Transition pour l'interaction au survol */
+}
+
+.links a:hover {
+    background-color: #0056b3; /* Changement de fond au survol */
+    color: white; /* Changement de couleur de texte au survol */
+}

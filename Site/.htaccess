@@ -9,3 +9,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # Rediriger toutes les requêtes vers index.php, en conservant les paramètres d'URL
 RewriteRule ^ index.php [QSA,L]
+
+php_value date.timezone "Europe/Paris"

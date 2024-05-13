@@ -1,5 +1,5 @@
 <?php
-session_start(); // Commencez une nouvelle session ou reprenez une existante
+require_once '../../init.php'; 
 
 // Supposons que vous avez une classe ou une fonction qui gère l'accès aux données utilisateur
 require_once('../model/UserModel.php');
