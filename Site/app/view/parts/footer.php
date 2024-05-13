@@ -16,7 +16,9 @@
         </div>
         <div class="social-media">
             <p>Rejoignez nous sur:</p>
-            <a href="https://www.facebook.com/forum.grasse.paysdegrasse">Facebook</a>
+            <a href="https://www.facebook.com/forum.grasse.paysdegrasse" class="facebook-logo">
+                <img src="../../public/images/FacebookLogo.png" alt="Facebook">
+            </a>
         </div>
     </footer>
     <!-- Fichier CSS du pied de page -->
