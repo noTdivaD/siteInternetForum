@@ -1,10 +1,14 @@
 <!-- Menu déroulant -->
+<?php require_once '../../init.php'; ?>
 <div id="overlay" onclick="closeMenu()"></div>
         <div id="dropdown-menu">    
             <div class="croix" onclick="closeMenu()">&#10006;</div>
             <ul>
-                <!--<li class="croix" onclick="closeMenu()">&#10006;</li>-->
-                <li><a href="connexion.php">Se connecter / S'inscrire</a></li>
+                <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']): ?>
+                    <li><a href="deconnexion.php">Se déconnecter</a></li>
+                <?php else: ?>
+                    <li><a href="connexion.php">Se connecter / S'inscrire</a></li>
+                <?php endif; ?>
                 <li><a href="accueil.php">Accueil</a></li>
 
                 <!--TODO: À remplir avec les liens pour les autres pages lorsque celles-ci seront disponibles -->

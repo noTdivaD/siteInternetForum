@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $isValid = $userModel->validateUser($email, $password);
         
         if ($isValid) {
+            $_SESSION['user_logged_in'] = true;  // Assurez-vous que cette ligne existe et est exécutée
             $_SESSION['user_email'] = $email; // Stockez l'email dans la session
             $userModel->updateLastLogin($email); // Mise à jour de la dernière connexion
             header("Location: ../view/accueil.php"); // Redirigez vers la page d'accueil

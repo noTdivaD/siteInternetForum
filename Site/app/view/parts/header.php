@@ -1,4 +1,4 @@
-<?php include 'head.php'; ?>
+<?php include 'head.php';?>
 <body>
         <!-- Bannière -->
         <header class="banner">
