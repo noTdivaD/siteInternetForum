@@ -1,11 +1,11 @@
 /* Pied de page */
 .footer {
-    background-color: lightgray;
-    color: black;
+    background-color: #b21f25;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: fixed;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     bottom: 0;
     width: 100%;
@@ -28,7 +28,7 @@
 }
 
 .footer-links a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -43,4 +43,12 @@
     color: rgb(44, 69, 184);
     text-decoration: none;
     margin-left: 20px;
+}
+
+.facebook-logo{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    max-width: 20px;
+    max-height: 20px;
 }

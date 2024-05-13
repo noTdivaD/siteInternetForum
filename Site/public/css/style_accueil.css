@@ -1,0 +1,119 @@
+body{
+    margin-top: 120px;
+    padding-bottom: 260px;
+}
+
+.inside-container{
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 1000px;
+    margin: auto; /* Centrage du conteneur sur la page */
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrage des éléments dans le conteneur */
+}
+
+h1{
+    background: #b21f25;
+    color: white;
+    padding: 20px 0 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    margin: auto; /* Centrage du conteneur sur la page */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrage des éléments dans le conteneur */
+}
+
+#discover-container {
+    position: relative;
+}
+
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.outside-container {
+    margin-top: 20vh;
+}
+.inside-container {
+    width: 80%; /* ajustez la largeur selon vos besoins */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+}
+
+.menus {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    top: 80%;
+    cursor: pointer;
+    position: absolute;
+    font-size: 40px;
+}
+
+button:hover{
+    background-color: lightgray;
+    border-radius: 4px;
+}
+
+#prevBtn {
+    left: 60px;
+}
+
+#nextBtn {
+    right: 60px;
+}
+
+.menu {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 100px;
+}
+
+.menu h2 {
+    margin-top: 0;
+}
+
+.menu .content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.menu .content img {
+    width: 50px; /* Ajustez la largeur selon vos besoins */
+    margin-right: 10px;
+}
+
+.menu .content iframe {
+    flex: 1;
+    border: none;
+}
+
+.menu a {
+    display: block;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #0056b3;
+}

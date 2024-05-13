@@ -1,6 +1,6 @@
 /* Bannière */
 .banner {
-    background-color: lightgray;
+    background-color: #b21f25;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -16,20 +16,39 @@
     height: 100%;
     width: 5%;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
 }
 
 .menu-icon {
     font-size: 45px;
     cursor: pointer;
-    color: black;
-    padding-left: 20px;
+    color: white;
+    padding-right: 20px;
     padding-bottom: 5px;
 }
 
+.menu-icon::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: darkred;
+    right: 12.7px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-icon:hover::before {
+    opacity: 1;
+}
+
 .banner-text {
-    color:black;
+    color:white;
     font-size: 30px;
     width: 100%;
     display: flex;
@@ -37,12 +56,12 @@
 }
 
 .current-page {
-    padding-left: 50px;
-    margin-right: auto;
+    padding-right: 50px;
+    margin-left: auto;
 }
 
 .titre {
-    padding-right: 150px;
-    margin-left: auto;
+    padding-left: 150px;
+    margin-right: auto;
 }
 

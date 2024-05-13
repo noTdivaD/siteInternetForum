@@ -59,3 +59,15 @@ input[type="email"], input[type="password"] {
     margin-bottom: 10px; /* Espacement entre les liens */
     font-size: 90%;
 }
+
+#dropdown-menu ul li a {
+    color: white;
+}
+
+#dropdown-menu ul li a:hover {
+    background-color: darkred;
+}
+
+.croix {
+    color: white;
+}
