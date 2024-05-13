@@ -27,12 +27,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #0056b3;  /* couleur de fond du thumb */
+    background-color: #b21f24;  /* couleur de fond du thumb */
     border-radius: 5px;  /* bord arrondi pour le thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #033670;  /* couleur de fond du thumb lors du survol */
+    background-color: #921b1f;  /* couleur de fond du thumb lors du survol */
 }
 
 .form-group-informations{
@@ -72,12 +72,12 @@ select {
 }
 
 select:hover {
-    border-color: #0056b3; /* Change la couleur de la bordure au survol */
+    border-color: #b21f24; /* Change la couleur de la bordure au survol */
 }
 
 select:focus {
     outline: none; /* Supprime l'outline par défaut */
-    box-shadow: 0 0 3px #0056b3; /* Ajoute un halo pour améliorer la visibilité lors de la sélection */
+    box-shadow: 0 0 3px #b21f24; /* Ajoute un halo pour améliorer la visibilité lors de la sélection */
 }
 
 
@@ -85,7 +85,7 @@ select:focus {
 .register-button {
     width: 100%;
     padding: 10px;
-    background-color: #0056b3;
+    background-color: #b21f24;
     color: white;
     border: none;
     border-radius: 4px;
@@ -93,7 +93,7 @@ select:focus {
 }
 
 .register-button:hover {
-    background-color: #004494;
+    background-color: #921b1f;
 }
 
 .links {
@@ -102,7 +102,7 @@ select:focus {
 }
 
 .links a {
-    color: #0056b3;
+    color: #feb041;
     text-decoration: none;
     display: block; /* Chaque lien prend sa propre ligne */
     margin-bottom: 10px; /* Espacement entre les liens */

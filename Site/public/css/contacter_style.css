@@ -1,16 +1,17 @@
-.login-container {
+/* Base styling for the whole container */
+.contact-form-container {
     background: white;
     padding: 25px 50px 25px 50px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 400px;
+    width: 800px;
     margin: auto; /* Centrage du conteneur sur la page */
     display: flex;
     flex-direction: column;
     align-items: center; /* Centrage des éléments dans le conteneur */
 }
 
-#form-login{
+#formContact{
     width: 64%; /* Assure que le groupe de formulaires utilise toute la largeur du conteneur 251.51 271.6*/ 
 }
 
@@ -24,7 +25,10 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="email"], input[type="password"] {
+/* Style inputs and textarea */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
     width: 100%; /* Réduit la largeur pour compter le padding */
     padding: 10px;
     border: 1px solid #ddd;
@@ -33,31 +37,42 @@ input[type="email"], input[type="password"] {
     box-sizing: border-box;
 }
 
-.login-button {
+.form-group textarea {
+    resize: vertical; /* allows vertical resize only */
+}
+
+/* Styling the header of the form */
+.contact-form-container h1 {
+    text-align: center;
+    color: black;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Style for labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 16px;
+}
+
+
+/* Style for the submit button */
+.submit-button {
     width: 100%;
     padding: 10px;
-    background-color: #b21f24;
-    color: white;
     border: none;
     border-radius: 4px;
+    background-color: #b21f24;
+    color: white;
+    font-size: 18px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.login-button:hover {
+.submit-button:hover {
     background-color: #921b1f;
-}
-
-.links {
-    text-align: center;
-    margin-top: 20px; /* Ajuste selon tes besoins pour plus d'espacement */
-}
-
-.links a {
-    color: #feb041;
-    text-decoration: none;
-    display: block; /* Chaque lien prend sa propre ligne */
-    margin-bottom: 10px; /* Espacement entre les liens */
-    font-size: 90%;
 }
 
 #dropdown-menu ul li a {
@@ -71,3 +86,5 @@ input[type="email"], input[type="password"] {
 .croix {
     color: white;
 }
+
+/* Add more styles below if needed */
