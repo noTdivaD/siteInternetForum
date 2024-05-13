@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 body.style.color = 'black';
                 body.style.fontSize = '20px';
                 body.style.lineHeight = '20px';
-                body.style.fontFamily = 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                body.style.fontFamily = 'Georgia, serif';
             } else {
                 console.error("Body element not found in iframe.");
             }

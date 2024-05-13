@@ -51,6 +51,7 @@
     font-weight: bold;
     width: 100%; /* S'assure que toute la zone est cliquable */
     box-sizing: border-box;
+    transition: background-color 0.5s ease;
 }
 
 #dropdown-menu ul li a:hover {
@@ -62,6 +63,7 @@
     font-size: 45px;
     cursor: pointer;
     padding: 10px;
+    transition: background-color 0.5s ease;
 }
 
 .croix:hover {
