@@ -15,6 +15,7 @@
 .footer p {
     padding-left: 20px;
     margin: 5px 0;
+    font-size: 14px; 
 }
 
 .footer-links ul {
@@ -31,6 +32,12 @@
     color: white;
     text-decoration: none;
 }
+
+.footer-links a:hover {
+    color: #feb041;
+}
+
+/* TODO Faire en sorte que quand on survole les liens, il y ai un fond noir transparant juste autour du texte du lien qui apparait comme pour le header avec l'icone du menu déroulant en haut à droite*/
 
 .social-media {
     margin-right: 20px;
@@ -51,4 +58,35 @@
     height: 10px;
     max-width: 20px;
     max-height: 20px;
+}
+
+
+/* Media Queries pour les tailles d'écrans plus petites */
+@media (max-width: 768px) {
+    .footer {
+        height: 60px; /* Réduction de la hauteur du footer */
+        flex-direction: row; /* Alignement horizontal */
+        justify-content: space-between; /* Espacement entre les éléments */
+    }
+
+    /* Cacher les textes spécifiques en dessous de 768px */
+    .footer-info p, .social-media p {
+        display: none;
+    }
+
+    .footer-links ul {
+        display: flex; /* Pour une meilleure disposition des liens */
+        align-items: center; /* Centrage vertical des liens */
+        margin-left: 50px; /* Ajout de marge à gauche et à droite */
+        font-size: 12px;
+    }
+
+    .footer-links li {
+        margin-right: 15px; /* Réduction de la marge entre les liens */
+    }
+
+    .social-media {
+        margin-right: 50px; /* Réduction de la marge à droite */
+        margin-bottom: 8px;
+    }
 }

@@ -85,3 +85,23 @@
         transform: translateX(100%);
     }
 }
+
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    #dropdown-menu {
+        width: 57%; /* Réduit la largeur du menu pour donner une impression d'espacement */
+    }
+
+    #dropdown-menu ul {
+        padding-top: 30px; /* Réduit l'espacement au-dessus */
+    }
+
+    #dropdown-menu ul li a {
+        font-size: 13px; /* Réduit légèrement la taille de la police pour s'adapter à la largeur réduite */
+    }
+
+    .croix {
+        font-size: 30px; /* Réduit la taille de la croix de fermeture pour les petits écrans */
+    }
+}

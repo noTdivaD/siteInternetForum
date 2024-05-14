@@ -87,4 +87,10 @@ label {
     color: white;
 }
 
+.error-message {
+    color: red;
+    display: none;
+    margin-bottom: 5px;
+}
+
 /* Add more styles below if needed */

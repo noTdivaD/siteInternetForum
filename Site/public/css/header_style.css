@@ -11,6 +11,7 @@
     height: 80px;
     max-height: 20%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 1000; /* Gardez la bannière au-dessus des autres éléments */
     overflow: hidden;
 }
 
@@ -28,6 +29,7 @@
     color: white;
     padding-right: 20px;
     padding-bottom: 5px;
+    z-index: 1010; /* S'assurer que l'icône est cliquable */
 }
 
 .menu-icon::before {
@@ -65,5 +67,28 @@
 .titre {
     padding-left: 150px;
     margin-right: auto;
+}
+
+
+/* Media Queries pour les tailles d'écrans plus petites */
+@media (max-width: 768px) {
+    .banner {
+        height: 60px;
+    }
+    .logo img {
+        max-width: 50px; /* Réduire la taille du logo */
+    }
+    .menu-icon {
+        font-size: 40px;
+    }
+    .banner-text {
+        font-size: 13px;
+    }
+    .titre {
+        padding-left: 50px;
+    }
+    .current-page{
+        padding-right: 20px;
+    }
 }
 

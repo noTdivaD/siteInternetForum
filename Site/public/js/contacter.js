@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
 
 
 
-document.getElementById('registrationForm').addEventListener('submit', function(event) {
+document.getElementById('formContact').addEventListener('submit', function(event) {
     event.preventDefault();  // Prévenir la soumission du formulaire pour la démonstration
     var isValid = true;
 

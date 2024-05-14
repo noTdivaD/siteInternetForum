@@ -7,7 +7,6 @@
 ?>
 
 <?php
-session_start();
 // Assure-toi que l'email est bien en session pour éviter les erreurs
 $email = isset($_SESSION['email']) ? $_SESSION['email'] : 'non spécifiée';
 ?>

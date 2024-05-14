@@ -8,7 +8,7 @@
 
 <div class="contact-form-container">
     <h1>Contactez-nous</h1>
-    <form action="ContactController.php" method="POST" id="formContact">
+    <form action="../controller/ContactController.php" method="POST" id="formContact">
 
         <div id="error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
 
@@ -33,7 +33,7 @@
         <div class="form-group">
             <label for="subject">Objet :</label>
             <input type="text" id="subject" name="subject" required>
-            <div class="error-subject" id="error-subject"></div>
+            <div class="error-message" id="error-subject"></div>
         </div>
 
         <div class="form-group">

@@ -1,7 +1,7 @@
 <?php
     // Titre de la page
     $pageTitle = "Réinitialisation - Forum du Pays de Grasse";
-    $currentPage = "Récupération Mot de Passe";
+    $currentPage = "Récupération";
     // Inclusion du header
     include 'parts/header.php';
 ?>

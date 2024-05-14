@@ -2,6 +2,7 @@
 
 require_once '../../init.php'; 
 
+
 class UserModel {
     private $db;
 
@@ -61,7 +62,7 @@ class UserModel {
         }
     }
 
-    /*
+    
     // Envoyer l'email de réinitialisation du mot de passe
     public function sendPasswordResetEmail($email) {
         $token = $this->generatePasswordResetToken($email);
@@ -74,17 +75,9 @@ class UserModel {
         'X-Mailer: PHP/' . phpversion();
 
         mail($email, $subject, $message, $headers);
-    } */
 
-    //Temporairement
-    public function sendPasswordResetEmail($email) {
-        $token = $this->generatePasswordResetToken($email);
-        $resetLink = "../view/mdp_reinitialise.php?email=" . urlencode($email) . "&token=" . $token;
-    
-        // Pour les besoins du test, renvoyez simplement le lien
-        return $resetLink;
-    }
-    
+        return true;
+    } 
 
     // Générer un token de réinitialisation de mot de passe
     public function generatePasswordResetToken($email) {
@@ -102,6 +95,38 @@ class UserModel {
 
         return $token;
     }
+
+    /*
+    //Temporairement
+    public function sendPasswordResetEmail($email) {
+        $token = $this->generatePasswordResetToken($email);
+        $resetLink = "../view/mdp_reinitialise.php?email=" . urlencode($email) . "&token=" . $token;
+    
+        // Pour les besoins du test, renvoyez simplement le lien
+        return $resetLink;
+    } */
+
+
+
+    public function sendMailtoForum($firstname,$lastname,$email,$subject,$message){
+        // Adresse Email du destinataire
+        $to = "monarka.yanno@gmail.com";
+
+        // Construction du corps du message
+        $body = "Prénom: $firstname\n";
+        $body .= "Nom: $lastname\n";
+        $body .= "Email: $email\n\n";
+        $body .= "Message:\n$message";
+
+        // En-têtes du mail
+        $headers = "From: $email";
+
+        //Envoie du mail
+        mail($to, $subject, $body, $headers);
+
+        return true; // A supprimer une fois l'envoie d'email configuré
+    } 
+
 
     //Vérifie si le nouveau mot de passe est déja utilisé par l'utilisateur
     public function isCurrentPasswordByEmail($email, $proposedPassword) {

@@ -12,24 +12,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_FULL_SPECIAL_CHARS);;
     $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_FULL_SPECIAL_CHARS);;
 
-    // Adresse e-mail du destinataire
-    $to = "monarka.yanno@gmail.com";
 
-    // Construction du corps du message
-    $body = "Prénom: $firstname\n";
-    $body .= "Nom: $lastname\n";
-    $body .= "Email: $email\n\n";
-    $body .= "Message:\n$message";
+    if(!empty($firstname) && !empty($lastname) && !empty($email) && !empty($subject) && !empty($message) && filter_var($email, FILTER_VALIDATE_EMAIL)){
+        
+        $userModel = new UserModel();
+        $sendMail = $userModel -> sendMailtoForum($firstname,$lastname,$email,$subject,$message);
 
-    // En-têtes du mail
-    $headers = "From: $email";
-
-    // Envoi du mail
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Votre message a été envoyé avec succès.";
+        // Envoi du mail
+        if ($sendMail) {
+            $successPage = "../view/forum_email_envoye.php"; // Chemin vers la page de succès
+            header("Location: $successPage?email=" . urlencode($email));
+            exit();
+        } else {
+            $error = "Une erreur s'est produite lors de l'envoi du message.";
+            header("Location: ../view/contacter.php?error="  . urlencode($error));
+            exit();
+        }
     } else {
-        echo "Une erreur s'est produite lors de l'envoi du message.";
+        $error = "Champs du formulaire de contact invalides.";
+        header("Location: ../view/contacter.php?error="  . urlencode($error));
+        exit();
     }
+    
 } else {
     // Redirection si le formulaire n'est pas soumis
     header("Location: ../view/contacter.php");

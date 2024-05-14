@@ -1,4 +1,4 @@
-.password-sent-email-container {
+.forum-sent-email-container {
     background: white;
     padding: 25px 50px 25px 50px;
     border-radius: 5px;
@@ -49,19 +49,20 @@
     color: white; /* Changement de couleur de texte au survol */
 }
 
-.password-sent-email-container h2 {
+
+.forum-sent-email-container h2 {
     margin: 0; /* Enlève les marges par défaut */
     font-size: 2em; /* Taille de police par défaut */
 }
 
 /* Media query pour les petits écrans */
 @media (max-width: 768px) {
-    .password-sent-email-container {
+    .forum-sent-email-container {
         width: 90%; /* Réduit la largeur du conteneur pour qu'il s'adapte mieux aux petits écrans */
         padding: 20px; /* Réduit le padding pour les petits écrans */
     }
 
-    .password-sent-email-container h2 {
+    .forum-sent-email-container h2 {
         font-size: 1.5em; /* Taille de police réduite pour les petits écrans */
     }
 }

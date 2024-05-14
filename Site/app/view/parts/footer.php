@@ -16,7 +16,7 @@
         </div>
         <div class="social-media">
             <p>Rejoignez nous sur:</p>
-            <a href="https://www.facebook.com/forum.grasse.paysdegrasse" class="facebook-logo">
+            <a href="https://www.facebook.com/forum.grasse.paysdegrasse" class="facebook-logo" target="_blank">
                 <img src="../../public/images/FacebookLogo.png" alt="Facebook">
             </a>
         </div>
