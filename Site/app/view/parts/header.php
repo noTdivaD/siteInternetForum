@@ -1,7 +1,7 @@
 <?php include 'head.php';?>
 <body>
         <!-- Bannière -->
-        <header class="banner">
+        <header class="banner" id="header">
             <div class="logo">
                 <a href="accueil.php" class="facebook-logo">
                     <img src="../../public/images/logo/Logo Association Forum.jpg" alt="Logo Association Forum">

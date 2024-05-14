@@ -52,3 +52,17 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     });
 });
+
+window.onload = function() {
+    // Récupérer la hauteur du header
+    var headerHeight = document.getElementById('header').offsetHeight;
+
+    // Ajuster le padding-top du body pour laisser de l'espace pour le header
+    document.body.style.paddingTop = headerHeight + 'px';
+}
+
+// Mettre à jour la hauteur du padding-top du body lors du redimensionnement de la fenêtre
+window.onresize = function() {
+    var headerHeight = document.getElementById('header').offsetHeight;
+    document.body.style.paddingTop = headerHeight + 'px';
+}

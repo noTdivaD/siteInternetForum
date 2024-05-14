@@ -75,13 +75,13 @@
         transform: translateX(100%);
     }
     to {
-        transform: translateX(80%);
+        transform: translateX(0); /* Limite le déplacement à 20% de la largeur de la fenêtre */
     }
 }
 
 @keyframes slideOutToLeft {
     from {
-        transform: translateX(80%);
+        transform: translateX(0); /* Démarre à partir de la limite précédemment définie */
     }
     to {
         transform: translateX(100%);
