@@ -45,10 +45,24 @@ document.addEventListener("DOMContentLoaded", function() {
                 body.style.color = 'black';
                 body.style.fontSize = '20px';
                 body.style.lineHeight = '20px';
-                body.style.fontFamily = 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                body.style.fontFamily = 'Georgia, serif';
             } else {
                 console.error("Body element not found in iframe.");
             }
         };
     });
 });
+
+window.onload = function() {
+    // Récupérer la hauteur du header
+    var headerHeight = document.getElementById('header').offsetHeight;
+
+    // Ajuster le padding-top du body pour laisser de l'espace pour le header
+    document.body.style.paddingTop = headerHeight + 'px';
+}
+
+// Mettre à jour la hauteur du padding-top du body lors du redimensionnement de la fenêtre
+window.onresize = function() {
+    var headerHeight = document.getElementById('header').offsetHeight;
+    document.body.style.paddingTop = headerHeight + 'px';
+}

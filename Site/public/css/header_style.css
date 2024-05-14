@@ -16,11 +16,13 @@
 }
 
 .logo img {
-    height: 100%;
-    max-width: 5%;
+    width: auto;
+    height: 100%; /* La hauteur de l'image sera égale à la hauteur de son conteneur */
+    max-height: 100%; /* Limite la hauteur de l'image à 100% de la hauteur de son conteneur */
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .menu-icon {
@@ -39,7 +41,7 @@
     height: 55px;
     border-radius: 50%;
     background-color: darkred;
-    right: 12.7px;
+    right: 12.7px; /* Positionnement par rapport au bord droit du menu icon */
     top: 50%;
     transform: translateY(-50%);
     z-index: -1;

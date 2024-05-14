@@ -1,15 +1,42 @@
-/* Pied de page */
+/* Styles de base pour le pied de page */
 .footer {
     background-color: #b21f24;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    height: 80px;
+    max-height: 200px; /* Hauteur maximale pour le pied de page */
+    overflow-y: auto; /* Défilement vertical si le contenu dépasse la hauteur maximale */
+    padding: 10px 20px; /* Ajout de padding pour une meilleure lisibilité */
+    display: flex;
+    flex-direction: row; /* Les éléments sont alignés horizontalement par défaut */
+    align-items: center; /* Centrer verticalement les éléments */
+    justify-content: center; /* Centrer horizontalement les éléments */
+}
+
+.footer-info, .footer-links, .social-media {
+    flex: 1; /* Chaque section prend la même portion de l'espace */
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+
+.footer-info {
+    display: inline;
+    justify-content: flex-start; /* Texte positionné à gauche */
+}
+
+.footer-links {
+    justify-content: center; /* Texte centré */
+}
+
+.social-media {
+    justify-content: flex-end; /* Texte positionné à droite */
+}
+
+.social-media p{
+    padding-right: 10px;
 }
 
 .footer p {
@@ -21,16 +48,15 @@
 .footer-links ul {
     list-style-type: none;
     padding: 0;
-}
-
-.footer-links li {
-    display: inline;
-    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .footer-links a {
     color: white;
     text-decoration: none;
+    padding: 0 10px; /* Espacement autour des liens */
 }
 
 .footer-links a:hover {
