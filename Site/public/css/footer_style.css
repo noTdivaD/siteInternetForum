@@ -89,23 +89,26 @@
 }
 
 @media screen and (max-width: 384px) {
-    @media screen and (max-width: 384px) {
-        .footer-links ul {
-            display: block; /* Afficher les éléments de liste comme des blocs */
-            padding-left: 0; /* Supprimer le décalage à gauche de la liste */
-        }
+    .footer-links ul {
+        display: block; /* Afficher les éléments de liste comme des blocs */
+        padding-left: 0; /* Supprimer le décalage à gauche de la liste */
+    }
         
-        .footer-links li {
-            display: block; /* Afficher les éléments de liste comme des blocs */
-            margin-bottom: 10px; /* Ajouter de l'espace entre chaque élément */
-        }
+    .footer-links li {
+        display: block; /* Afficher les éléments de liste comme des blocs */
+        margin-bottom: 10px; /* Ajouter de l'espace entre chaque élément */
+    }
         
-        .footer-links .link-separator {
-            display: none; /* Masquer les séparateurs de liens */
-        }
+    .footer-links .link-separator {
+        display: none; /* Masquer les séparateurs de liens */
+    }
 
-        .social-media{
-            padding-bottom: 10px;
-        }
+    .social-media{
+        padding-bottom: 10px;
+    }
+
+    .footer {
+        max-height: 100px;
+        overflow-y: auto;
     }
 }
