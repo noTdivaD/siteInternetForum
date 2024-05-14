@@ -7,15 +7,17 @@
         </div>
         <div class="footer-links">
             <ul>
-                <!--TODO: À remplir avec les liens pour les autres pages lorsque celles-ci seront disponibles -->
                 <li><a href="contacter.php">Nous Contacter</a></li>
+                <li><span class="link-separator">|</span></li>
                 <li><a href="#">Nos Partenaires</a></li>
+                <li><span class="link-separator">|</span></li>
                 <li><a href="#">Affichage Mobile</a></li>
+                <li><span class="link-separator">|</span></li>
                 <li><a href="#">Version Imprimable</a></li>
             </ul>
         </div>
         <div class="social-media">
-            <p>Rejoignez nous sur:</p>
+            <p>Rejoignez nous sur :</p>
             <a href="https://www.facebook.com/forum.grasse.paysdegrasse" class="facebook-logo">
                 <img src="../../public/images/FacebookLogo.png" alt="Facebook">
             </a>
