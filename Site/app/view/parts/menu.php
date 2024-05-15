@@ -12,7 +12,7 @@
                 <li><a href="accueil.php">Accueil</a></li>
 
                 <!--TODO: À remplir avec les liens pour les autres pages lorsque celles-ci seront disponibles -->
-                <li><a href="#">Journée Forum</a></li>
+                <li><a href="journee_forum.php">Journée Forum</a></li>
                 <li><a href="annuaire.php">Annuaire des Associations</a></li>
                 <li><a href="#">Rencontres Associatives</a></li>
                 <li><a href="#">Collège d'Experts</a></li>
