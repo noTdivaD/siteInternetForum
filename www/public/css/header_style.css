@@ -1,0 +1,94 @@
+/* Bannière */
+.banner {
+    background-color: #b21f25;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    max-height: 20%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*z-index: 1000; /* Gardez la bannière au-dessus des autres éléments */
+    overflow: hidden;
+}
+
+.logo img {
+    height: 100%;
+    max-width: 5%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.menu-icon {
+    font-size: 45px;
+    cursor: pointer;
+    color: white;
+    padding-right: 20px;
+    padding-bottom: 5px;
+   /* z-index: 1010; /* S'assurer que l'icône est cliquable */
+}
+
+.menu-icon::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: darkred;
+    right: 12.7px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-icon:hover::before {
+    opacity: 1;
+}
+
+.banner-text {
+    color:white;
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.current-page {
+    padding-right: 50px;
+    margin-left: auto;
+}
+
+.titre {
+    padding-left: 150px;
+    margin-right: auto;
+}
+
+
+/* Media Queries pour les tailles d'écrans plus petites */
+@media (max-width: 768px) {
+    .banner {
+        height: 60px;
+    }
+    .logo img {
+        max-width: 50px; /* Réduire la taille du logo */
+    }
+    .menu-icon {
+        font-size: 40px;
+    }
+    .banner-text {
+        font-size: 13px;
+    }
+    .titre {
+        padding-left: 50px;
+    }
+    .current-page{
+        padding-right: 20px;
+    }
+}
+

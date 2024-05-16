@@ -1,0 +1,14 @@
+RewriteEngine On
+# Si votre application est à la racine du serveur, utilisez '/'
+# Si elle est dans un sous-dossier, remplacez '/' par '/nom_du_sous_dossier/'
+RewriteBase /
+
+# Ne pas appliquer la réécriture pour les fichiers ou dossiers réels existants
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rediriger toutes les requêtes vers index.php, en conservant les paramètres d'URL
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+#php_value date.timezone "Europe/Paris"
+

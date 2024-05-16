@@ -1,0 +1,184 @@
+/* Style général pour la section des articles */
+.article-section {
+    background: white;
+    padding: 25px 50px 25px 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 80%; /* Ajustez selon la largeur souhaitée pour votre section */
+    margin: 20px auto; /* Centrage et espacement vertical */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article {
+    width: 100%; /* Utilise toute la largeur du conteneur .article-section */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Un fond légèrement différent pour distinguer les articles #f9f9f9 */
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.article h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.article p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.article-controls {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.edit-article-btn, .delete-article-btn {
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.edit-article-btn {
+    background-color: #007bff;
+}
+
+.delete-article-btn {
+    background-color: #dc3545;
+}
+
+.add-article-btn {
+    width: auto; /* S'adapte au contenu plutôt qu'à la largeur totale */
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px; /* Espacement par rapport aux articles */
+}
+
+.add-article-btn:hover {
+    background-color: #218838; /* Une nuance plus foncée lors du survol */
+}
+
+.article-content {
+    white-space: pre-wrap; /* Preserve white space and line breaks */
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 25px 50px 25px 50px;
+    border-radius: 5px;
+    border: 2px solid #888;
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.5);
+    width: 60%;
+    margin: auto; /* Centrage du conteneur sur la page */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrage des éléments dans le conteneur */
+    overflow-y: auto; /* Permet le défilement vertical si le contenu est trop long */
+}
+
+.close {
+    color: #aaa;
+    position: absolute; /* Position absolue par rapport à modal-content */
+    top: 0px;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer; /* Ajoute un curseur pointeur pour indiquer l'action */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px; /* Espace après le titre */
+}
+
+#addArticleForm {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrage des éléments dans le conteneur */
+}
+
+.form-group {
+    width: 100%; /* Assure que le groupe de formulaires utilise toute la largeur du conteneur */
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px; /* Espacement au-dessus des champs de formulaire */
+}
+
+input[type="text"], input[type="file"], textarea {
+    width: 100%; /* Utilise toute la largeur */
+    padding: 10px;
+    margin-bottom: 20px; /* Espacement entre les champs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 200px;
+}
+
+#addArticleForm button.add-article-btn {
+    width: 40%; /* Auto width to center */
+    padding: 10px 20px;
+    background-color: #b21f24;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 30px; /* Espace avant le bouton */
+}
+
+#addArticleForm button.add-article-btn:hover {
+    background-color: #921b1f;
+}
+
+
+
+
