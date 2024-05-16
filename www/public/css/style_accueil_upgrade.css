@@ -5,6 +5,7 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 80%; /* Ajustez selon la largeur souhaitée pour votre section */
+    max-width: 1000px;
     margin: 20px auto; /* Centrage et espacement vertical */
     display: flex;
     flex-direction: column;
@@ -179,6 +180,27 @@ textarea {
     background-color: #921b1f;
 }
 
+.swiper-container{
+    max-width: 100vw;
+    position: relative; /* Assurez-vous que la position est relative pour les éléments enfants absolus */
+    padding: 20px;
+}
 
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination {
+    position: absolute; /* Position absolue par rapport à la div .swiper-container */
+    z-index: 10; /* Assurez-vous que les éléments de navigation et de pagination sont en premier plan */
+}
 
+.swiper-button-prev {
+    left: 10px; /* Positionnez la flèche précédente à gauche */
+}
 
+.swiper-button-next {
+    right: 10px; /* Positionnez la flèche suivante à droite */
+}
+
+.swiper-pagination {
+    bottom: 10px; /* Positionnez la pagination en bas */
+}

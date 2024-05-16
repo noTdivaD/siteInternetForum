@@ -59,6 +59,26 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('Erreur lors du parsing JSON ou lors de la requête AJAX:', error);
         });
     });
+
+    var swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+    
+        // If you need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+    
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
 });
 
 function deleteArticle(articleId, articleElement) {

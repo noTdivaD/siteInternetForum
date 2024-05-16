@@ -4,7 +4,7 @@
 date_default_timezone_set('Europe/Paris'); // Configure le fuseau horaire dès le début
 
 // Définition du chemin absolu de la base du projet
-define('BASE_PATH', realpath(dirname(__FILE__)));
+define('BASE_PATH', realpath(dirname(__FILE__))); 
 
 // Autoload des classes
 spl_autoload_register(function($class) {
