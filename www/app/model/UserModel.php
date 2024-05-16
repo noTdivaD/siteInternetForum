@@ -2,13 +2,14 @@
 
 require_once BASE_PATH . '/init.php'; 
 
-
 class UserModel {
     private $db;
+    private $mailModel;
 
     // Constructeur pour initialiser la connexion à la base de données
     public function __construct() {
         $this->db = Database::getInstance();
+        $this->mailModel = SendMailModel::getInstance(); // Utiliser le singleton SendMailModel
     }
 
     // Valider les identifiants de l'utilisateur
@@ -65,29 +66,24 @@ class UserModel {
         }
     }
 
-    
-    // Envoyer l'email de réinitialisation du mot de passe
+    // Envoyer l'email de réinitialisation de mot de passe
     public function sendPasswordResetEmail($email) {
         $token = $this->generatePasswordResetToken($email);
-        $resetLink = "http://yourdomain.com/reset_password.php?email=" . urlencode($email) . "&token=" . $token;
+        $resetLink = "http://" . $_SERVER['HTTP_HOST'] . "/app/mdp_reinitialise?email=" . urlencode($email) . "&token=" . $token;
 
         $subject = "Réinitialisation de votre mot de passe";
-        $message = "Veuillez cliquer sur le lien suivant pour réinitialiser votre mot de passe : " . $resetLink;
-        $headers = 'From: noreply@yourdomain.com' . "\r\n" .
-        'Reply-To: noreply@yourdomain.com' . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+        $message = "Veuillez cliquer sur le lien suivant pour réinitialiser votre mot de passe (expire dans 5 minutes) : " . $resetLink;
 
-        mail($email, $subject, $message, $headers);
+        return SendMailModel::getInstance()->sendMail($email, $subject, $message);
+    }
 
-        return true;
-    } 
 
     // Générer un token de réinitialisation de mot de passe
     public function generatePasswordResetToken($email) {
         $token = bin2hex(random_bytes(16)); // Génère un token sécurisé
         $expiry = new DateTime('+5 minutes'); // Définit l'expiration du token à 5 minutes
 
-         // Prépare la requête pour insérer ou mettre à jour le token
+        // Prépare la requête pour insérer ou mettre à jour le token
         $stmt = $this->db->prepare(
             "INSERT INTO reset_tokens (email, token, expiry) VALUES (?, ?, ?) 
             ON DUPLICATE KEY UPDATE token = VALUES(token), expiry = VALUES(expiry)"
@@ -99,50 +95,29 @@ class UserModel {
         return $token;
     }
 
-    /*
-    //Temporairement
-    public function sendPasswordResetEmail($email) {
-        $token = $this->generatePasswordResetToken($email);
-        $resetLink = "../view/mdp_reinitialise.php?email=" . urlencode($email) . "&token=" . $token;
-    
-        // Pour les besoins du test, renvoyez simplement le lien
-        return $resetLink;
-    } */
-
-
-
-    public function sendMailtoForum($firstname,$lastname,$email,$subject,$message){
+    public function sendMailtoForum($firstname, $lastname, $email, $subject, $message) {
         // Adresse Email du destinataire
-        $to = "monarka.yanno@gmail.com";
+        $to = "marin.lafitte08@gmail.com";
+    
+        // Construction du corps du message en HTML
+        $body = "<p>Prénom: $firstname</p>";
+        $body .= "<p>Nom: $lastname</p>";
+        $body .= "<p>Email: $email</p>";
+        $body .= "<p><strong>Message:<br><br>" . nl2br($message) . "</strong></p>";
+    
+        return SendMailModel::getInstance()->sendMail($to, $subject, $body);
+    }    
 
-        // Construction du corps du message
-        $body = "Prénom: $firstname\n";
-        $body .= "Nom: $lastname\n";
-        $body .= "Email: $email\n\n";
-        $body .= "Message:\n$message";
-
-        // En-têtes du mail
-        $headers = "From: $email";
-
-        //Envoie du mail
-        mail($to, $subject, $body, $headers);
-
-        return true; // A supprimer une fois l'envoie d'email configuré
-    } 
-
-
-    //Vérifie si le nouveau mot de passe est déja utilisé par l'utilisateur
+    // Vérifie si le nouveau mot de passe est déjà utilisé par l'utilisateur
     public function isCurrentPasswordByEmail($email, $proposedPassword) {
         // Récupérer le hash du mot de passe actuel de l'utilisateur par email
         $stmt = $this->db->prepare("SELECT password FROM utilisateurs WHERE email = ?");
         $stmt->execute([$email]);
         $currentPasswordHash = $stmt->fetchColumn();
-    
+
         // Vérifier si le mot de passe proposé correspond au mot de passe actuel
         return password_verify($proposedPassword, $currentPasswordHash);
     }
-    
-
 
     // Créer un nouvel utilisateur
     public function createUser($nom, $prenom, $email, $password, $date_naissance, $adresse, $ville, $code_postal, $pays, $type = 'utilisateur', $photo_profil = 'adressephotodeprofil') {
@@ -158,7 +133,7 @@ class UserModel {
             }
             throw $e; // Relancez les autres exceptions
         }
-    }    
+    }
 
     // Mise à jour de la dernière connexion
     public function updateLastLogin($email) {
@@ -173,7 +148,7 @@ class UserModel {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    //Récupèrer l'id de l'utilisateur inscrit en dernier
+    // Récupérer l'id de l'utilisateur inscrit en dernier
     public function getLastInsertId() {
         return $this->db->lastInsertId();
     }
