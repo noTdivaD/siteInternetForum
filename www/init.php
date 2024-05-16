@@ -25,6 +25,7 @@ spl_autoload_register(function($class) {
 // Configuration de la base de données ou autres configurations initiales
 require_once BASE_PATH . '/config/config.php';
 require_once BASE_PATH . '/app/model/DatabaseModel.php';
+require_once BASE_PATH . '/app/model/SendMailModel.php';
 
 // Erreurs d'affichage pour le développement
 ini_set('display_errors', 1);
