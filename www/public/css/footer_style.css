@@ -35,9 +35,10 @@
 
 .footer-links a:hover {
     color: #feb041;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajout du fond noir transparent */
+    padding: 5px; /* Ajout de padding pour mieux voir l'effet de survol */
+    border-radius: 5px; /* Ajout de bordures arrondies pour un meilleur effet visuel */
 }
-
-/* TODO Faire en sorte que quand on survole les liens, il y ai un fond noir transparant juste autour du texte du lien qui apparait comme pour le header avec l'icone du menu déroulant en haut à droite*/
 
 .social-media {
     margin-right: 20px;
@@ -52,14 +53,13 @@
     margin-left: 20px;
 }
 
-.facebook-logo{
+.facebook-logo {
     display: inline-block;
     width: 10px;
     height: 10px;
     max-width: 20px;
     max-height: 20px;
 }
-
 
 /* Media Queries pour les tailles d'écrans plus petites */
 @media (max-width: 768px) {
@@ -88,5 +88,8 @@
     .social-media {
         margin-right: 50px; /* Réduction de la marge à droite */
         margin-bottom: 8px;
+    }
+    .main-content {
+        margin-bottom: 60px; /* Ajuster la marge en fonction de la hauteur réduite du footer */
     }
 }

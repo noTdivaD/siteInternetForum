@@ -1,15 +1,37 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-}
-
-
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    
+}
+
+body::-webkit-scrollbar {
+    width: 10px;  /* ou 'height' pour les scrollbar horizontales */
+    background-color: #b21f24;  /* couleur de fond de la scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #b21f24;  /* couleur de fond du thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #921b1f;  /* couleur de fond du thumb lors du survol */
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 80px; /* Hauteur du header */
+    padding-bottom: 80px; /* Hauteur du footer */
 }

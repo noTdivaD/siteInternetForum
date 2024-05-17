@@ -6,45 +6,47 @@
     include 'parts/header.php';
 ?>
 
-<div class="contact-form-container">
-    <h1>Contactez-nous</h1>
-    <form action="/app/contacter/send" method="POST" id="formContact">
+<div class="main-content">
+    <div class="contact-form-container">
+        <h1>Contactez-nous</h1>
+        <form action="/app/contacter/send" method="POST" id="formContact">
 
-        <div id="error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
+            <div id="error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
 
-        <div class="form-group">
-            <label for="firstname">Prénom :</label>
-            <input type="text" id="firstname" name="firstname" required>
-            <div class="error-message" id="error-firstname"></div>
-        </div>
+            <div class="form-group">
+                <label for="firstname">Prénom :</label>
+                <input type="text" id="firstname" name="firstname" required>
+                <div class="error-message" id="error-firstname"></div>
+            </div>
 
-        <div class="form-group">
-            <label for="lastname">Nom :</label>
-            <input type="text" id="lastname" name="lastname" required>
-            <div class="error-message" id="error-lastname"></div>
-        </div>
+            <div class="form-group">
+                <label for="lastname">Nom :</label>
+                <input type="text" id="lastname" name="lastname" required>
+                <div class="error-message" id="error-lastname"></div>
+            </div>
 
-        <div class="form-group">
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
-            <div class="error-message" id="error-email"></div>
-        </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="error-email"></div>
+            </div>
 
-        <div class="form-group">
-            <label for="subject">Objet :</label>
-            <input type="text" id="subject" name="subject" required>
-            <div class="error-message" id="error-subject"></div>
-        </div>
+            <div class="form-group">
+                <label for="subject">Objet :</label>
+                <input type="text" id="subject" name="subject" required>
+                <div class="error-message" id="error-subject"></div>
+            </div>
 
-        <div class="form-group">
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-        </div>
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
 
-        <button type="submit" class="submit-button">Envoyer</button>
-        
-    </form>
-</div>
+            <button type="submit" class="submit-button">Envoyer</button>
+            
+        </form>
+    </div>
+</div>   
 
 
 <link rel="stylesheet" href="/public/css/contacter_style.css">

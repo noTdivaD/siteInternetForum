@@ -1,7 +1,6 @@
-/* Style général pour la section des articles */
 .article-section {
     background: white;
-    padding: 25px 50px 25px 50px;
+    padding: 25px 50px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 80%; /* Ajustez selon la largeur souhaitée pour votre section */
@@ -33,10 +32,12 @@
 }
 
 .article img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     border-radius: 4px;
     margin-top: 10px;
+    max-height: 200px; /* Limite maximale de la hauteur */
+    object-fit: cover; /* Ajuste l'image pour qu'elle reste couverte dans le cadre */
 }
 
 .article-controls {
@@ -80,7 +81,6 @@
     white-space: pre-wrap; /* Preserve white space and line breaks */
 }
 
-
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -100,7 +100,7 @@
 .modal-content {
     position: relative;
     background: white;
-    padding: 25px 50px 25px 50px;
+    padding: 25px 50px;
     border-radius: 5px;
     border: 2px solid #888;
     box-shadow: 0px 20px 50px rgba(0,0,0,0.5);
@@ -134,6 +134,13 @@
 }
 
 #addArticleForm {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrage des éléments dans le conteneur */
+}
+
+#editArticleForm {
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -179,6 +186,79 @@ textarea {
     background-color: #921b1f;
 }
 
+#editArticleForm button.edit-article-btn {
+    width: 40%; /* Auto width to center */
+    padding: 10px 20px;
+    background-color: #b21f24;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 30px; /* Espace avant le bouton */
+}
 
+#editArticleForm button.edit-article-btn {
+    background-color: #921b1f;
+}
 
+/* Styles pour la checkbox */
+.form-group-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
+.form-group-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group-checkbox label {
+    margin: 0;
+}
+
+/* Styles pour le champ de dépôt de fichier */
+.drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.drop-zone:hover {
+    background-color: #f0f0f0;
+}
+
+.drop-zone .drop-zone__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.drop-zone__thumb {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.drop-zone__prompt {
+    font-size: 16px;
+    color: #999;
+}
+
+.drop-zone.highlight {
+    background-color: #e9e9e9;
+}
+
+.drop-zone.dragover {
+    background-color: #f0f0f0;
+    border-color: #333;
+}

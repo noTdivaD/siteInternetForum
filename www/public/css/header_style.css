@@ -9,10 +9,8 @@
     top: 0;
     width: 100%;
     height: 80px;
-    max-height: 20%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /*z-index: 1000; /* Gardez la bannière au-dessus des autres éléments */
-    overflow: hidden;
 }
 
 .logo img {
@@ -29,7 +27,7 @@
     color: white;
     padding-right: 20px;
     padding-bottom: 5px;
-   /* z-index: 1010; /* S'assurer que l'icône est cliquable */
+    z-index: 1010; /* S'assurer que l'icône est cliquable */
 }
 
 .menu-icon::before {
@@ -52,7 +50,7 @@
 }
 
 .banner-text {
-    color:white;
+    color: white;
     font-size: 30px;
     width: 100%;
     display: flex;
@@ -68,7 +66,6 @@
     padding-left: 150px;
     margin-right: auto;
 }
-
 
 /* Media Queries pour les tailles d'écrans plus petites */
 @media (max-width: 768px) {
@@ -87,8 +84,10 @@
     .titre {
         padding-left: 50px;
     }
-    .current-page{
+    .current-page {
         padding-right: 20px;
     }
+    .main-content {
+        margin-top: 60px; /* Ajuster la marge en fonction de la hauteur réduite du header */
+    }
 }
-

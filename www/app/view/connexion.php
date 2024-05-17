@@ -6,28 +6,30 @@
     include 'parts/header.php';
 ?>
 
-<!-- Formulaire de connexion -->
-<div class="login-container">
-    <h2>Connexion</h2>
-    <form action="/app/connexion/login" method="POST" id="form-login">
-        <div id="error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
-        <div class="form-group">
-            <label for="email">Adresse Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Mot de passe:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div class="form-group">
-            <button type="submit" class="login-button">Se connecter</button>
-        </div>
-        <div class="links">
-            <a href="/app/inscription">Pas Encore Membre ? Créer un compte</a>
-            <a href="/app/mdp_oublie">Mot de passe oublié ?</a>
-        </div>
-    </form>
-</div>
+<div class="main-content">
+    <!-- Formulaire de connexion -->
+    <div class="login-container">
+        <h2>Connexion</h2>
+        <form action="/app/connexion/login" method="POST" id="form-login">
+            <div id="error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
+            <div class="form-group">
+                <label for="email">Adresse Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="login-button">Se connecter</button>
+            </div>
+            <div class="links">
+                <a href="/app/inscription">Pas Encore Membre ? Créer un compte</a>
+                <a href="/app/mdp_oublie">Mot de passe oublié ?</a>
+            </div>
+        </form>
+    </div>
+</div>   
 <link rel="stylesheet" href="/public/css/style_connexion.css">
 <script src="/public/js/connexion.js"></script>
 <?php
