@@ -4,6 +4,7 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 80%; /* Ajustez selon la largeur souhaitée pour votre section */
+    max-width: 100vh;
     margin: 20px auto; /* Centrage et espacement vertical */
     display: flex;
     flex-direction: column;
@@ -45,7 +46,7 @@
     margin-top: 15px;
 }
 
-.edit-article-btn, .delete-article-btn {
+.edit-article-btn, .delete-article-btn, .swiper-slide a {
     padding: 8px 16px;
     color: white;
     border: none;
@@ -60,6 +61,11 @@
 
 .delete-article-btn {
     background-color: #dc3545;
+}
+
+.swiper-slide a{
+    background-color: #007bff;
+    text-decoration: none;
 }
 
 .add-article-btn {
@@ -84,7 +90,7 @@
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 3; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */

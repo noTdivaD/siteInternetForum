@@ -323,6 +323,26 @@ document.getElementById("addArticleForm").addEventListener("submit", function(ev
         console.error('Erreur lors du parsing JSON ou de la requête AJAX :', error);
         document.getElementById('error_message').textContent = 'Erreur lors de l\'ajout de l\'article.';
     });
+
+    var swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+    
+        // If you need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+    
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
 });
 
 // Gestion de la soumission du formulaire d'édition d'article

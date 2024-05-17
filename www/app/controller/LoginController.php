@@ -20,7 +20,7 @@ class LoginController {
 
                 if ($isValid) {
                     $userType = $userModel->getUserType($email);
-                    $_SESSION['user_logged_in'] = true;
+                    $_SESSION['user_logged_in'] = true; 
                     $_SESSION['user_email'] = $email;
                     $_SESSION['user_type'] = $userType;
                     $userModel->updateLastLogin($email); // Mise à jour de la dernière connexion

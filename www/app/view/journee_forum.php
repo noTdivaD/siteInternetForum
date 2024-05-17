@@ -27,8 +27,6 @@
         <div class="swiper-pagination"></div>
 </div>
 
-    </div>
-
 <link rel="stylesheet" href="../../public/css/journee_forum_style.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../../public/js/journee_forum.js"></script>

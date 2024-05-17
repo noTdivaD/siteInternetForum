@@ -13,3 +13,7 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 <!-- TODO Régler le problème que quand un utilisateur s'inscrit, on ne puisse plus modifier les fichiers js et css, qu'il faille les renommer ou les recréer pour les modifier" -->
 <!-- TODO Installation d'un serveur d'envoie de mail, Formulaire de contact, css, js et responsive" -->
+<!-- TODO Faire en sorte que les caractères spéciaux (accents, etc..) soient bien affichés dans les articles de l'accueil -->
+
+
+<!-- contact@assoforum-paysdegrasse.com    #Forum06130 -->
