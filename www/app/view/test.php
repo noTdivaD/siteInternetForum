@@ -1,13 +1,18 @@
 <?php
 $password = "Motdepasse123*"; // Changez ceci pour le mot de passe que vous voulez utiliser
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-echo $hashed_password;
+// echo $hashed_password;
 $email = ".prank.pulse.2E2E_@free.fr.fr.fr";
-if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "L'adresse email est valide.";
-} else {
-    echo "L'adresse email n'est pas valide.";
-}
+// if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+//     echo "L'adresse email est valide.";
+// } else {
+//     echo "L'adresse email n'est pas valide.";
+// }
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+echo "PHP is working!";
 ?>
 
 

@@ -97,7 +97,7 @@ class UserModel {
 
     public function sendMailtoForum($firstname, $lastname, $email, $subject, $message) {
         // Adresse Email du destinataire
-        $to = "marin.lafitte08@gmail.com";
+        $to = "davidton2434@gmail.com";
     
         // Construction du corps du message en HTML
         $body = "<p>Prénom: $firstname</p>";

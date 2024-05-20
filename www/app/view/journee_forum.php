@@ -24,12 +24,14 @@
                 <div class="swiper-slide"><img src="../../public/images/imagesForum/2.JPG" alt="Image 2"></div>
                 <div class="swiper-slide"><img src="../../public/images/imagesForum/3.JPG" alt="Image 3"></div>
             </div>  
-        <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div>
+        </div>
 </div>
 
 <link rel="stylesheet" href="../../public/css/journee_forum_style.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../../public/js/journee_forum.js"></script>
+
 <?php
     // Inclusion du footer
     include 'parts/footer.php';

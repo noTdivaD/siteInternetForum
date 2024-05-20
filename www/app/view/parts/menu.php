@@ -12,8 +12,8 @@
                 <li><a href="/app/accueil_upgrade">Accueil</a></li>
 
                 <!--TODO: À remplir avec les liens pour les autres pages lorsque celles-ci seront disponibles -->
-                <li><a href="#">Journée Forum</a></li>
-                <li><a href="#">Annuaire des Associations</a></li>
+                <li><a href="/app/journee_forum">Journée Forum</a></li>
+                <li><a href="/app/annuaire_associations">Annuaire des Associations</a></li>
                 <li><a href="#">Rencontres Associatives</a></li>
                 <li><a href="#">Collège d'Experts</a></li>
                 <li><a href="#">Agenda Des Associations</a></li>

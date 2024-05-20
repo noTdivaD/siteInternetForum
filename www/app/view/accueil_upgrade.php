@@ -16,6 +16,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
 ?>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<div class="main-content">
 <div class=container>
 <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -23,7 +24,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                 <h2>Journée FORUM</h2>
                 <div class="content">
                     <img src="../../public/images/FacebookLogo.png" alt="Facebook">
-                    <p> texte texte texte texte texte texte texte texte texte texte</p>
+                    <p>Placeholder de la description</p>
                 </div>
                 <a href="#">En savoir plus</a>
             </div>
@@ -31,7 +32,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                 <h2>Annuaire des associations</h2>
                 <div class="content">
                     <img src="../../public/images/FacebookLogo.png" alt="Facebook">
-                    <p> texte texte texte texte texte texte texte texte texte texte</p>
+                    <p>Placeholder de la description</p>
                 </div>
                 <a href="#">En savoir plus</a>
             </div>
@@ -39,7 +40,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                 <h2>Rencontres associatives</h2>
                 <div class="content">
                     <img src="../../public/images/FacebookLogo.png" alt="Facebook">
-                    <p> texte texte texte texte texte texte texte texte texte texte</p>
+                    <p>Placeholder de la description</p>
                 </div>
                 <a href="#">En savoir plus</a>
             </div>  
@@ -47,7 +48,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                 <h2>Conférences</h2>
                 <div class="content">
                     <img src="../../public/images/FacebookLogo.png" alt="Facebook">
-                    <p> texte texte texte texte texte texte texte texte texte texte</p>
+                    <p>Placeholder de la description</p>
                 </div>
                 <a href="#">En savoir plus</a>
             </div>  
@@ -55,7 +56,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                 <h2>Site internet et Facebook</h2>
                 <div class="content">
                     <img src="../../public/images/FacebookLogo.png" alt="Facebook">
-                    <p> texte texte texte texte texte texte texte texte texte texte</p>
+                    <p>Placeholder de la description</p>
                 </div>
                 <a href="#">En savoir plus</a>
             </div>  
@@ -63,7 +64,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                 <h2>Manifestations ponctuelles, sorties associatives</h2>
                 <div class="content">
                     <img src="../../public/images/FacebookLogo.png" alt="Facebook">
-                    <p> texte texte texte texte texte texte texte texte texte texte</p>
+                    <p>Placeholder de la description</p>
                 </div>
                 <a href="#">En savoir plus</a>
             </div>  
@@ -71,7 +72,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                 <h2>Annuaire des associations</h2>
                 <div class="content">
                     <img src="../../public/images/FacebookLogo.png" alt="Facebook">
-                    <p> texte texte texte texte texte texte texte texte texte texte</p>
+                    <p>Placeholder de la description</p>
                 </div>
                 <a href="#">En savoir plus</a>
             </div>  
@@ -79,7 +80,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                 <h2>Collège d'experts</h2>
                 <div class="content">
                     <img src="../../public/images/FacebookLogo.png" alt="Facebook">
-                    <p> texte texte texte texte texte texte texte texte texte texte</p>
+                    <p>Placeholder de la description</p>
                 </div>
                 <a href="#">En savoir plus</a>
             </div>  
@@ -90,7 +91,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
     </div>
 
 
-<div class="main-content">
+
     <div class="article-section">
         <?php
         if (isset($articles) && is_array($articles)) { // Assurez-vous que les articles existent et forment un tableau
