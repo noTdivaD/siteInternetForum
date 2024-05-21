@@ -13,7 +13,7 @@
 
 <?php include 'parts/annuaire_associations.php'; ?>
 
-<link rel="stylesheet" href="../../public/css/associations_style.css">
+<link rel="stylesheet" href="/public/css/associations_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/associations_style.css'); ?>">
 
 <?php
 // Inclusion du footer

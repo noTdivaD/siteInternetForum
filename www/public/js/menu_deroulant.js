@@ -15,3 +15,4 @@ function closeMenu() {
         dropdownMenu.style.display = 'none';
     }, 200);
 }
+

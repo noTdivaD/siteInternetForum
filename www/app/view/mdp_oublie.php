@@ -25,8 +25,8 @@
         </form>
     </div>
 </div>    
-<link rel="stylesheet" href="/public/css/style_mdp_oublie.css">
-<script src="/public/js/mdp_oublie.js"></script>
+<link rel="stylesheet" href="/public/css/style_mdp_oublie.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/style_mdp_oublie.css'); ?>">
+<script src="/public/js/mdp_oublie.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/mdp_oublie.js'); ?>"></script>
 <?php
     // Inclusion du footer
     include 'parts/footer.php';

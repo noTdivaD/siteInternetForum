@@ -30,8 +30,8 @@
         </form>
     </div>
 </div>   
-<link rel="stylesheet" href="/public/css/style_connexion.css">
-<script src="/public/js/connexion.js"></script>
+<link rel="stylesheet" href="/public/css/style_connexion.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/style_connexion.css'); ?>">
+<script src="/public/js/connexion.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/connexion.js'); ?>"></script>
 <?php
     // Inclusion du footer
     include 'parts/footer.php';

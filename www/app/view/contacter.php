@@ -49,8 +49,8 @@
 </div>   
 
 
-<link rel="stylesheet" href="/public/css/contacter_style.css">
-<script src="/public/js/contacter.js"></script>
+<link rel="stylesheet" href="/public/css/contacter_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/contacter_style.css'); ?>">
+<script src="/public/js/contacter.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/contacter.js'); ?>"></script>
 <?php
     // Inclusion du footer
     include 'parts/footer.php';

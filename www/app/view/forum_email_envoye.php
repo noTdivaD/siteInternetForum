@@ -20,8 +20,8 @@
         </div>
     </div>
 </div>    
-<link rel="stylesheet" href="/public/css/style_forum_email_envoye.css">
-<script src="/public/js/forum_email_envoye.js"></script>
+<link rel="stylesheet" href="/public/css/style_forum_email_envoye.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/style_forum_email_envoye.css'); ?>">
+<script src="/public/js/forum_email_envoye.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/forum_email_envoye.js'); ?>"></script>
 <?php
     // Inclusion du footer
     include 'parts/footer.php';

@@ -95,10 +95,10 @@
         </form>    
     </div>
 </div>        
-<link rel="stylesheet" href="/public/css/inscription_style.css">     
-<script src="/public/js/inscription.js"></script>
+<link rel="stylesheet" href="/public/css/inscription_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/inscription_style.css'); ?>">     
+<script src="/public/js/inscription.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/inscription.js'); ?>"></script>
 
 <?php
     // Inclusion du footer
-    include 'parts/footer.php';
+    include 'parts/footer.php'
 ?>

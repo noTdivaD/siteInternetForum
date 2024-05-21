@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réinitialisation Du Mot de Passe</title>
-    <link rel="stylesheet" href="/public/css/common_style.css">
+    <link rel="stylesheet" href="/public/css/common_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/common_style.css'); ?>">
     <link rel="icon" href="/public/images/logo/logo-association-forum-onglet-t48.png" type="/png">
-    <link rel="stylesheet" href="/public/css/style_mdp_reinitialise.css"> 
+    <link rel="stylesheet" href="/public/css/style_mdp_reinitialise.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/style_mdp_reinitialise.css'); ?>"> 
 </head>
 <body>
     <div class="main-content">
@@ -37,6 +37,6 @@
             </form>
         </div>
     </div>   
-    <script src="/public/js/mdp_reinitialise.js"></script>
+    <script src="/public/js/mdp_reinitialise.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/mdp_reinitialise.js'); ?>"></script>
 </body>
 </html>

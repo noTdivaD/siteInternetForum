@@ -27,8 +27,8 @@
     </div>
 </div>    
 
-<link rel="stylesheet" href="../../public/css/annuaire_style.css">
-<script src="../../public/js/annuaire.js"></script>
+<link rel="stylesheet" href="/public/css/annuaire_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/annuaire_style.css'); ?>">
+<script src="/public/js/annuaire.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/annuaire.js'); ?>"></script>
 <?php
     // Inclusion du footer
     include 'parts/footer.php';

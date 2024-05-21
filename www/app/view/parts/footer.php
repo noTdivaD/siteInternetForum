@@ -22,6 +22,6 @@
         </div>
     </footer>
     <!-- Fichier CSS du pied de page -->
-    <script src="/public/js/menu_deroulant.js"></script>
+    <script src="/public/js/menu_deroulant.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/menu_deroulant.js'); ?>"></script>
 </body>
 </html>
