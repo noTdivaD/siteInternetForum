@@ -4,6 +4,8 @@
     $currentPage = "Journée FORUM";
     // Inclusion du header
     include 'parts/header.php';
+
+    $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'administrateur';
 ?>
 
 <link
@@ -17,6 +19,9 @@
             <p>La <span class="date">Journée Forum</span> est un événement annuel incontournable à Grasse. Cette année, il se tiendra le <span class="date">Samedi 14 Septembre</span> à la <span class="location">Cours Honoré Cresp</span>.</p>
             <p>Venez découvrir les diverses associations locales, rencontrer les membres et participer à des activités passionnantes. C'est une occasion parfaite pour en apprendre davantage sur les initiatives locales et peut-être même rejoindre une association qui vous tient à cœur.</p>
             <a href="#" class="btn">Bulletins d'inscription</a>
+            <?php if ($isAdmin) : ?>
+                <a href="#" class="btn" id="manageRegistrationsBtn">Modifier le contenu</a>
+            <?php endif; ?>
         </div>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -26,6 +31,39 @@
             </div>  
             <div class="swiper-pagination"></div>
         </div>
+</div>
+
+<div id="editArticleModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Éditer la page</h2>
+        <form id="editArticleForm">
+            <input type="hidden" id="edit-article-id" name="article_id">
+            <div id="edit_error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
+            <div class="form-group">
+                <label for="edit-title">Titre de l'article:</label>
+                <input type="text" id="edit-title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-content">Contenu de l'article:</label>
+                <textarea id="edit-content" name="content" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="edit-image">Image (optionnelle):</label>
+                <div id="drop-zone-edit" class="drop-zone">
+                    <span class="drop-zone__prompt">Sélectionnez ou Déposer votre Fichier Ici</span>
+                    <input type="file" id="edit-image" name="image" class="drop-zone__input" disabled>
+                </div>
+            </div>
+            <div class="form-group" id="delete-image-container" style="display: none;">
+                <label for="delete-image">
+                    <input type="checkbox" id="delete-image" name="delete_image">
+                    Supprimer l'image existante
+                </label>
+            </div>      
+            <button type="submit" class="edit-article-btn">Modifier</button>
+        </form>
+    </div>
 </div>
 
 <link rel="stylesheet" href="../../public/css/journee_forum_style.css">
