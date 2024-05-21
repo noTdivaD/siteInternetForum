@@ -31,7 +31,7 @@
                     <div class="error-message" id="error-confirm_password"></div>
                 </div>
 
-                <p id="format_mdp">Attention, le mot de passe doit contenir au moins 8 caractères, incluant au moins une majuscule, un chiffre et un caractère spécial parmis ceux présentés ici : @ $ ! % * ? &.</p>
+                <p id="format_mdp">Attention, le mot de passe doit contenir au moins 8 caractères, incluant au moins une majuscule, un chiffre et un caractère spécial parmis ceux présentés ici : @ $ ! % * ? & #.</p>
 
                 <button type="submit">Réinitialiser le mot de passe</button>
             </form>

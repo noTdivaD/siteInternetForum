@@ -64,7 +64,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
     //Vérification du mot de passe
     var password = document.getElementById('password').value;
-    if (!password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)) {
+    if (!password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/)) {
         showError('password', "Format du mot de passe incorrect.");
         isValid = false;
         firstInvalidElement = firstInvalidElement || password;
