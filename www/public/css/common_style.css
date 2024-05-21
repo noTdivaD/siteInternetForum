@@ -35,3 +35,7 @@ body::-webkit-scrollbar-thumb:hover {
     padding-top: 80px; /* Hauteur du header */
     padding-bottom: 80px; /* Hauteur du footer */
 }
+
+.banner{
+    z-index: 1;
+}

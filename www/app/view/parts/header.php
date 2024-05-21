@@ -3,7 +3,7 @@
         <!-- Bannière -->
         <header class="banner">
             <div class="logo">
-                <a href="accueil.php" class="facebook-logo">
+                <a href="/app/accueil_upgrade" class="facebook-logo">
                     <img src="/public/images/logo/Logo Association Forum.jpg" alt="Logo Association Forum">
                 </a>
             </div>

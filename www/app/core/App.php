@@ -17,7 +17,9 @@ class App {
             'mdp_reinitialise' => 'ResetPasswordController',
             'deconnexion' => 'LogoutController',
             'mdp_email_envoye' => 'SentResetEmailController',
-            'forum_email_envoye' => 'SentForumEmailController'
+            'forum_email_envoye' => 'SentForumEmailController',
+            'journee_forum' => 'ForumController',
+            'annuaire_associations' => 'AssociationsController'
         ];
 
         // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut

@@ -155,6 +155,23 @@ function initializeDropZoneEvents(dropZoneElement, inputElement) {
 document.addEventListener("DOMContentLoaded", function() {
     initializeDropZones();
 
+    // Gestion du menu des contenus
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+    
+        pagination: {
+          el: '.swiper-pagination',
+        },
+    
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+    });
+
     // Gestion des clics sur les boutons de la section des articles
     document.querySelector('.article-section').addEventListener('click', function(event) {
         if (event.target.classList.contains('delete-article-btn')) {
@@ -323,25 +340,6 @@ document.getElementById("addArticleForm").addEventListener("submit", function(ev
         console.error('Erreur lors du parsing JSON ou de la requête AJAX :', error);
         document.getElementById('error_message').textContent = 'Erreur lors de l\'ajout de l\'article.';
     });
-
-    var swiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-    
-        // If you need pagination
-        pagination: {
-          el: '.swiper-pagination',
-        },
-    
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
 
 });
 
