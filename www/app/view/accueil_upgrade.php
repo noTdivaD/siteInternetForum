@@ -91,7 +91,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
     </div>
 
 
-<div class="main-content">
+
     <div class="article-section">
         <?php
         if (isset($articles) && is_array($articles)) { // Assurez-vous que les articles existent et forment un tableau
@@ -187,6 +187,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
 </div>
 
 <link rel="stylesheet" href="/public/css/style_accueil_upgrade.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="/public/js/accueil_upgrade.js"></script>
 <?php
 // Inclusion du footer
