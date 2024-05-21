@@ -21,7 +21,13 @@ class App {
         ];
 
         // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut
-        $controllerName = $controllerMap[$url[0]] ?? 'HomeController';
+        if (!empty($url[0])) {
+            // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut
+            $controllerName = $controllerMap[$url[0]] ?? 'HomeController';
+        } else {
+            $controllerName = 'AccueilController'; // Définir AccueilController comme contrôleur par défaut
+        }
+        
         $controllerPath = __DIR__ . "/../controller/" . $controllerName . ".php";
 
         // Vérifie si le fichier du contrôleur existe et inclut-le
