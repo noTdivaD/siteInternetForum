@@ -19,7 +19,12 @@ class App {
             'mdp_email_envoye' => 'SentResetEmailController',
             'forum_email_envoye' => 'SentForumEmailController',
             'journee_forum' => 'ForumController',
-            'annuaire_associations' => 'AssociationsController'
+            'annuaire_associations' => 'AnnuaireController',
+            'associations_sports' => 'SportsController',
+            'associations_animationsloisirs' => 'AnimationsLoisirsController',
+            'associations_artsculture' => 'ArtsCultureController',
+            'associations_bienetre' => 'BienEtreController',
+            'associations_humanitaires' => 'HumanitaireController'
         ];
 
         // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut
@@ -35,7 +40,25 @@ class App {
         // Vérifie si le fichier du contrôleur existe et inclut-le
         if (file_exists($controllerPath)) {
             require_once $controllerPath;
-            $this->controller = new $controllerName;
+            switch ($controllerName) {
+                case 'SportsController':
+                    $this->controller = new SportsController();
+                    break;
+                case 'AnimationsLoisirsController':
+                    $this->controller = new AnimationsLoisirsController();
+                    break;
+                case 'ArtsCultureController':
+                    $this->controller = new ArtsCultureController();
+                    break;
+                case 'BienEtreController':
+                    $this->controller = new BienEtreController();
+                    break;
+                case 'HumanitaireController':
+                    $this->controller = new HumanitaireController();
+                    break;
+                default:
+                    $this->controller = new $controllerName();
+            }
             error_log("Controller {$controllerName} loaded successfully.");
         } else {
             throw new Exception("Controller file not found: {$controllerPath}");
