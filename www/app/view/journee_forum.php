@@ -2,6 +2,13 @@
     // Titre de la page
     $pageTitle = "Journée FORUM - Forum du Pays de Grasse";
     $currentPage = "Journée FORUM";
+
+    // Vérifier si l'utilisateur a accès au site
+    if (!isset($_SESSION['site_access_granted']) || $_SESSION['site_access_granted'] !== true) {
+        header('Location: /app/authentification');
+        exit();
+    }
+
     // Inclusion du header
     include 'parts/header.php';
 

@@ -2,6 +2,13 @@
     // Titre de la page
     $pageTitle = "Email Envoyé - Forum du Pays de Grasse";
     $currentPage = "Email Envoyé";
+
+    // Vérifier si l'utilisateur a accès au site
+    if (!isset($_SESSION['site_access_granted']) || $_SESSION['site_access_granted'] !== true) {
+        header('Location: /app/authentification');
+        exit();
+    }
+    
     // Inclusion du header
     include 'parts/header.php';
 ?>

@@ -1,4 +1,10 @@
 <?php
+// Vérifier si l'utilisateur a accès au site
+if (!isset($_SESSION['site_access_granted']) || $_SESSION['site_access_granted'] !== true) {
+    header('Location: /app/authentification');
+    exit();
+}
+
 $password = "Motdepasse123*"; // Changez ceci pour le mot de passe que vous voulez utiliser
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 // echo $hashed_password;

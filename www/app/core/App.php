@@ -24,7 +24,8 @@ class App {
             'associations_animationsloisirs' => 'AnimationsLoisirsController',
             'associations_artsculture' => 'ArtsCultureController',
             'associations_bienetre' => 'BienEtreController',
-            'associations_humanitaires' => 'HumanitaireController'
+            'associations_humanitaires' => 'HumanitaireController',
+            'authentification' => 'PasswordProtectController'
         ];
 
         // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut

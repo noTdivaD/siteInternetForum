@@ -1,3 +1,18 @@
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 80px; /* Hauteur du header */
+    padding-bottom: 80px; /* Hauteur du footer */
+}
+
+.banner{
+    z-index: 1;
+}
+
+
 .forgotpassword-container {
     background: white;
     padding: 25px 50px 25px 50px;

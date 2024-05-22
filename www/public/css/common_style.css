@@ -25,17 +25,3 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background-color: #921b1f;  /* couleur de fond du thumb lors du survol */
 }
-
-.main-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    padding-top: 80px; /* Hauteur du header */
-    padding-bottom: 80px; /* Hauteur du footer */
-}
-
-.banner{
-    z-index: 1;
-}

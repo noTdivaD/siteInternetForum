@@ -3,6 +3,12 @@
 $pageTitle = "Accueil - Forum du Pays de Grasse";
 $currentPage = "Accueil";
 
+// Vérifier si l'utilisateur a accès au site
+if (!isset($_SESSION['site_access_granted']) || $_SESSION['site_access_granted'] !== true) {
+    header('Location: /app/authentification');
+    exit();
+}
+
 // Inclusion du header
 require_once BASE_PATH . '/app/view/parts/header.php';
 
