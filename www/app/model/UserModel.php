@@ -72,7 +72,22 @@ class UserModel {
         $resetLink = "http://" . $_SERVER['HTTP_HOST'] . "/app/mdp_reinitialise?email=" . urlencode($email) . "&token=" . $token;
 
         $subject = "Réinitialisation de votre mot de passe";
-        $message = "Veuillez cliquer sur le lien suivant pour réinitialiser votre mot de passe (expire dans 5 minutes) : " . $resetLink;
+        
+        $message = "
+            <html>
+            <head>
+                <title>Réinitialisation de votre mot de passe</title>
+            </head>
+            <body>
+                <p>Bonjour,</p>
+                <p>Vous avez demandé à réinitialiser votre mot de passe. Veuillez cliquer sur le lien suivant pour réinitialiser votre mot de passe (ce lien expire dans 5 minutes) :</p>
+                <p><a href='$resetLink'>$resetLink</a></p>
+                <p>Si vous n'avez pas demandé cette réinitialisation, vous pouvez ignorer cet email.</p>
+                <p>Cordialement,</p>
+                <p>Assoforum Pays de Grasse</p>
+            </body>
+            </html>
+        ";
 
         return SendMailModel::getInstance()->sendMail($email, $subject, $message);
     }
@@ -97,7 +112,7 @@ class UserModel {
 
     public function sendMailtoForum($firstname, $lastname, $email, $subject, $message) {
         // Adresse Email du destinataire
-        $to = "marin.lafitte08@gmail.com";
+        $to = "contact@assoforum-paysdegrasse.com";
     
         // Construction du corps du message en HTML
         $body = "<p>Prénom: $firstname</p>";

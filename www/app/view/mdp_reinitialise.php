@@ -1,9 +1,10 @@
 <?php
+/*
 // Vérifier si l'utilisateur a accès au site
 if (!isset($_SESSION['site_access_granted']) || $_SESSION['site_access_granted'] !== true) {
     header('Location: /app/authentification');
     exit();
-}
+} */
 ?>
 
 <!DOCTYPE html>

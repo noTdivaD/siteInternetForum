@@ -1,11 +1,26 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    height: 100vh;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+    box-sizing: border-box; /* Ensures padding and borders are included in width */
+}
+
 .container {
     position: relative;
     display: flex;
@@ -17,19 +32,24 @@ body {
     color: white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background: #b21f25;
+    flex-direction: row;
 }
+
 .text {
     max-width: 50%;
     padding: 20px;
     background: #b21f25;
 }
+
 .text h1 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
 }
+
 .text p {
     font-size: 1.2em;
 }
+
 .btn {
     display: inline-block;
     margin-top: 20px;
@@ -40,208 +60,89 @@ body {
     border-radius: 5px;
     font-weight: bold;
 }
+
 .btn:hover {
     background-color: #d40813;
 }
+
 .swiper {
     width: 100%;
     height: 100%;
-  }
+}
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .swiper-slide img {
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 3; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    font-family: Arial, sans-serif;
-    justify-content: center;
-    align-items: center;
 }
 
-.modal-content {
-    position: relative;
-    background: white;
-    padding: 25px 50px;
-    border-radius: 5px;
-    border: 2px solid #888;
-    box-shadow: 0px 20px 50px rgba(0,0,0,0.5);
-    width: 60%;
-    margin: auto; /* Centrage du conteneur sur la page */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrage des éléments dans le conteneur */
-    overflow-y: auto; /* Permet le défilement vertical si le contenu est trop long */
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .text {
+        max-width: 100%;
+        width: 100%;
+        padding: 20px 0px 20px 0px;
+        text-align: center;
+    }
+    .swiper {
+        width: 100%;
+        height: auto;
+        flex: none;
+    }
 }
 
-.close {
-    color: #aaa;
-    position: absolute; /* Position absolue par rapport à modal-content */
-    top: 0px;
-    right: 10px;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer; /* Ajoute un curseur pointeur pour indiquer l'action */
+@media (max-width: 768px) {
+    .text h1 {
+        font-size: 2em;
+    }
+    .text p {
+        font-size: 1em;
+    }
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+    .text {
+        padding: 20px 0px 20px 0px;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+    .swiper-slide img {
+        height: auto;
+    }
 }
 
-.modal-content h2 {
-    font-size: 30px;
-    margin-bottom: 20px; /* Espace après le titre */
-}
-
-#addArticleForm {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrage des éléments dans le conteneur */
-}
-
-#editArticleForm {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrage des éléments dans le conteneur */
-}
-
-.form-group {
-    width: 100%; /* Assure que le groupe de formulaires utilise toute la largeur du conteneur */
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 10px; /* Espacement au-dessus des champs de formulaire */
-}
-
-input[type="text"], input[type="file"], textarea {
-    width: 100%; /* Utilise toute la largeur */
-    padding: 10px;
-    margin-bottom: 20px; /* Espacement entre les champs */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    display: block;
-    box-sizing: border-box;
-}
-
-textarea {
-    height: 200px;
-}
-
-#addArticleForm button.add-article-btn {
-    width: 40%; /* Auto width to center */
-    padding: 10px 20px;
-    background-color: #b21f24;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 30px; /* Espace avant le bouton */
-}
-
-#addArticleForm button.add-article-btn:hover {
-    background-color: #921b1f;
-}
-
-#editArticleForm button.edit-article-btn {
-    width: 40%; /* Auto width to center */
-    padding: 10px 20px;
-    background-color: #b21f24;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 30px; /* Espace avant le bouton */
-}
-
-#editArticleForm button.edit-article-btn {
-    background-color: #921b1f;
-}
-
-/* Styles pour la checkbox */
-.form-group-checkbox {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.form-group-checkbox input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-.form-group-checkbox label {
-    margin: 0;
-}
-
-/* Styles pour le champ de dépôt de fichier */
-.drop-zone {
-    border: 2px dashed #ccc;
-    border-radius: 4px;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.drop-zone:hover {
-    background-color: #f0f0f0;
-}
-
-.drop-zone .drop-zone__input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.drop-zone__thumb {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-.drop-zone__prompt {
-    font-size: 16px;
-    color: #999;
-}
-
-.drop-zone.highlight {
-    background-color: #e9e9e9;
-}
-
-.drop-zone.dragover {
-    background-color: #f0f0f0;
-    border-color: #333;
+@media (max-height: 810px) {
+    .main-content{
+        padding-top: 250px;
+    }
+    .container {
+        width: 100%;
+    }
+    .text {
+        padding: 20px 0px 20px 0px;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+    .swiper-slide img {
+        height: auto;
+    }
 }

@@ -23,24 +23,24 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <div class="main-content">
-<div class=container>
-<div class="swiper-container">
+
+    <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <h2>Journée FORUM</h2>
                 <div class="content">
                     <img src="/public/images/imagesForum/1.JPG" alt="Facebook">
-                    <p>Venez découvrir les diverses associations locales, rencontrer les membres et participer à des activités passionnantes. C'est une occasion parfaite pour en apprendre davantage sur les initiatives locales et peut-être même rejoindre une association qui vous tient à cœur.</p>
+                    <p>Le forum des associations est un événement annuel organisé par l'association FORUM chaque automne. Ce rassemblement permet aux adhérents et aux nouvelles associations de se faire connaître du grand public à travers des stands et des animations diverses. C'est une opportunité unique pour découvrir les associations locales, rencontrer leurs membres et participer à des activités passionnantes. Vous pourrez en apprendre davantage sur les initiatives locales et trouver l'association qui correspond à vos intérêts. Le forum des associations est l'occasion parfaite pour s'engager dans la vie associative de votre communauté.</p>
                 </div>
-                <a href="#">En savoir plus</a>
+                <a href="journee_forum">En savoir plus</a>
             </div>
             <div class="swiper-slide">
                 <h2>Annuaire des associations</h2>
                 <div class="content">
                     <img src="/public/images/imagesForum/2.JPG" alt="Facebook">
-                    <p>Placeholder de la description</p>
+                    <p>L'annuaire des associations est une ressource précieuse qui regroupe une liste étendue d'associations classées par différents thèmes et sujets. Conçu pour faciliter l'accès aux informations essentielles, cet annuaire permet de découvrir diverses organisations locales. Chaque entrée inclut des détails sur les activités, les coordonnées et les objectifs de l'association, offrant ainsi une vue d'ensemble complète pour ceux qui cherchent à s'informer ou à s'engager dans la vie associative de leur communauté. Que vous soyez intéressé par la culture, le sport, l'environnement ou toute autre cause, l'annuaire des associations vous aide à trouver l'organisation qui correspond à vos intérêts.</p>
                 </div>
-                <a href="#">En savoir plus</a>
+                <a href="annuaire_associations">En savoir plus</a>
             </div>
             <div class="swiper-slide">
                 <h2>Rencontres associatives</h2>
@@ -51,52 +51,42 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                 <a href="#">En savoir plus</a>
             </div>  
             <div class="swiper-slide">
-                <h2>Conférences</h2>
+                <h2>Collège d'Experts</h2>
                 <div class="content">
                     <img src="/public/images/imagesForum/1.JPG" alt="Facebook">
                     <p>Placeholder de la description</p>
                 </div>
                 <a href="#">En savoir plus</a>
+            </div>
+            <div class="swiper-slide">
+                <h2>Agenda des Associations</h2>
+                <div class="content">
+                    <img src="/public/images/imagesForum/3.JPG" alt="Facebook">
+                    <p>Les agendas des associations constituent un calendrier complet référençant toutes les activités et événements organisés par les associations locales. Cette ressource permet de trier les événements par type d'association ainsi que par période, que ce soit par mois, par semaine, ou plus. Les agendas facilitent ainsi la planification et la participation aux diverses activités associatives. Que vous souhaitiez découvrir des événements culturels, sportifs, environnementaux ou autres, les agendas des associations vous offrent une vue d'ensemble pratique pour vous engager pleinement dans la vie associative de votre communauté.</p>
+                </div>
+                <a href="#">En savoir plus</a>
             </div>  
+            <div class="swiper-slide">
+                <h2>Flash Info et Informations Utiles</h2>
+                <div class="content">
+                    <img src="/public/images/imagesForum/2.JPG" alt="Facebook">
+                    <p>Cette section fournit des informations pratiques pour les résidents du Pays de Grasse. Découvrez la Recyclerie mobile du SMED, en partenariat avec Soli-Cités, qui récupère et transforme des objets réutilisables chaque mois dans les déchèteries locales. Les associations locales sont encouragées à participer au tri sélectif des déchets, recyclant plastiques, métaux, papiers, cartons et verre. Le dispositif "Cliiink" permet de cumuler des points en triant le verre, échangeables contre des réductions chez les commerçants partenaires. Des informations sur la SACEM expliquent les droits d'auteur et leur gestion, essentielle pour les créateurs. Cette rubrique aide à rester informé et engagé dans la vie locale.</p>
+                </div>
+                <a href="#">En savoir plus</a>
+            </div>
             <div class="swiper-slide">
                 <h2>Site internet et Facebook</h2>
                 <div class="content">
                     <img src="/public/images/imagesForum/2.JPG" alt="Facebook">
-                    <p>Placeholder de la description</p>
+                    <p>Le site internet et la page Facebook du Pays de Grasse sont des ressources essentielles pour rester informé sur les actualités locales, les événements et les initiatives communautaires. Sur le site, vous trouverez des informations détaillées sur les services municipaux, les projets en cours, et des outils pratiques pour les citoyens. La page Facebook, quant à elle, offre des mises à jour en temps réel, des annonces d'événements et des opportunités de participation. C'est une plateforme interactive où les résidents peuvent poser des questions, partager des idées et s'engager avec leur communauté. Suivez-nous en ligne pour ne rien manquer des activités et des nouvelles du Pays de Grasse.</p>
                 </div>
-                <a href="#">En savoir plus</a>
-            </div>  
-            <div class="swiper-slide">
-                <h2>Manifestations ponctuelles, sorties associatives</h2>
-                <div class="content">
-                    <img src="/public/images/imagesForum/3.JPG" alt="Facebook">
-                    <p>Placeholder de la description</p>
-                </div>
-                <a href="#">En savoir plus</a>
-            </div>  
-            <div class="swiper-slide">
-                <h2>Annuaire des associations</h2>
-                <div class="content">
-                    <img src="/public/images/imagesForum/1.JPG" alt="Facebook">
-                    <p>Placeholder de la description</p>
-                </div>
-                <a href="#">En savoir plus</a>
-            </div>  
-            <div class="swiper-slide">
-                <h2>Collège d'experts</h2>
-                <div class="content">
-                    <img src="/public/images/imagesForum/2.JPG" alt="Facebook">
-                    <p>Placeholder de la description</p>
-                </div>
-                <a href="#">En savoir plus</a>
-            </div>  
+                <a href="https://www.facebook.com/forum.grasse.paysdegrasse" target="new_blank">En savoir plus</a>
+            </div>    
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
-
-
 
     <div class="article-section">
         <?php
@@ -104,7 +94,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
             foreach ($articles as $article) {
                 echo '<div class="article" data-article-id="' . htmlspecialchars($article['id'], ENT_QUOTES, 'UTF-8') . '">';
                 echo '<h2>' . html_entity_decode($article['title'], ENT_QUOTES, 'UTF-8') . '</h2>';
-                echo '<div class="article-content">' . nl2br(html_entity_decode($article['content'], ENT_QUOTES, 'UTF-8')) . '</div>';
+                echo '<div class="article-content">' . html_entity_decode($article['content'], ENT_QUOTES, 'UTF-8') . '</div>';
                 if (!empty($article['image_url'])) {
                     echo '<img src="' . htmlspecialchars($article['image_url'], ENT_QUOTES, 'UTF-8') . '" alt="Image de l\'article">';
                 }
