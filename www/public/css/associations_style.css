@@ -11,6 +11,11 @@
     align-items: center;
 }
 
+.main-content{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
 .association-list {
     width: 100%;
     list-style-type: none;

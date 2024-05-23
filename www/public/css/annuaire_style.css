@@ -6,6 +6,14 @@ body {
     min-height: 100vh;
 }
 
+header{
+    z-index: 2;
+}
+
+.main-content{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
 
 .annuaire-container {
     background: white;
