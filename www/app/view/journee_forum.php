@@ -43,16 +43,16 @@
 <div id="editArticleModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Éditer la page</h2>
+        <h2>Éditer le contenu</h2>
         <form id="editArticleForm">
             <input type="hidden" id="edit-article-id" name="article_id">
             <div id="edit_error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
             <div class="form-group">
-                <label for="edit-title">Titre de l'article:</label>
+                <label for="edit-title">Titre:</label>
                 <input type="text" id="edit-title" name="title" required>
             </div>
             <div class="form-group">
-                <label for="edit-content">Contenu de l'article:</label>
+                <label for="edit-content">Contenu:</label>
                 <textarea id="edit-content" name="content" required></textarea>
             </div>
             <div class="form-group">
