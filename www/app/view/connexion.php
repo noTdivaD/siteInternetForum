@@ -18,6 +18,7 @@
     <div class="login-container">
         <h2>Connexion</h2>
         <form action="/app/connexion/login" method="POST" id="form-login">
+            <div id="success_message" style="text-align: center; margin-bottom: 10px; color: green;"></div>
             <div id="error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
             <div class="form-group">
                 <label for="email">Adresse Email:</label>

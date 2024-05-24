@@ -25,7 +25,10 @@ class App {
             'associations_artsculture' => 'ArtsCultureController',
             'associations_bienetre' => 'BienEtreController',
             'associations_humanitaires' => 'HumanitaireController',
-            'authentification' => 'PasswordProtectController'
+            'authentification' => 'PasswordProtectController',
+            'verify_email' => 'VerifyEmailController',
+            'email_verified' => 'EmailConfirmedController',
+            'email_verification_failed' => 'EmailConfirmationErrorController'
         ];
 
         // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut

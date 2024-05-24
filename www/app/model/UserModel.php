@@ -167,5 +167,64 @@ class UserModel {
     public function getLastInsertId() {
         return $this->db->lastInsertId();
     }
+
+    public function generateEmailVerificationToken($email) {
+        $token = bin2hex(random_bytes(16)); // Génération du token
+        $expiry = new DateTime('+24 hours'); // Expire dans 24h
+
+        $stmt = $this->db->prepare(
+            "INSERT INTO email_verification_tokens (email, token, expiry) VALUES (?, ?, ?) 
+            ON DUPLICATE KEY UPDATE token = VALUES(token), expiry = VALUES(expiry)"
+        );
+
+        $stmt->execute([$email, $token, $expiry->format('Y-m-d H:i:s')]);
+
+        return $token;
+    }
+
+   // Vérification token
+    public function verifyEmailVerificationToken($token) {
+        // Récupérer le mail associé au token
+        $stmt = $this->db->prepare("SELECT email FROM email_verification_tokens WHERE token = ? AND expiry > NOW()");
+        $stmt->execute([$token]);
+        $email = $stmt->fetchColumn();
+
+        if ($email !== false) {
+            // Mettre à jour le statut "verified" du compte dans la table "utilisateurs"
+            $this->markUserAsVerified($email);
+
+            // Supprimer le token de la table "email_verification_tokens"
+            $this->deleteEmailVerificationToken($email, $token);
+
+            return true;
+        }
+
+        return false;
+    }
+
+    // Marque l'utilisateur en tant que vérifié
+    private function markUserAsVerified($email) {
+        $stmt = $this->db->prepare("UPDATE utilisateurs SET verified = 1 WHERE email = ?");
+        $stmt->execute([$email]);
+    }
+
+    // Suppression du token
+    private function deleteEmailVerificationToken($email, $token) {
+        $stmt = $this->db->prepare("DELETE FROM email_verification_tokens WHERE email = ? AND token = ?");
+        $stmt->execute([$email, $token]);
+    }
+
+    // Envoi du mail
+    public function sendEmail($email, $subject, $message) {
+        return SendMailModel::getInstance()->sendMail($email, $subject, $message);
+    }
+
+    // Méthode pour vérifier si l'utilisateur est vérifié
+    public function isUserVerified($email) {
+        $stmt = $this->db->prepare("SELECT verified FROM utilisateurs WHERE email = ?");
+        $stmt->execute([$email]);
+        $verified = $stmt->fetchColumn();
+        return $verified == 1; // Retourne true si l'utilisateur est vérifié, sinon false
+    }
 }
 ?>
