@@ -226,5 +226,27 @@ class UserModel {
         $verified = $stmt->fetchColumn();
         return $verified == 1; // Retourne true si l'utilisateur est vérifié, sinon false
     }
+
+    public function generateTokenIfNeeded($email) {
+        // Vérifier d'abord si l'utilisateur a un token existant non expiré
+        $stmt = $this->db->prepare("SELECT token FROM email_verification_tokens WHERE email = ? AND expiry > NOW()");
+        $stmt->execute([$email]);
+        $existingToken = $stmt->fetchColumn();
+    
+        if (!$existingToken) {
+            // Générer un nouveau token
+            $newToken = bin2hex(random_bytes(16)); // Génère un token sécurisé
+            $expiry = new DateTime('+24 hours'); // Définit l'expiration du token à 24 heures
+    
+            // Insérer le nouveau token dans la base de données
+            $stmt = $this->db->prepare("INSERT INTO email_verification_tokens (email, token, expiry) VALUES (?, ?, ?)");
+            $stmt->execute([$email, $newToken, $expiry->format('Y-m-d H:i:s')]);
+    
+            return $newToken; // Retourner le nouveau token généré
+        }
+    
+        // S'il y a déjà un token valide, retourner null
+        return null;
+    }
 }
 ?>
