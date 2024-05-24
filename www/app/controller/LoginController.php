@@ -8,32 +8,66 @@ class LoginController {
     public function login() {
         require_once BASE_PATH . '/init.php'; 
         require_once BASE_PATH . '/app/model/UserModel.php';
-
+    
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
             $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
-
+    
             // Vérifiez que les champs ne sont pas vides
             if (!empty($email) && !empty($password) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $userModel = new UserModel();
-
+    
+                // Vérifiez si le cooldown est expiré
+                $loginCooldown = 180; // 3 minutes en secondes
+                $maxLoginAttempts = 5;
+    
+                if (isset($_SESSION['login_attempts']) && isset($_SESSION['last_login_attempt_time'])) {
+                    $lastLoginAttemptTime = $_SESSION['last_login_attempt_time'];
+                    $loginAttempts = $_SESSION['login_attempts'];
+    
+                    // Vérifiez si le cooldown est expiré
+                    if (time() - $lastLoginAttemptTime > $loginCooldown) {
+                        // Le cooldown est expiré, réinitialisez les tentatives de connexion
+                        $_SESSION['login_attempts'] = 1;
+                        $_SESSION['last_login_attempt_time'] = time();
+                    } else {
+                        // Le cooldown n'est pas expiré, vérifiez si le nombre maximum de tentatives de connexion est dépassé
+                        if ($loginAttempts >= $maxLoginAttempts) {
+                            header("Location: /app/connexion?error=" . urlencode("Vous avez atteint le nombre maximal de tentatives de connexion. Veuillez réessayer plus tard."));
+                            exit();
+                        }
+                    }
+                } else {
+                    // Première tentative de connexion
+                    $_SESSION['login_attempts'] = 1;
+                    $_SESSION['last_login_attempt_time'] = time();
+                }
+    
+                // Vérifiez les identifiants de l'utilisateur
+                $isValid = $userModel->validateUser($email, $password);
+    
+                if (!$isValid) {
+                    // Identifiants incorrects, incrémentez le nombre de tentatives de connexion
+                    if (isset($_SESSION['login_attempts'])) {
+                        $_SESSION['login_attempts']++;
+                    } else {
+                        $_SESSION['login_attempts'] = 1;
+                    }
+                    $_SESSION['last_login_attempt_time'] = time();
+                    header("Location: /app/connexion?error=" . urlencode("Identifiants incorrects, veuillez réessayer."));
+                    exit();
+                }
+    
                 // Vérifie si l'utilisateur est vérifié
                 if ($userModel->isUserVerified($email)) {
-                    // Utilisateur vérifié, vérifiez les identifiants
-                    $isValid = $userModel->validateUser($email, $password);
-
-                    if ($isValid) {
-                        $userType = $userModel->getUserType($email);
-                        $_SESSION['user_logged_in'] = true; 
-                        $_SESSION['user_email'] = $email;
-                        $_SESSION['user_type'] = $userType;
-                        $userModel->updateLastLogin($email); // Mise à jour de la dernière connexion
-                        header("Location: /app/accueil_upgrade"); // Redirigez vers la page d'accueil
-                        exit();
-                    } else {
-                        header("Location: /app/connexion?error=" . urlencode("Identifiants invalides, veuillez réessayer."));
-                        exit();
-                    }
+                    // Utilisateur vérifié, connectez-le
+                    $userType = $userModel->getUserType($email);
+                    $_SESSION['user_logged_in'] = true; 
+                    $_SESSION['user_email'] = $email;
+                    $_SESSION['user_type'] = $userType;
+                    $userModel->updateLastLogin($email); // Mise à jour de la dernière connexion
+                    header("Location: /app/accueil_upgrade"); // Redirigez vers la page d'accueil
+                    exit();
                 } else {
                     // Si l'utilisateur n'est pas vérifié, génère un nouveau token si nécessaire
                     $newToken = $userModel->generateTokenIfNeeded($email);
@@ -47,12 +81,12 @@ class LoginController {
                             // Erreur lors de l'envoi de l'e-mail
                             $error = "Erreur lors de l'envoi de l'e-mail du token. Veuillez réessayer ultérieurement.";
                         } else {
-                            // Redirection vers la page de connexion
+                            // Redirection vers la page de connexion avec un message de succès
                             header('Location: /app/connexion?success=check_email');
                             exit();
                         }
                     } else {
-                        // Redirige vers une page d'erreur indiquant que l'utilisateur doit vérifier son e-mail
+                        // Redirection vers une page d'erreur indiquant que l'utilisateur doit vérifier son e-mail
                         header("Location: /app/connexion?error=" . urlencode("Votre compte n'a pas encore été vérifié. Veuillez vérifier votre adresse email avant de vous connecter."));
                         exit();
                     }
