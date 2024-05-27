@@ -46,7 +46,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                 <h2>Rencontres associatives</h2>
                 <div class="content">
                     <img src="/public/images/imagesForum/3.JPG" alt="Facebook">
-                    <p>Placeholder de la description</p>
+                    <p>Les Rencontres Associatives sont des événements hebdomadaires organisés tous les vendredis. Initialement tenues dans un bar, ces rencontres se déroulent désormais sous forme de pique-nique convivial. Chaque semaine, un représentant de différentes associations locales se réunit pour échanger et tisser des liens. Lors de ces rencontres, une association est mise à l'honneur, présentant ses objectifs, ses activités et ses projets. L'objectif principal est de favoriser les interactions et les collaborations entre les diverses associations de la région, enrichissant ainsi le tissu associatif local.</p>
                 </div>
                 <a href="#">En savoir plus</a>
             </div>  
@@ -54,7 +54,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                 <h2>Collège d'Experts</h2>
                 <div class="content">
                     <img src="/public/images/imagesForum/1.JPG" alt="Facebook">
-                    <p>Placeholder de la description</p>
+                    <p>La page Collège d'Experts est dédiée à la mise en relation des associations avec des experts, qu'ils soient internes ou externes à notre organisation. Ce service vise à offrir un soutien précieux aux associations, en leur fournissant des conseils et des connaissances pratiques sur divers sujets essentiels. Que ce soit pour créer une association, remplir les documents nécessaires, développer un site web, ou apprendre à communiquer efficacement avec la presse, nos experts sont là pour vous guider. La page proposera des rubriques thématiques, semblables à une FAQ, pour répondre aux questions fréquentes et offrir des conseils structurés.</p>
                 </div>
                 <a href="#">En savoir plus</a>
             </div>
