@@ -18,7 +18,7 @@ class App {
             'deconnexion' => 'LogoutController',
             'mdp_email_envoye' => 'SentResetEmailController',
             'forum_email_envoye' => 'SentForumEmailController',
-            'journee_forum' => 'ForumController',
+            'journee_forum' => 'JourneeForumController',
             'annuaire_associations' => 'AnnuaireController',
             'associations_sports' => 'SportsController',
             'associations_animationsloisirs' => 'AnimationsLoisirsController',
