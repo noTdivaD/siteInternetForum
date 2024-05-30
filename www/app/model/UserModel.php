@@ -134,7 +134,7 @@ class UserModel {
     }
 
     // Créer un nouvel utilisateur
-    public function createUser($nom, $prenom, $email, $password, $date_naissance, $adresse, $ville, $code_postal, $pays, $type = 'utilisateur', $photo_profil = 'adressephotodeprofil') {
+    public function createUser($nom, $prenom, $email, $password, $date_naissance, $adresse, $ville, $code_postal, $pays, $type = 'utilisateur', $photo_profil = BASE_URL . '/upload/default_pp.png') {
         try {
             $password_hash = password_hash($password, PASSWORD_DEFAULT); // Hachage du mot de passe
             $stmt = $this->db->prepare("INSERT INTO utilisateurs (nom, prenom, email, password, date_naissance, adresse, ville, code_postal, pays, type, photo_profil) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");

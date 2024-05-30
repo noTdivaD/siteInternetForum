@@ -16,7 +16,7 @@
                 $date_naissance = date('Y-m-d', strtotime($date_naissance)); // Reformate la date
                 $adresse = filter_input(INPUT_POST, 'adresse', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                 $ville = filter_input(INPUT_POST, 'ville', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-                $code_postal = filter_input(INPUT_POST, 'code_postal', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+                $code_postal = filter_input(INPUT_POST, 'codePostal', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                 $pays = filter_input(INPUT_POST, 'pays', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
                 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);

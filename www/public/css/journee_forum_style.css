@@ -50,6 +50,22 @@ body {
     font-size: 1.2em;
 }
 
+.btn-inscription {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;    
+}
+
+.btn-inscription:hover {
+    background-color: #d40813;
+}
+
+
 .btn {
     display: inline-block;
     margin-top: 20px;
@@ -59,6 +75,8 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    border: none;
+    font-size: 16.3px;
 }
 
 .btn:hover {
@@ -308,6 +326,9 @@ textarea {
     .btn {
         padding: 8px 16px;
     }
+    .btn-inscription {
+        padding: 8px 16px;
+    }
     .swiper-slide img {
         max-height: 200px; /* Further adjust for the smallest screens */
     }
@@ -334,6 +355,9 @@ textarea {
         padding: 20px 0px 20px 0px;
     }
     .btn {
+        padding: 8px 16px;
+    }
+    .btn-inscription {
         padding: 8px 16px;
     }
     .swiper-slide img {
