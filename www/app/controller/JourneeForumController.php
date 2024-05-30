@@ -84,9 +84,18 @@ class JourneeForumController {
                     error_log("Fichier non trouvé : " . $filePath);
                 }
             }
+
+            // Liste des extensions autorisées
+            $allowedfileExtensions = ['png', 'jpg', 'jpeg', 'gif'];
     
             // Ajouter les nouvelles images
             foreach ($newImages as $image) {
+                // Vérifier l'extension de l'image
+                $extension = strtolower(pathinfo($image['name'], PATHINFO_EXTENSION));
+                if (!in_array($extension, $allowedfileExtensions)) {
+                    throw new Exception('Extension de fichier non autorisée : ' . $extension);
+                }
+
                 // Générer un chemin unique pour l'image
                 $imagePath = '/upload/' . uniqid() . '.' . $image['extension'];
                 $filePath = $_SERVER['DOCUMENT_ROOT'] . $imagePath;
@@ -96,7 +105,7 @@ class JourneeForumController {
                 error_log("Nouvelle image ajoutée : " . $imagePath);
     
                 // Ajouter l'URL de la nouvelle image à la liste des images existantes
-                $existingImageUrls[] = 'http://localhost' . $imagePath;
+                $existingImageUrls[] = BASE_URL . $imagePath;
             }
     
             // Log l'état final des images

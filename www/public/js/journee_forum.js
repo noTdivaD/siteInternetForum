@@ -21,13 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
         return txt.value;
     }
 
-    // Fonction pour encoder le texte avec des sauts de ligne en HTML
-    function encodeHtml(text) {
-        var txt = document.createElement('textarea');
-        txt.innerHTML = text;
-        return txt.value.replace(/\n/g, "<br>");
-    }
-
     let newImages = [];
     let existingImages = [];
 
@@ -57,7 +50,11 @@ document.addEventListener("DOMContentLoaded", function() {
         // Récupérer les informations de l'article
         const articleId = 1; // Remplacez ceci par l'ID réel de l'article si nécessaire
         const articleTitle = decodeHtml(document.querySelector('.text h1').innerHTML);
-        const articleContent = decodeHtml(document.querySelector('.text p').innerHTML.replace(/<br\s*\/?>/gm, "\n"));
+        const articleContentHtml = document.querySelector('.text p').innerHTML;
+        
+        // Remplacer les balises <br> simples par des retours à la ligne (\n) et les doubles <br><br> par des doubles retours à la ligne (\n\n)
+        const articleContent = decodeHtml(articleContentHtml.replace(/<br\s*\/?>\s*<br\s*\/?>/gm, "\n\n").replace(/<br\s*\/?>/gm, "\n"));
+
         existingImages = Array.from(document.querySelectorAll('.swiper-slide img')).map(img => ({
             name: img.alt, // Remplacez ceci par le nom de l'image si nécessaire
             url: img.src,
@@ -206,17 +203,20 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
+        // Convertir les retours à la ligne en <br> et les doubles retours à la ligne en <br><br>
+        const contentHtml = content.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
+
         const formData = new FormData();
         formData.append('article_id', document.getElementById('edit-article-id').value);
         formData.append('title', title);
-        formData.append('content', content);
+        formData.append('content', contentHtml);
         formData.append('existing_images', JSON.stringify(existingImages));
         formData.append('new_images', JSON.stringify(newImages));
 
         console.log("Données envoyées :");
         console.log("ID de l'article :", document.getElementById('edit-article-id').value);
         console.log("Titre :", title);
-        console.log("Contenu :", content);
+        console.log("Contenu :", contentHtml);
         console.log("Images existantes :", JSON.stringify(existingImages));
         console.log("Nouvelles images :", JSON.stringify(newImages));
 
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (data.success) {
                 // Mise à jour des informations sur la page principale après la soumission réussie
                 document.querySelector('.text h1').innerText = title;
-                document.querySelector('.text p').innerHTML = encodeHtml(content);
+                document.querySelector('.text p').innerHTML = contentHtml;
                 const swiperWrapper = document.querySelector('.swiper-wrapper');
                 swiperWrapper.innerHTML = '';
                 existingImages.concat(newImages).forEach(image => {

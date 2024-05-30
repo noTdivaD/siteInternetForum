@@ -22,7 +22,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
         <div class="text">
             <h1><?php echo htmlspecialchars_decode($article['titre']); ?></h1>
             <p><?php echo nl2br(htmlspecialchars_decode($article['contenu'])); ?></p>
-            <a href="/app/inscription_journee_forum" class="btn">Bulletins d'inscription</a>
+            <a href="/app/inscription_journee_forum" class="btn-inscription">Bulletins d'inscription</a>
             <?php if ($isAdmin): ?>
                 <button class="btn edit-article-btn">Modifier l'article</button>
             <?php endif; ?>
