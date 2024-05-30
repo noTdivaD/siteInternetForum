@@ -1,19 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center; /* Centre le contenu horizontalement */
+}
+
+header {
+    z-index: 2;
+    width: 100%;
+}
+
+.main-content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 100%; /* Assure que le contenu principal occupe toute la largeur */
+}
+
 .association-section {
     background: white;
-    padding: 25px 20%;
+    padding: 25px 5%;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 80%;
-    max-width: 100vh;
+    width: 100%;
+    max-width: 1000px; /* Limite la largeur maximale pour éviter le débordement */
     margin: 40px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.main-content{
-    padding-top: 80px;
-    padding-bottom: 80px;
 }
 
 .association-list {
@@ -27,7 +42,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: row;
+    width: 100%;
 }
 
 .association-item {
@@ -38,8 +53,7 @@
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     text-align: center;
 }
@@ -50,22 +64,23 @@
     margin-bottom: 10px;
 }
 
-.association-item td {
+.association-item table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.association-item th, .association-item td {
     color: #666;
     font-size: 16px;
     line-height: 1.5;
-    padding: 0 50px 0 50px;
-}
-
-.association-item h2,
-.association-item td {
-    width: 100%;
-    white-space: nowrap;
-    margin-right: 20px;
+    padding: 8px;
+    border: none; /* Supprimer les bordures */
+    text-align: center;
 }
 
 .association-item img {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
     border-radius: 4px;
     margin-top: 10px;
@@ -81,7 +96,10 @@
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s;
-    margin-left: 20px;
+    text-align: center; /* Centre le texte horizontalement */
+    display: flex; /* Utilise flexbox */
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center; /* Centre le texte horizontalement */
 }
 
 .association-item a:hover {
@@ -98,6 +116,10 @@
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s;
+    text-align: center; /* Centre le texte horizontalement */
+    display: flex; /* Utilise flexbox */
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center; /* Centre le texte horizontalement */
 }
 
 .back-to-directory:hover,
@@ -105,18 +127,9 @@
     background-color: darkred;
 }
 
-.back-to-directory {
-    top: 20px;
-    left: 20px;
-}
-
-.back-to-top {
-    bottom: 20px;
-    right: 20px;
-}
-
-h1{
+h1 {
     text-align: center;
+    width: 100%; /* Assure que le titre occupe toute la largeur */
 }
 
 /* Barre de recherche */
@@ -124,15 +137,17 @@ h1{
     margin-bottom: 20px; /* Ajouter un espace en bas */
     display: flex;
     align-items: center;
+    justify-content: center; /* Centre le formulaire horizontalement */
+    width: 100%;
+    max-width: 600px; /* Limite la largeur maximale du formulaire */
 }
 
 #search-input {
     padding: 8px 16px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    width: 190px;
+    flex: 1; /* Permet à l'input de prendre l'espace restant */
     margin-right: 10px; /* Ajouter un espacement à droite */
-    flex: 1; /* Faites en sorte que l'input occupe tout l'espace disponible */
 }
 
 #search-input::placeholder {
@@ -152,83 +167,235 @@ h1{
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s; /* Transition pour une animation fluide */
+    text-align: center; /* Centre le texte horizontalement */
+    display: flex; /* Utilise flexbox */
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center; /* Centre le texte horizontalement */
 }
 
-#search-button:hover {
-    background-color: darkred;
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .association-section {
+        padding: 25px 5%;
+        width: 90%;
+    }
+
+    .association-item {
+        flex-direction: column;
+    }
+    
+    .association-item h2, 
+    .association-item td {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .association-item img {
+        max-width: 100%;
+    }
 }
 
-/* Styles spécifiques pour sports */
-.sports .association-item a,
-.sports .back-to-directory,
-.sports .back-to-top,
-.sports #search-button {
-    background-color: #305cb4;
+@media (max-width: 768px) {
+    .association-section {
+        width: 90%;
+        padding: 25px 5%;
+    }
+
+    #search-input {
+        width: auto;
+    }
+
+    .association-item {
+        flex-direction: column;
+    }
+
+    .association-item h2, 
+    .association-item td {
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .association-item img {
+        max-width: 80%;
+        margin: 20px 0;
+    }
 }
 
-.sports .association-item a:hover,
-.sports .back-to-directory:hover,
-.sports .back-to-top:hover,
-.sports #search-button:hover {
-    background-color: #1f3c7f;
+@media (max-width: 666px) {
+    .association-section {
+        width: 90%;
+        padding: 25px 3.5%;
+    }
+
+    #search-input {
+        width: auto;
+    }
+
+    .association-item {
+        flex-direction: column;
+    }
+
+    .association-item h2, 
+    .association-item td {
+        text-align: center;
+        padding: 8px 15px;
+    }
+
+    .association-item img {
+        max-width: 80%;
+        margin: 15px 0;
+    }
 }
 
-/* Styles spécifiques pour animations et loisirs */
-.animations-loisirs .association-item a,
-.animations-loisirs .back-to-directory,
-.animations-loisirs .back-to-top,
-.animations-loisirs #search-button {
-    background-color: #ffac4c;
+@media (max-width: 588px) {
+    .association-section {
+        width: 90%;
+        padding: 25px 2%;
+    }
+
+    .association-item {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .association-item h2 {
+        font-size: 14px;
+    }
+
+    .association-item td {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .association-item img {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    #search-input {
+        padding: 6px 12px;
+    }
+
+    #search-button {
+        padding: 6px 12px;
+    }
 }
 
-.animations-loisirs .association-item a:hover,
-.animations-loisirs .back-to-directory:hover,
-.animations-loisirs .back-to-top:hover,
-.animations-loisirs #search-button:hover {
-    background-color: #d98719;
+@media (max-width: 480px) {
+    .association-section {
+        width: 90%;
+        padding: 25px 2%;
+    }
+
+    .association-item {
+        flex-direction: column;
+        padding: 7.5px;
+    }
+
+    .association-item h2 {
+        font-size: 14px;
+    }
+
+    .association-item th {
+        font-size: 12px;
+        padding: 2.5px 5px;
+    }
+
+    .association-item td {
+        font-size: 10px;
+        padding: 2.5px 5px;
+    }
+
+    .association-item img {
+        max-width: 100%;
+        margin: 5px 0;
+    }
+
+    #search-input {
+        padding: 3px 6px;
+    }
+
+    #search-button {
+        padding: 3px 6px;
+    }
 }
 
-/* Styles spécifiques pour arts et culture */
-.arts-culture .association-item a,
-.arts-culture .back-to-directory,
-.arts-culture .back-to-top,
-.arts-culture #search-button {
-    background-color: #70c474;
+@media (max-width: 400px) {
+    .association-section {
+        width: 90%;
+        padding: 25px 2%;
+        font-size: 75%;
+    }
+
+    .association-item {
+        flex-direction: column;
+        padding: 7.5px;
+    }
+
+    .association-item h2 {
+        font-size: 10px;
+    }
+
+    .association-item th {
+        font-size: 7px;
+        padding: 2.5px 5px;
+    }
+
+    .association-item td {
+        font-size: 7px;
+        padding: 2.5px 5px;
+    }
+
+    .association-item img {
+        max-width: 100%;
+        margin: 5px 0;
+    }
+
+    #search-input {
+        padding: 3px 6px;
+    }
+
+    #search-button {
+        padding: 3px 6px;
+    }
 }
 
-.arts-culture .association-item a:hover,
-.arts-culture .back-to-directory:hover,
-.arts-culture .back-to-top:hover,
-.arts-culture #search-button:hover {
-    background-color: #57a660;
-}
+@media (max-width: 376px) {
+    .association-section {
+        width: 90%;
+        padding: 25px 2%;
+        font-size: 60%;
+    }
 
-/* Styles spécifiques pour bien-être */
-.bien-etre .association-item a,
-.bien-etre .back-to-directory,
-.bien-etre .back-to-top,
-.bien-etre #search-button {
-    background-color: #58ccb4;
-}
+    .association-item {
+        flex-direction: column;
+        padding: 7.5px;
+    }
 
-.bien-etre .association-item a:hover,
-.bien-etre .back-to-directory:hover,
-.bien-etre .back-to-top:hover,
-.bien-etre #search-button:hover {
-    background-color: #46a08e;
-}
+    .association-item h2 {
+        font-size: 10px;
+    }
 
-/* Styles spécifiques pour associations humanitaires */
-.humanitaire .association-item a,
-.humanitaire .back-to-directory,
-.humanitaire .back-to-top,
-.humanitaire #search-button {
-    background-color: #5844a4;
-}
+    .association-item th {
+        font-size: 7px;
+        padding: 2.5px 5px;
+    }
 
-.humanitaire .association-item a:hover,
-.humanitaire .back-to-directory:hover,
-.humanitaire .back-to-top:hover,
-.humanitaire #search-button:hover {
-    background-color: #3c2f78;
+    .association-item td {
+        font-size: 7px;
+        padding: 2.5px 5px;
+    }
+
+    .association-item img {
+        max-width: 100%;
+        margin: 5px 0;
+    }
+
+    #search-input {
+        padding: 3px 6px;
+    }
+
+    #search-button {
+        padding: 3px 6px;
+    }
 }

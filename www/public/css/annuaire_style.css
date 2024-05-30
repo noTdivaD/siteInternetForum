@@ -6,11 +6,11 @@ body {
     min-height: 100vh;
 }
 
-header{
+header {
     z-index: 2;
 }
 
-.main-content{
+.main-content {
     padding-top: 80px;
     padding-bottom: 80px;
 }
@@ -120,4 +120,43 @@ h1 {
 
 .humanitaire {
     background-image: url('/public/images/imagesAnnuaire/Humanitaire.jpg');
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .annuaire-container {
+        width: 90%;
+    }
+
+    .thematique {
+        width: 90%;
+        padding: 80px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+        padding: 15px 0;
+    }
+
+    .thematique {
+        font-size: 24px;
+        padding: 60px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .thematique {
+        font-size: 20px;
+        padding: 40px;
+        width: 60%;
+    }
 }
