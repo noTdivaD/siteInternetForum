@@ -65,6 +65,11 @@ class LoginController {
                     $_SESSION['user_logged_in'] = true; 
                     $_SESSION['user_email'] = $email;
                     $_SESSION['user_type'] = $userType;
+
+                    // Récupérer et stocker toutes les informations de l'utilisateur dans la session
+                    $userInfo = $userModel->getUserInfo($email);
+                    $_SESSION['user'] = $userInfo;
+
                     $userModel->updateLastLogin($email); // Mise à jour de la dernière connexion
                     header("Location: /app/accueil_upgrade"); // Redirigez vers la page d'accueil
                     exit();
@@ -98,3 +103,4 @@ class LoginController {
         }
     }
 }
+?>

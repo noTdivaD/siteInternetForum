@@ -92,7 +92,6 @@ class UserModel {
         return SendMailModel::getInstance()->sendMail($email, $subject, $message);
     }
 
-
     // Générer un token de réinitialisation de mot de passe
     public function generatePasswordResetToken($email) {
         $token = bin2hex(random_bytes(16)); // Génère un token sécurisé
@@ -158,10 +157,10 @@ class UserModel {
 
     // Récupérer les informations d'un utilisateur
     public function getUserInfo($email) {
-        $stmt = $this->db->prepare("SELECT * FROM utilisateurs WHERE email = ?");
+        $stmt = $this->db->prepare("SELECT id, email, password, type, photo_profil, date_naissance, adresse, ville, code_postal, pays, nom, prenom, date_derniere_connexion, created_at, updated_at, verified FROM utilisateurs WHERE email = ?");
         $stmt->execute([$email]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
+    }    
 
     // Récupérer l'id de l'utilisateur inscrit en dernier
     public function getLastInsertId() {
@@ -247,6 +246,20 @@ class UserModel {
     
         // S'il y a déjà un token valide, retourner null
         return null;
+    }
+
+    // Mettre à jour les informations de l'utilisateur
+    public function updateUserInfo($user_id, $firstname, $lastname, $address, $city, $postal_code, $country) {
+        $sql = "UPDATE utilisateurs SET prenom = ?, nom = ?, adresse = ?, ville = ?, code_postal = ?, pays = ? WHERE id = ?";
+        $stmt = $this->db->prepare($sql);
+        return $stmt->execute([$firstname, $lastname, $address, $city, $postal_code, $country, $user_id]);
+    }
+
+    // Mettre à jour la photo de profil de l'utilisateur
+    public function updateUserProfilePhoto($user_id, $photo_path) {
+        $sql = "UPDATE utilisateurs SET photo_profil = ? WHERE id = ?";
+        $stmt = $this->db->prepare($sql);
+        return $stmt->execute([$photo_path, $user_id]);
     }
 }
 ?>

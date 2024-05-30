@@ -1,11 +1,16 @@
 <?php
 require_once BASE_PATH . '/init.php';
+require_once BASE_PATH . '/lib/phpmailer/src/Exception.php';
+require_once BASE_PATH . '/lib/phpmailer/src/PHPMailer.php';
+require_once BASE_PATH . '/lib/phpmailer/src/SMTP.php';
 
 class JourneeForumModel {
     private $db;
+    private $mailModel;
 
     public function __construct() {
         $this->db = Database::getInstance();
+        $this->mailModel = SendMailModel::getInstance(); 
     }
 
     public function getArticleById($articleId) {
@@ -26,6 +31,49 @@ class JourneeForumModel {
         $stmt->bindParam(':content', $content, PDO::PARAM_STR);
         $stmt->bindParam(':images', $imagesJson, PDO::PARAM_STR);
         return $stmt->execute();
+    }
+
+    // Fonction pour inscrire un utilisateur dans la table inscription_journee_forum
+    public function registerUser($firstname, $lastname, $email, $address, $city, $postal_code) {
+        $sql = "INSERT INTO inscription_journee_forum (firstname, lastname, email, address, city, postal_code, registration_date) 
+                VALUES (:firstname, :lastname, :email, :address, :city, :postal_code, NOW())";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindParam(':firstname', $firstname, PDO::PARAM_STR);
+        $stmt->bindParam(':lastname', $lastname, PDO::PARAM_STR);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':address', $address, PDO::PARAM_STR);
+        $stmt->bindParam(':city', $city, PDO::PARAM_STR);
+        $stmt->bindParam(':postal_code', $postal_code, PDO::PARAM_STR);
+        $result = $stmt->execute();
+
+        if ($result) {
+            $this->sendConfirmationEmail($firstname, $lastname, $email, $address, $city, $postal_code);
+        }
+
+        return $result;
+    }
+
+    // Fonction qui envoie un mail à contact@assoforum-paysdegrasse.com après une inscription réussie
+    public function sendConfirmationEmail($firstname, $lastname, $email, $address, $city, $postal_code) {
+        $subject = 'Nouvelle inscription à la Journée Forum';
+        $message = "
+            <html>
+            <head>
+                <title>Nouvelle inscription à la Journée Forum</title>
+            </head>
+            <body>
+                <p>Une nouvelle inscription a été reçue pour la Journée Forum.</p>
+                <p><strong>Prénom :</strong> $firstname</p>
+                <p><strong>Nom :</strong> $lastname</p>
+                <p><strong>Email :</strong> $email</p>
+                <p><strong>Adresse :</strong> $address</p>
+                <p><strong>Ville :</strong> $city</p>
+                <p><strong>Code Postal :</strong> $postal_code</p>
+            </body>
+            </html>
+        ";
+
+        return $this->mailModel->sendMail('contact@assoforum-paysdegrasse.com', $subject, $message);
     }
 }
 ?>

@@ -10,7 +10,6 @@
     width: 100%;
     height: 80px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /*z-index: 1000; /* Gardez la bannière au-dessus des autres éléments */
     z-index: 2; /* Ensure footer is above everything else */
 }
 
@@ -28,7 +27,9 @@
     color: white;
     padding-right: 20px;
     padding-bottom: 5px;
-    /*z-index: 1010; /* S'assurer que l'icône est cliquable */
+    z-index: 1010; /* Ensure icon is clickable */
+    display: flex;
+    align-items: center;
 }
 
 .menu-icon::before {
@@ -55,17 +56,38 @@
     font-size: 30px;
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .current-page {
-    padding-right: 50px;
+    padding-right: 20px;
     margin-left: auto;
 }
 
 .titre {
     padding-left: 150px;
     margin-right: auto;
+}
+
+/* Profil Picture in Banner */
+.profile-pic-container {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.profile-pic-container a {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white; /* Optional: Add border for better visibility */
 }
 
 /* Media Queries pour les tailles d'écrans plus petites */
@@ -90,5 +112,12 @@
     }
     .main-content {
         margin-top: 60px; /* Ajuster la marge en fonction de la hauteur réduite du header */
+    }
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+    }
+    .profile-pic-container {
+        display: none; /* Hide profile pic container on small screens */
     }
 }

@@ -1,0 +1,81 @@
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 80px; /* Hauteur du header */
+    padding-bottom: 80px; /* Hauteur du footer */
+}
+
+.banner{
+    z-index: 1;
+}
+
+.inscription-journee-forum-success-container {
+    background: white;
+    padding: 25px 50px 25px 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 600px;
+    margin: auto; /* Centrage du conteneur sur la page */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrage des éléments dans le conteneur */   
+}
+
+.succes-container {
+    width: 100%; /* Utilise toute la largeur du conteneur parent */
+    text-align: center; /* Centre le texte à l'intérieur */
+}
+
+.succes-text-container {
+    margin: 20px 0; /* Espacement vertical pour séparer les éléments */
+}
+
+.succes-text-container img {
+    width: 100px; /* Taille fixe pour l'image */
+    margin: 0 auto 20px; /* Centrage horizontal de l'image et espace en dessous */
+    display: block; /* Assure que l'image est traitée comme un bloc pour le centrage */
+}
+
+.succes-text-container p {
+    font-size: 18px; /* Taille de police plus grande pour la visibilité */
+    color: #333; /* Couleur de texte plus foncée pour un meilleur contraste */
+    margin-bottom: 20px; /* Espacement sous le paragraphe */
+}
+
+.links a {
+    color: #b21f24; /* Couleur de thème pour les liens */
+    text-decoration: none; /* Aucun soulignement pour un style plus propre */
+    font-weight: bold; /* Rend le texte du lien en gras */
+    font-size: 16px; /* Légèrement plus grand pour une meilleure accessibilité */
+    margin-top: 20px; /* Espacement au-dessus du lien */
+    display: inline-block; /* Permet de contrôler la taille et le padding du lien */
+    padding: 10px 20px; /* Padding pour rendre le lien plus cliquable */
+    border-radius: 5px; /* Bord arrondi pour l'esthétique */
+    background-color: #f4f4f4; /* Léger fond pour le lien pour qu'il ressorte */
+    transition: background-color 0.3s, color 0.3s; /* Transition pour l'interaction au survol */
+}
+
+.links a:hover {
+    background-color: #feb041; /* Changement de fond au survol */
+    color: white; /* Changement de couleur de texte au survol */
+}
+
+.inscription-journee-forum-success-container h2 {
+    margin: 0; /* Enlève les marges par défaut */
+    font-size: 2em; /* Taille de police par défaut */
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px) {
+    .inscription-journee-forum-success-container {
+        width: 90%; /* Réduit la largeur du conteneur pour qu'il s'adapte mieux aux petits écrans */
+        padding: 20px; /* Réduit le padding pour les petits écrans */
+    }
+
+    .inscription-journee-forum-success-container h2 {
+        font-size: 1.5em; /* Taille de police réduite pour les petits écrans */
+    }
+}

@@ -28,7 +28,10 @@ class App {
             'authentification' => 'PasswordProtectController',
             'verify_email' => 'VerifyEmailController',
             'email_verified' => 'EmailConfirmedController',
-            'email_verification_failed' => 'EmailConfirmationErrorController'
+            'email_verification_failed' => 'EmailConfirmationErrorController',
+            'inscription_journee_forum' => 'RegisterJourneeForumController',
+            'inscription_journee_forum_success' => 'RegisterJourneeForumSuccessController',
+            'mon_compte' => 'MonCompteController'                           
         ];
 
         // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut

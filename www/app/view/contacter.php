@@ -9,6 +9,9 @@
         exit();
     }
 
+    // Vérifier si l'utilisateur est connecté et récupérer ses informations
+    $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
+
     // Inclusion du header
     include 'parts/header.php';
 ?>
@@ -22,19 +25,19 @@
 
             <div class="form-group">
                 <label for="firstname">Prénom :</label>
-                <input type="text" id="firstname" name="firstname" required>
+                <input type="text" id="firstname" name="firstname" value="<?php echo $user['prenom'] ?? ''; ?>" required>
                 <div class="error-message" id="error-firstname"></div>
             </div>
 
             <div class="form-group">
                 <label for="lastname">Nom :</label>
-                <input type="text" id="lastname" name="lastname" required>
+                <input type="text" id="lastname" name="lastname" value="<?php echo $user['nom'] ?? ''; ?>" required>
                 <div class="error-message" id="error-lastname"></div>
             </div>
 
             <div class="form-group">
                 <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" value="<?php echo $user['email'] ?? ''; ?>" required>
                 <div class="error-message" id="error-email"></div>
             </div>
 
@@ -54,7 +57,6 @@
         </form>
     </div>
 </div>   
-
 
 <link rel="stylesheet" href="/public/css/contacter_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/contacter_style.css'); ?>">
 <script src="/public/js/contacter.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/contacter.js'); ?>"></script>
