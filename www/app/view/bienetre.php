@@ -18,11 +18,14 @@
     $associations = $controller->displayPage();
 ?>
 
-<?php include 'parts/annuaire_associations.php'; ?>
+<body class="bien-etre">
+    <?php include 'parts/annuaire_associations.php'; ?>
+    <link rel="stylesheet" href="/public/css/associations_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/associations_style.css'); ?>">
+    <link rel="stylesheet" href="/public/css/dropdown_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/dropdown_style.css'); ?>">
 
-<link rel="stylesheet" href="/public/css/associations_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/associations_style.css'); ?>">
-
+    <script src="/public/js/annuaire_associations.js"></script>
 <?php
-// Inclusion du footer
+    // Inclusion du footer
     include 'parts/footer.php';
 ?>
+</body>

@@ -2,6 +2,13 @@
     <div class="association-section">
         <h1><?= $currentPage ?></h1>
         <a href="/app/annuaire_associations" class="back-to-directory">Retour à l'annuaire des associations</a>
+
+        <!-- Barre de recherche -->
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Rechercher par nom ou adresse">
+            <button type="submit" id="search-button">Rechercher</button>
+        </form>
+
         <div class="association-container">
             <?php foreach ($associations as $association): ?>
                 <div class="association-item">
@@ -14,10 +21,10 @@
                             <th>Date de création</th>
                         </tr>
                         <tr>
-                            <td><?= htmlspecialchars($association['adresse'], ENT_QUOTES, 'UTF-8') ?></td>
-                            <td><?= htmlspecialchars($association['telephone'], ENT_QUOTES, 'UTF-8') ?></td>
-                            <td><?= htmlspecialchars($association['email'], ENT_QUOTES, 'UTF-8') ?></td>
-                            <td><?= htmlspecialchars($association['date_creation'], ENT_QUOTES, 'UTF-8') ?></td>
+                            <td class="address"><?= htmlspecialchars($association['adresse'], ENT_QUOTES, 'UTF-8') ?></td>
+                            <td class="phone"><?= htmlspecialchars($association['telephone'], ENT_QUOTES, 'UTF-8') ?></td>
+                            <td class="mail"><?= htmlspecialchars($association['email'], ENT_QUOTES, 'UTF-8') ?></td>
+                            <td class="creationdate"><?= htmlspecialchars($association['date_creation'], ENT_QUOTES, 'UTF-8') ?></td>
                         </tr>
                     </table>
                     <?php if (!empty($association['site_web'])): ?>
