@@ -62,6 +62,32 @@
     max-height: 20px;
 }
 
+/* Styles spécifiques pour sports */
+.sports .footer {
+    background-color: #305cb4;
+}
+
+/* Styles spécifiques pour animations et loisirs */
+.animations-loisirs .footer {
+    background-color: #ffac4c;
+}
+
+/* Styles spécifiques pour arts et culture */
+.arts-culture .footer {
+    background-color: #70c474;
+}
+
+/* Styles spécifiques pour bien-être */
+.bien-etre .footer {
+    background-color: #58ccb4;
+}
+
+/* Styles spécifiques pour associations humanitaires */
+.humanitaire .footer {
+    background-color: #5844a4;
+}
+
+
 /* Media Queries pour les tailles d'écrans plus petites */
 @media (max-width: 768px) {
     .footer {

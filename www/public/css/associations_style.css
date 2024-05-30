@@ -118,3 +118,117 @@
 h1{
     text-align: center;
 }
+
+/* Barre de recherche */
+#search-form {
+    margin-bottom: 20px; /* Ajouter un espace en bas */
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 190px;
+    margin-right: 10px; /* Ajouter un espacement à droite */
+    flex: 1; /* Faites en sorte que l'input occupe tout l'espace disponible */
+}
+
+#search-input::placeholder {
+    color: #999; /* Couleur du texte de l'placeholder */
+}
+
+#search-input:focus {
+    outline: none; /* Supprimer le contour sur le focus */
+    border-color: #70c474; /* Couleur de la bordure sur le focus */
+}
+
+#search-button {
+    padding: 8px 16px;
+    background-color: #b21f25;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition pour une animation fluide */
+}
+
+#search-button:hover {
+    background-color: darkred;
+}
+
+/* Styles spécifiques pour sports */
+.sports .association-item a,
+.sports .back-to-directory,
+.sports .back-to-top,
+.sports #search-button {
+    background-color: #305cb4;
+}
+
+.sports .association-item a:hover,
+.sports .back-to-directory:hover,
+.sports .back-to-top:hover,
+.sports #search-button:hover {
+    background-color: #1f3c7f;
+}
+
+/* Styles spécifiques pour animations et loisirs */
+.animations-loisirs .association-item a,
+.animations-loisirs .back-to-directory,
+.animations-loisirs .back-to-top,
+.animations-loisirs #search-button {
+    background-color: #ffac4c;
+}
+
+.animations-loisirs .association-item a:hover,
+.animations-loisirs .back-to-directory:hover,
+.animations-loisirs .back-to-top:hover,
+.animations-loisirs #search-button:hover {
+    background-color: #d98719;
+}
+
+/* Styles spécifiques pour arts et culture */
+.arts-culture .association-item a,
+.arts-culture .back-to-directory,
+.arts-culture .back-to-top,
+.arts-culture #search-button {
+    background-color: #70c474;
+}
+
+.arts-culture .association-item a:hover,
+.arts-culture .back-to-directory:hover,
+.arts-culture .back-to-top:hover,
+.arts-culture #search-button:hover {
+    background-color: #57a660;
+}
+
+/* Styles spécifiques pour bien-être */
+.bien-etre .association-item a,
+.bien-etre .back-to-directory,
+.bien-etre .back-to-top,
+.bien-etre #search-button {
+    background-color: #58ccb4;
+}
+
+.bien-etre .association-item a:hover,
+.bien-etre .back-to-directory:hover,
+.bien-etre .back-to-top:hover,
+.bien-etre #search-button:hover {
+    background-color: #46a08e;
+}
+
+/* Styles spécifiques pour associations humanitaires */
+.humanitaire .association-item a,
+.humanitaire .back-to-directory,
+.humanitaire .back-to-top,
+.humanitaire #search-button {
+    background-color: #5844a4;
+}
+
+.humanitaire .association-item a:hover,
+.humanitaire .back-to-directory:hover,
+.humanitaire .back-to-top:hover,
+.humanitaire #search-button:hover {
+    background-color: #3c2f78;
+}

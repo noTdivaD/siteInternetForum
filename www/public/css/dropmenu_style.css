@@ -86,6 +86,71 @@
     }
 }
 
+/* Styles spécifiques pour sports */
+.sports #dropdown-menu {
+    background-color: #305cb4;
+}
+
+.sports #dropdown-menu ul li a:hover {
+    background-color: #1f3c7f;
+}
+
+.sports .croix:hover {
+    background-color: #1f3c7f;
+}
+
+/* Styles spécifiques pour animations et loisirs */
+.animations-loisirs #dropdown-menu {
+    background-color: #ffac4c;
+}
+
+.animations-loisirs #dropdown-menu ul li a:hover {
+    background-color: #d98719;
+}
+
+.animations-loisirs .croix:hover {
+    background-color: #d98719;
+}
+
+
+/* Styles spécifiques pour arts et culture */
+.arts-culture #dropdown-menu {
+    background-color: #70c474;
+}
+
+.arts-culture #dropdown-menu ul li a:hover {
+    background-color: #4ca35c;
+}
+
+.arts-culture .croix:hover {
+    background-color: #4ca35c;
+}
+
+/* Styles spécifiques pour bien-être */
+.bien-etre #dropdown-menu {
+    background-color: #58ccb4;
+}
+
+.bien-etre #dropdown-menu ul li a:hover {
+    background-color: #409e88;
+}
+
+.bien-etre .croix:hover {
+    background-color: #409e88;
+}
+
+/* Styles spécifiques pour associations humanitaires */
+.humanitaire #dropdown-menu {
+    background-color: #5844a4;
+}
+
+.humanitaire #dropdown-menu ul li a:hover {
+    background-color: #3c2f78;
+}
+
+.humanitaire .croix:hover {
+    background-color: #3c2f78;
+}
 
 /* Adaptation pour les petits écrans */
 @media (max-width: 768px) {
