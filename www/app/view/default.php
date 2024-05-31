@@ -15,7 +15,7 @@
         <form method="POST" action="/app/authentification/authentification" id="AuthentificationForm">
             <h1>Authentification</h1>
             <div id="error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
-            <input type="password" name="password" placeholder="Mot de passe à 4 chiffres" maxlength="4" required>
+            <input type="password" name="password" placeholder="Insérer le Code Pin" maxlength="4" required>
             <br>
             <input type="submit" value="S'authentifier">
         </form>
