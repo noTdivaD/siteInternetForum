@@ -173,6 +173,96 @@ h1 {
     justify-content: center; /* Centre le texte horizontalement */
 }
 
+/* Styles spécifiques pour sports */
+.sports .association-item a,
+.sports .back-to-directory,
+.sports .back-to-top,
+.sports #search-button,
+.sports::-webkit-scrollbar, 
+.sports::-webkit-scrollbar-thumb {
+    background-color: #305cb4;
+}
+
+.sports .association-item a:hover,
+.sports .back-to-directory:hover,
+.sports .back-to-top:hover,
+.sports #search-button:hover,
+.sports::-webkit-scrollbar-thumb:hover {
+    background-color: #1f3c7f;
+}
+
+/* Styles spécifiques pour animations et loisirs */
+.animations-loisirs .association-item a,
+.animations-loisirs .back-to-directory,
+.animations-loisirs .back-to-top,
+.animations-loisirs #search-button,
+.animations-loisirs::-webkit-scrollbar, 
+.animations-loisirs::-webkit-scrollbar-thumb {
+    background-color: #ffac4c;
+}
+
+.animations-loisirs .association-item a:hover,
+.animations-loisirs .back-to-directory:hover,
+.animations-loisirs .back-to-top:hover,
+.animations-loisirs #search-button:hover,
+.animations-loisirs::-webkit-scrollbar-thumb:hover {
+    background-color: #d98719;
+}
+
+/* Styles spécifiques pour arts et culture */
+.arts-culture .association-item a,
+.arts-culture .back-to-directory,
+.arts-culture .back-to-top,
+.arts-culture #search-button,
+.arts-culture::-webkit-scrollbar, 
+.arts-culture::-webkit-scrollbar-thumb {
+    background-color: #70c474;
+}
+
+.arts-culture .association-item a:hover,
+.arts-culture .back-to-directory:hover,
+.arts-culture .back-to-top:hover,
+.arts-culture #search-button:hover,
+.arts-culture::-webkit-scrollbar-thumb:hover {
+    background-color: #57a660;
+}
+
+/* Styles spécifiques pour bien-être */
+.bien-etre .association-item a,
+.bien-etre .back-to-directory,
+.bien-etre .back-to-top,
+.bien-etre #search-button,
+.bien-etre::-webkit-scrollbar, 
+.bien-etre::-webkit-scrollbar-thumb {
+    background-color: #58ccb4;
+}
+
+.bien-etre .association-item a:hover,
+.bien-etre .back-to-directory:hover,
+.bien-etre .back-to-top:hover,
+.bien-etre #search-button:hover,
+.bien-etre::-webkit-scrollbar-thumb:hover {
+    background-color: #46a08e;
+}
+
+/* Styles spécifiques pour associations humanitaires */
+.humanitaire .association-item a,
+.humanitaire .back-to-directory,
+.humanitaire .back-to-top,
+.humanitaire #search-button,
+.humanitaire::-webkit-scrollbar, 
+.humanitaire::-webkit-scrollbar-thumb {
+    background-color: #5844a4;
+}
+
+.humanitaire .association-item a:hover,
+.humanitaire .back-to-directory:hover,
+.humanitaire .back-to-top:hover,
+.humanitaire #search-button:hover,
+.humanitaire::-webkit-scrollbar-thumb:hover {
+    background-color: #3c2f78;
+}
+
 /* Responsive styles */
 @media (max-width: 1200px) {
     .association-section {
