@@ -31,6 +31,7 @@ class App {
             'email_verification_failed' => 'EmailConfirmationErrorController',
             'inscription_journee_forum' => 'RegisterJourneeForumController',
             'inscription_journee_forum_success' => 'RegisterJourneeForumSuccessController',
+            'liste_journee_forum' => 'ListJourneeForumController',
             'mon_compte' => 'MonCompteController'                           
         ];
 

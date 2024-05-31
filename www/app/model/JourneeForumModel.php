@@ -75,5 +75,11 @@ class JourneeForumModel {
 
         return $this->mailModel->sendMail('contact@assoforum-paysdegrasse.com', $subject, $message);
     }
+
+    // Fonction pour récupérer la liste des inscrits à la journée forum
+    public function getRegisteredUsers() {
+        $sql = "SELECT * FROM inscription_journee_forum";
+        $stmt = $this->db->query($sql);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
-?>

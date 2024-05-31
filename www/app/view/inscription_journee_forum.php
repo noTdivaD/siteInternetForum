@@ -11,6 +11,7 @@
 
     // Vérifier si l'utilisateur est connecté et récupérer ses informations
     $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
+    $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'administrateur';
 
     // Inclusion du header
     include 'parts/header.php';
@@ -59,7 +60,12 @@
                 <div class="error-message" id="error-postal_code"></div>
             </div>
 
-            <button type="submit" class="submit-button">Participer</button>
+            <div class="form-buttons">
+                <button type="submit" class="submit-button">Participer</button>
+                <?php if ($isAdmin): ?>
+                    <a href="/app/liste_journee_forum" class="admin-button">Voir liste des inscrits</a>
+                <?php endif; ?>
+            </div>
         </form>
     </div>
 </div>   
