@@ -14,7 +14,7 @@
     
     // Inclusion du contrôleur des associations humanitaires
     require_once BASE_PATH . '/app/controller/HumanitaireController.php';
-    $controller = new BienEtreController();
+    $controller = new HumanitaireController();
     $associations = $controller->displayPage();
 ?>
 
