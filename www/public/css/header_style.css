@@ -154,6 +154,14 @@ body.humanitaire .logo img {
     .logo img {
         max-width: 50px; /* Réduire la taille du logo */
     }
+    body.sports .logo img,
+    body.animations-loisirs .logo img,
+    body.arts-culture .logo img,
+    body.bien-etre .logo img,
+    body.humanitaire .logo img {
+        width: 40px;
+        height: 50px;
+    }
     .menu-icon {
         font-size: 40px;
     }
