@@ -28,7 +28,15 @@
                         </tr>
                     </table>
                     <?php if (!empty($association['site_web'])): ?>
-                        <a href="<?= htmlspecialchars($association['site_web'], ENT_QUOTES, 'UTF-8') ?>" target="_blank">Visiter le site</a>
+                        <?php
+                            $url = $association['site_web'];
+                            // Vérifie si l'URL commence par "http://" ou "https://"
+                            if (!preg_match("~^(?:f|ht)tps?://~i", $url)) {
+                                // Si ce n'est pas le cas, ajoute "http://" au début de l'URL
+                                $url = "http://" . $url;
+                            }
+                        ?>
+                        <a href="<?= htmlspecialchars($url, ENT_QUOTES, 'UTF-8') ?>" target="_blank">Visiter le site</a>
                     <?php endif; ?>
                 </div>
             <?php endforeach; ?>
