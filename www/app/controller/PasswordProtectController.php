@@ -3,7 +3,7 @@
 class PasswordProtectController {
     public function index() {
         // Charge la vue de connexion
-        require_once BASE_PATH . '/app/view/password_protect.php';
+        require_once BASE_PATH . '/app/view/default.php';
     }
 
     public function authentification() {
@@ -18,7 +18,7 @@ class PasswordProtectController {
 
             if (isset($_POST['password']) && $_POST['password'] === $correct_password) {
                 $_SESSION['site_access_granted'] = true;
-                header('Location: /app/accueil_upgrade');
+                header('Location: /app/index');
                 exit();
             } else {
                 header("Location: /app/authentification?error=" . urlencode("Mot de passe incorrect."));
@@ -28,7 +28,7 @@ class PasswordProtectController {
 
         // Si l'utilisateur est déjà authentifié pour l'accès au site, rediriger vers la page principale
         if (isset($_SESSION['site_access_granted']) && $_SESSION['site_access_granted'] === true) {
-            header('Location: /app/accueil_upgrade');
+            header('Location: /app/index');
             exit();
         }
     }

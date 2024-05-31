@@ -11,7 +11,7 @@ class App {
         $controllerMap = [
             'connexion' => 'LoginController',
             'inscription' => 'RegisterController',
-            'accueil_upgrade' => 'AccueilController',
+            'index' => 'AccueilController',
             'mdp_oublie' => 'ForgotPasswordController',
             'contacter' => 'ContactController',
             'mdp_reinitialise' => 'ResetPasswordController',

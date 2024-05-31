@@ -9,7 +9,7 @@
                 <?php else: ?>
                     <li><a href="/app/connexion">Se connecter / S'inscrire</a></li>
                 <?php endif; ?>
-                <li><a href="/app/accueil_upgrade">Accueil</a></li>
+                <li><a href="/app/index">Accueil</a></li>
 
                 <!--TODO: À remplir avec les liens pour les autres pages lorsque celles-ci seront disponibles -->
                 <li><a href="/app/journee_forum">Journée Forum</a></li>

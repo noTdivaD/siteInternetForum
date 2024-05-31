@@ -6,7 +6,7 @@
     <title>Authentification</title>
     <link rel="stylesheet" href="/public/css/common_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/common_style.css'); ?>">
     <link rel="icon" href="/public/images/logo/logo-association-forum-onglet-t48.png" type="/png">
-    <link rel="stylesheet" href="/public/css/style_password_protect.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/style_password_protect.css'); ?>"> 
+    <link rel="stylesheet" href="/public/css/style_default.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/style_default.css'); ?>"> 
 </head>
 <body>
     <div class="main-content">
@@ -20,6 +20,6 @@
             <input type="submit" value="S'authentifier">
         </form>
     </div>   
-    <script src="/public/js/password_protect.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/password_protect.js'); ?>"></script>
+    <script src="/public/js/default.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/default.js'); ?>"></script>
 </body>
 </html>

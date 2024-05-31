@@ -22,7 +22,7 @@
                 <p>Vous avez été ajouté dans la liste d'inscrits à la <strong>Journée Forum</strong></p>
             </div>
             <div class="links">
-                <a href="/app/accueil_upgrade">Retourner à la page d'acceuil</a>
+                <a href="/app/index">Retourner à la page d'acceuil</a>
             </div>
         </div>
     </div>

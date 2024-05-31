@@ -22,7 +22,7 @@
                 <p>Votre mail a bien été pris en compte par nos services et a été envoyé à l'adresse mail : <strong>contact@assoforum-paysdegrasse.com</strong></p>
             </div>
             <div class="links">
-                <a href="/app/accueil_upgrade">Retourner à la page d'accueil</a>
+                <a href="/app/index">Retourner à la page d'accueil</a>
             </div>
         </div>
     </div>

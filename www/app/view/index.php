@@ -182,9 +182,9 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
     <?php endif; ?>
 </div>
 
-<link rel="stylesheet" href="/public/css/style_accueil_upgrade.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/style_accueil_upgrade.css'); ?>">
+<link rel="stylesheet" href="/public/css/style_index.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/style_index.css'); ?>">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="/public/js/accueil_upgrade.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/accueil_upgrade.js'); ?>"></script>
+<script src="/public/js/index.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/index.js'); ?>"></script>
 <?php
 // Inclusion du footer
 require_once BASE_PATH . '/app/view/parts/footer.php';

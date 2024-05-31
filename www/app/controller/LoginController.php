@@ -71,7 +71,7 @@ class LoginController {
                     $_SESSION['user'] = $userInfo;
 
                     $userModel->updateLastLogin($email); // Mise à jour de la dernière connexion
-                    header("Location: /app/accueil_upgrade"); // Redirigez vers la page d'accueil
+                    header("Location: /app/index"); // Redirigez vers la page d'accueil
                     exit();
                 } else {
                     // Si l'utilisateur n'est pas vérifié, génère un nouveau token si nécessaire

@@ -300,7 +300,7 @@ document.getElementById("addArticleForm").addEventListener("submit", function(ev
 
     console.log('Envoi du formulaire...');
 
-    fetch('/app/accueil_upgrade/addArticle', {
+    fetch('/app/index/addArticle', {
         method: 'POST',
         body: formData
     })
@@ -366,7 +366,7 @@ document.getElementById("editArticleForm").addEventListener("submit", function(e
 
     console.log('Envoi du formulaire de modification...');
 
-    fetch('/app/accueil_upgrade/updateArticle', {
+    fetch('/app/index/updateArticle', {
         method: 'POST',
         body: formData
     })
@@ -427,7 +427,7 @@ function deleteArticle(articleId, articleElement) {
 
     console.log("Envoi de la demande de suppression pour l'article ID :", articleId);
 
-    fetch('/app/accueil_upgrade/deleteArticle', {
+    fetch('/app/index/deleteArticle', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'

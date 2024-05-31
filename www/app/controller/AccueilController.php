@@ -10,7 +10,7 @@ class AccueilController {
     }
 
     public function index() {
-        require_once BASE_PATH . '/app/view/accueil_upgrade.php';
+        require_once BASE_PATH . '/app/view/index.php';
         error_log("Calling method index on controller AccueilController.");
     }
 
