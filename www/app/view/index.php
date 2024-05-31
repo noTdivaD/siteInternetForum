@@ -53,7 +53,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
             <div class="swiper-slide">
                 <h2>Collège d'Experts</h2>
                 <div class="content">
-                    <img src="/public/images/imagesForum/1.JPG" alt="Facebook">
+                    <img src="/public/images/imagesForum/4.JPG" alt="Facebook">
                     <p>La page Collège d'Experts est dédiée à la mise en relation des associations avec des experts, qu'ils soient internes ou externes à notre organisation. Ce service vise à offrir un soutien précieux aux associations, en leur fournissant des conseils et des connaissances pratiques sur divers sujets essentiels. Que ce soit pour créer une association, remplir les documents nécessaires, développer un site web, ou apprendre à communiquer efficacement avec la presse, nos experts sont là pour vous guider. La page proposera des rubriques thématiques, semblables à une FAQ, pour répondre aux questions fréquentes et offrir des conseils structurés.</p>
                 </div>
                 <a href="#">En savoir plus</a>
@@ -61,7 +61,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
             <div class="swiper-slide">
                 <h2>Agenda des Associations</h2>
                 <div class="content">
-                    <img src="/public/images/imagesForum/3.JPG" alt="Facebook">
+                    <img src="/public/images/imagesForum/5.JPG" alt="Facebook">
                     <p>Les agendas des associations constituent un calendrier complet référençant toutes les activités et événements organisés par les associations locales. Cette ressource permet de trier les événements par type d'association ainsi que par période, que ce soit par mois, par semaine, ou plus. Les agendas facilitent ainsi la planification et la participation aux diverses activités associatives. Que vous souhaitiez découvrir des événements culturels, sportifs, environnementaux ou autres, les agendas des associations vous offrent une vue d'ensemble pratique pour vous engager pleinement dans la vie associative de votre communauté.</p>
                 </div>
                 <a href="#">En savoir plus</a>
@@ -69,7 +69,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
             <div class="swiper-slide">
                 <h2>Flash Info et Informations Utiles</h2>
                 <div class="content">
-                    <img src="/public/images/imagesForum/2.JPG" alt="Facebook">
+                    <img src="/public/images/imagesForum/6.JPG" alt="Facebook">
                     <p>Cette section fournit des informations pratiques pour les résidents du Pays de Grasse. Découvrez la Recyclerie mobile du SMED, en partenariat avec Soli-Cités, qui récupère et transforme des objets réutilisables chaque mois dans les déchèteries locales. Les associations locales sont encouragées à participer au tri sélectif des déchets, recyclant plastiques, métaux, papiers, cartons et verre. Le dispositif "Cliiink" permet de cumuler des points en triant le verre, échangeables contre des réductions chez les commerçants partenaires. Des informations sur la SACEM expliquent les droits d'auteur et leur gestion, essentielle pour les créateurs. Cette rubrique aide à rester informé et engagé dans la vie locale.</p>
                 </div>
                 <a href="#">En savoir plus</a>
@@ -77,7 +77,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
             <div class="swiper-slide">
                 <h2>Site internet et Facebook</h2>
                 <div class="content">
-                    <img src="/public/images/imagesForum/2.JPG" alt="Facebook">
+                    <img src="/public/images/imagesForum/7.JPG" alt="Facebook">
                     <p>Le site internet et la page Facebook du Pays de Grasse sont des ressources essentielles pour rester informé sur les actualités locales, les événements et les initiatives communautaires. Sur le site, vous trouverez des informations détaillées sur les services municipaux, les projets en cours, et des outils pratiques pour les citoyens. La page Facebook, quant à elle, offre des mises à jour en temps réel, des annonces d'événements et des opportunités de participation. C'est une plateforme interactive où les résidents peuvent poser des questions, partager des idées et s'engager avec leur communauté. Suivez-nous en ligne pour ne rien manquer des activités et des nouvelles du Pays de Grasse.</p>
                 </div>
                 <a href="https://www.facebook.com/forum.grasse.paysdegrasse" target="new_blank">En savoir plus</a>
