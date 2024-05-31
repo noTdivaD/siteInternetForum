@@ -263,6 +263,17 @@ h1 {
     background-color: #3c2f78;
 }
 
+#no-results-message {
+    display: flex;
+    justify-content: center; /* Centre le texte horizontalement */
+    align-items: center; /* Centre le texte verticalement */
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2em;
+    color: black;
+    width: 100%; /* S'assure que le message occupe toute la largeur disponible */
+}
+
 /* Responsive styles */
 @media (max-width: 1200px) {
     .association-section {
