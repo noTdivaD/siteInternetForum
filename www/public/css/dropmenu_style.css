@@ -88,68 +88,68 @@
 
 /* Styles spécifiques pour sports */
 .sports #dropdown-menu {
-    background-color: #305cb4;
+    background-color: rgba(144,228,252,1.0);
 }
 
 .sports #dropdown-menu ul li a:hover {
-    background-color: #1f3c7f;
+    background-color: rgb(11, 137, 171);
 }
 
 .sports .croix:hover {
-    background-color: #1f3c7f;
+    background-color: rgb(11, 137, 171);
 }
 
 /* Styles spécifiques pour animations et loisirs */
 .animations-loisirs #dropdown-menu {
-    background-color: #ffac4c;
+    background-color: rgba(222, 107, 48, 1.0);
 }
 
 .animations-loisirs #dropdown-menu ul li a:hover {
-    background-color: #d98719;
+    background-color: rgb(143, 53, 8);
 }
 
 .animations-loisirs .croix:hover {
-    background-color: #d98719;
+    background-color: rgb(143, 53, 8);
 }
 
 
 /* Styles spécifiques pour arts et culture */
 .arts-culture #dropdown-menu {
-    background-color: #70c474;
+    background-color: rgba(125, 168, 103, 1.0);
 }
 
 .arts-culture #dropdown-menu ul li a:hover {
-    background-color: #4ca35c;
+    background-color: rgb(75, 105, 60);
 }
 
 .arts-culture .croix:hover {
-    background-color: #4ca35c;
+    background-color: rgb(75, 105, 60);
 }
 
 /* Styles spécifiques pour bien-être */
 .bien-etre #dropdown-menu {
-    background-color: #58ccb4;
+    background-color: rgba(71, 165, 153, 1.0);
 }
 
 .bien-etre #dropdown-menu ul li a:hover {
-    background-color: #409e88;
+    background-color: rgb(43, 101, 93);
 }
 
 .bien-etre .croix:hover {
-    background-color: #409e88;
+    background-color: rgb(43, 101, 93);
 }
 
 /* Styles spécifiques pour associations humanitaires */
 .humanitaire #dropdown-menu {
-    background-color: #5844a4;
+    background-color: rgba(173, 149, 233, 1.0);
 }
 
 .humanitaire #dropdown-menu ul li a:hover {
-    background-color: #3c2f78;
+    background-color: rgb(89, 77, 121);
 }
 
 .humanitaire .croix:hover {
-    background-color: #3c2f78;
+    background-color: rgb(89, 77, 121);
 }
 
 /* Adaptation pour les petits écrans */

@@ -64,27 +64,27 @@
 
 /* Styles spécifiques pour sports */
 .sports .footer {
-    background-color: #305cb4;
+    background-image: url('/public/images/imagesAnnuaire/Sports-Banner.png');
 }
 
 /* Styles spécifiques pour animations et loisirs */
 .animations-loisirs .footer {
-    background-color: #ffac4c;
+    background-image: url('/public/images/imagesAnnuaire/AnimationsLoisirs-Banner.png');
 }
 
 /* Styles spécifiques pour arts et culture */
 .arts-culture .footer {
-    background-color: #70c474;
+    background-image: url('/public/images/imagesAnnuaire/ArtsCultures-Banner.png');
 }
 
 /* Styles spécifiques pour bien-être */
 .bien-etre .footer {
-    background-color: #58ccb4;
+    background-image: url('/public/images/imagesAnnuaire/BienEtre-Banner.png');
 }
 
 /* Styles spécifiques pour associations humanitaires */
 .humanitaire .footer {
-    background-color: #5844a4;
+    background-image: url('/public/images/imagesAnnuaire/Humanitaire-Banner.png');
 }
 
 

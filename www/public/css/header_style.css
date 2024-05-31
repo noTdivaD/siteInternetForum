@@ -103,47 +103,47 @@ body.humanitaire .logo img {
 
 /* Styles spécifiques pour sports */
 .sports .banner {
-    background-color: #305cb4;
+    background-image: url('/public/images/imagesAnnuaire/Sports-Banner.png');
 }
 
 .sports .menu-icon::before {
-    background-color: #1f3c7f;
+    background-color: rgba(144,228,252,0.8); /* Adjusted for better visibility on background image */
 }
 
 /* Styles spécifiques pour animations et loisirs */
 .animations-loisirs .banner {
-    background-color: #ffac4c;
+    background-image: url('/public/images/imagesAnnuaire/AnimationsLoisirs-Banner.png');
 }
 
 .animations-loisirs .menu-icon::before {
-    background-color: #d98719;
+    background-color: rgba(222, 107, 48, 0.8);
 }
 
 /* Styles spécifiques pour arts et culture */
 .arts-culture .banner {
-    background-color: #70c474;
+    background-image: url('/public/images/imagesAnnuaire/ArtsCultures-Banner.png');
 }
 
 .arts-culture .menu-icon::before {
-    background-color: #57a660;
+    background-color: rgba(125, 168, 103, 0.8);
 }
 
 /* Styles spécifiques pour bien-être */
 .bien-etre .banner {
-    background-color: #58ccb4;
+    background-image: url('/public/images/imagesAnnuaire/BienEtre-Banner.png');
 }
 
 .bien-etre .menu-icon::before {
-    background-color: #46a08e;
+    background-color: rgba(71, 165, 153, 0.8);
 }
 
 /* Styles spécifiques pour associations humanitaires */
 .humanitaire .banner {
-    background-color: #5844a4;
+    background-image: url('/public/images/imagesAnnuaire/Humanitaire-Banner.png');
 }
 
 .humanitaire .menu-icon::before {
-    background-color: #3c2f78;
+    background-color: rgba(173, 149, 233, 0.8);
 }
 
 /* Media Queries pour les tailles d'écrans plus petites */
