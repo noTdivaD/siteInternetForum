@@ -31,6 +31,15 @@
             <div class="thematique humanitaire"  onclick="redirectToLink('/app/associations_humanitaires')">
                 <h2>Humanitaire, social, civique, et environnement</h2>
             </div>
+            <div class="thematique ecologie"  onclick="redirectToLink('/app/associations_ecologiques')">
+                <h2>Écologie et environnement</h2>
+            </div>
+            <div class="thematique combattant"  onclick="redirectToLink('/app/associations_combattants')">
+                <h2>Anciens combattants et assimilés</h2>
+            </div>
+            <div class="thematique economie"  onclick="redirectToLink('/app/associations_economie')">
+                <h2>Économie et développement</h2>
+            </div>
     </div>
 </div>    
 

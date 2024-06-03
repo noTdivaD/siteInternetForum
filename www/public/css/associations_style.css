@@ -263,6 +263,60 @@ h1 {
     background-color: rgb(89, 77, 121);
 }
 
+/* Styles spécifiques pour associations écologiques */
+.ecologie .association-item a,
+.ecologie .back-to-directory,
+.ecologie .back-to-top,
+.ecologie #search-button,
+.ecologie::-webkit-scrollbar, 
+.ecologie::-webkit-scrollbar-thumb {
+    background-color: rgba(40, 116, 76, 1.0);
+}
+
+.ecologie .association-item a:hover,
+.ecologie .back-to-directory:hover,
+.ecologie .back-to-top:hover,
+.ecologie #search-button:hover,
+.ecologie::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(32, 93, 61);
+}
+
+/* Styles spécifiques pour associations anciens combattant */
+.combattant .association-item a,
+.combattant .back-to-directory,
+.combattant .back-to-top,
+.combattant #search-button,
+.combattant::-webkit-scrollbar, 
+.combattant::-webkit-scrollbar-thumb {
+    background-color: rgba(200, 52, 28, 1.0);
+}
+
+.combattant .association-item a:hover,
+.combattant .back-to-directory:hover,
+.combattant .back-to-top:hover,
+.combattant #search-button:hover,
+.combattant::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(180, 41, 21);
+}
+
+/* Styles spécifiques pour associations économiques */
+.economie .association-item a,
+.economie .back-to-directory,
+.economie .back-to-top,
+.economie #search-button,
+.economie::-webkit-scrollbar, 
+.economie::-webkit-scrollbar-thumb {
+    background-color: rgba(200, 220, 76, 1.0);
+}
+
+.economie .association-item a:hover,
+.economie .back-to-directory:hover,
+.economie .back-to-top:hover,
+.economie #search-button:hover,
+.economie::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(180, 176, 60);
+}
+
 #no-results-message {
     display: flex;
     justify-content: center; /* Centre le texte horizontalement */

@@ -24,7 +24,7 @@
                             <td class="address"><?= htmlspecialchars($association['adresse'], ENT_QUOTES, 'UTF-8') ?></td>
                             <td class="phone"><?= htmlspecialchars($association['telephone'], ENT_QUOTES, 'UTF-8') ?></td>
                             <td class="mail"><?= htmlspecialchars($association['email'], ENT_QUOTES, 'UTF-8') ?></td>
-                            <td class="creationdate"><?= htmlspecialchars($association['date_creation'], ENT_QUOTES, 'UTF-8') ?></td>
+                            <td class="creationdate"><?= date('Y', strtotime($association['date_creation'])) ?> </td>
                         </tr>
                     </table>
                     <?php if (!empty($association['site_web'])): ?>

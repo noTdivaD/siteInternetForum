@@ -8,7 +8,7 @@ class BienEtreModel {
     }
 
     public function getAssociations() {
-        $sql = "SELECT * FROM associations WHERE domaine = 'bien être'";
+        $sql = "SELECT * FROM associations WHERE FIND_IN_SET('bien être', domaine)";
         $result = $this->db->query($sql);
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }

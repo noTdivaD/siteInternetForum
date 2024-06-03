@@ -97,6 +97,18 @@ h1 {
     background-color: rgba(88, 68, 164, 0.5); /* Fond semi-transparent au survol */
 }
 
+.ecologie:hover::after{
+    background-color: rgba(40, 116, 76, 0.5);
+}
+
+.combattant:hover::after{
+    background-color: rgba(255, 52, 28, 0.2);
+}
+
+.economie:hover::after{
+    background-color: rgba(255, 220, 76, 0.2);
+}
+
 .thematique h2 {
     position: relative;
     z-index: 1; /* Assure que le texte est au-dessus de l'élément ::after */
@@ -120,6 +132,18 @@ h1 {
 
 .humanitaire {
     background-image: url('/public/images/imagesAnnuaire/Humanitaire.jpg');
+}
+
+.ecologie{
+    background-image: url('/public/images/imagesAnnuaire/Ecologie.jpg');
+}
+
+.combattant{
+    background-image: url('/public/images/imagesAnnuaire/Combattant.jpg');
+}
+
+.economie{
+    background-image: url('/public/images/imagesAnnuaire/Economie.jpg');
 }
 
 /* Responsive styles */

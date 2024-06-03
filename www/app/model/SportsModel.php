@@ -8,7 +8,7 @@ class SportsModel {
     }
 
     public function getAssociations() {
-        $sql = "SELECT * FROM associations WHERE domaine = 'sports'";
+        $sql = "SELECT * FROM associations WHERE FIND_IN_SET('sports', domaine)";
         $result = $this->db->query($sql);
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }

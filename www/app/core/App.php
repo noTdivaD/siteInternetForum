@@ -32,7 +32,10 @@ class App {
             'inscription_journee_forum' => 'RegisterJourneeForumController',
             'inscription_journee_forum_success' => 'RegisterJourneeForumSuccessController',
             'liste_journee_forum' => 'ListJourneeForumController',
-            'mon_compte' => 'MonCompteController'                           
+            'mon_compte' => 'MonCompteController',
+            'associations_ecologiques' => 'EcologieController',
+            'associations_combattants' => 'CombattantController',
+            'associations_economie' => 'EconomieController'                        
         ];
 
         // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut

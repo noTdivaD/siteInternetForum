@@ -152,6 +152,45 @@
     background-color: rgb(89, 77, 121);
 }
 
+/* Styles spécifiques pour associations écologiques */
+.ecologie #dropdown-menu {
+    background-color: rgba(40, 116, 76, 1.0);
+}
+
+.ecologie #dropdown-menu ul li a:hover {
+    background-color: rgb(32, 93, 61);
+}
+
+.ecologie .croix:hover {
+    background-color: rgb(32, 93, 61);
+}
+
+/* Styles spécifiques pour associations anciens combattants */
+.combattant #dropdown-menu {
+    background-color: rgba(200, 52, 28, 1.0);
+}
+
+.combattant #dropdown-menu ul li a:hover {
+    background-color: rgb(180, 41, 21);
+}
+
+.combattant .croix:hover {
+    background-color: rgb(180, 41, 21);
+}
+
+/* Styles spécifiques pour associations économiques */
+.economie #dropdown-menu {
+    background-color: rgba(200, 220, 76, 1.0);
+}
+
+.economie #dropdown-menu ul li a:hover {
+    background-color: rgb(180, 176, 60);
+}
+
+.economie .croix:hover {
+    background-color: rgb(180, 176, 60);
+}
+
 /* Adaptation pour les petits écrans */
 @media (max-width: 768px) {
     #dropdown-menu {

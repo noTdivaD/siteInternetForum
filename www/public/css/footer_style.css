@@ -87,6 +87,20 @@
     background-image: url('/public/images/imagesAnnuaire/Humanitaire-Banner.png');
 }
 
+/* Styles spécifiques pour associations ecologiques */
+.ecologie .footer {
+    background-image: url('/public/images/imagesAnnuaire/Ecologie-Banner.jpg');
+}
+    
+/* Styles spécifiques pour associations anciens combattants */
+.combattant .footer {
+    background-image: url('/public/images/imagesAnnuaire/Combattant-Banner.jpg');
+}
+
+/* Styles spécifiques pour associations économiques */
+.economie .footer {
+    background-image: url('/public/images/imagesAnnuaire/Economie-Banner.jpg');
+}
 
 /* Media Queries pour les tailles d'écrans plus petites */
 @media (max-width: 768px) {
