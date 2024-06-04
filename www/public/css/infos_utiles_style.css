@@ -1,0 +1,367 @@
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+    box-sizing: border-box; /* Ensures padding and borders are included in width */
+}
+
+.article-section {
+    background: white;
+    padding: 25px 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 100vh;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Ensures padding and borders are included in width */
+}
+
+.article {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-sizing: border-box; /* Ensures padding and borders are included in width */
+}
+
+.article h2 {
+    /*color: #333;*/
+    color: #feb041;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.article p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.article-controls {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.edit-article-btn, .delete-article-btn, .swiper-slide a {
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.edit-article-btn {
+    background-color: #007bff;
+}
+
+.delete-article-btn {
+    background-color: #dc3545;
+}
+
+.swiper-slide a {
+    background-color: #007bff;
+    text-decoration: none;
+}
+
+.add-article-btn {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.add-article-btn:hover {
+    background-color: #218838;
+}
+
+.article-content {
+    white-space: pre-wrap;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 25px 50px;
+    border-radius: 5px;
+    border: 2px solid #888;
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.5);
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#addArticleForm, #editArticleForm {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="file"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 200px;
+}
+
+#addArticleForm button.add-article-btn, #editArticleForm button.edit-article-btn {
+    width: 40%;
+    padding: 10px 20px;
+    background-color: #b21f24;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+#addArticleForm button.add-article-btn:hover, #editArticleForm button.edit-article-btn:hover {
+    background-color: #921b1f;
+}
+
+.form-group-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group-checkbox label {
+    margin: 0;
+}
+
+.drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.drop-zone:hover {
+    background-color: #f0f0f0;
+}
+
+.drop-zone .drop-zone__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.drop-zone__thumb {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.drop-zone__prompt {
+    font-size: 16px;
+    color: #999;
+}
+
+.drop-zone.highlight {
+    background-color: #e9e9e9;
+}
+
+.drop-zone.dragover {
+    background-color: #f0f0f0;
+    border-color: #333;
+}
+
+/* Media queries pour rendre le contenu responsive */
+@media (max-width: 768px) {
+    .article-section {
+        width: 90%;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    #addArticleForm, #editArticleForm {
+        width: 90%;
+    }
+
+    .article img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-section {
+        width: 95%;
+        padding: 25px 15px;
+    }
+
+    .article{
+        padding: 15px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .drop-zone__thumb{
+        font-size: 10px;
+    }
+
+    .article h2 {
+        font-size: 20px;
+    }
+
+    .article p {
+        font-size: 14px;
+    }
+
+    .modal-content h2 {
+        font-size: 24px;
+    }
+
+    input[type="text"], input[type="file"], textarea {
+        padding: 8px;
+    }
+
+    #addArticleForm button.add-article-btn, #editArticleForm button.edit-article-btn {
+        width: 100%;
+    }
+
+    .article img {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-height: 750px) {
+    .article-section {
+        width: 95%;
+        padding: 25px 15px;
+    }
+
+    .article{
+        padding: 15px;
+    }
+
+    .modal-content {
+        width: 90%;
+        height: 70%;
+    }
+
+    .drop-zone__thumb{
+        font-size: 10px;
+    }
+
+    .article h2 {
+        font-size: 20px;
+    }
+
+    .article p {
+        font-size: 14px;
+    }
+
+    .modal-content h2 {
+        font-size: 24px;
+    }
+
+    input[type="text"], input[type="file"], textarea {
+        padding: 8px;
+    }
+
+    #addArticleForm button.add-article-btn, #editArticleForm button.edit-article-btn {
+        width: 100%;
+    }
+
+    .article img {
+        max-width: 100%;
+    }
+}

@@ -35,7 +35,8 @@ class App {
             'mon_compte' => 'MonCompteController',
             'associations_ecologiques' => 'EcologieController',
             'associations_combattants' => 'CombattantController',
-            'associations_economie' => 'EconomieController'                        
+            'associations_economie' => 'EconomieController',  
+            'infos_utiles' => 'InfosUtilesController'                     
         ];
 
         // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut

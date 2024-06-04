@@ -17,7 +17,7 @@
                 <li><a href="#">Rencontres Associatives</a></li>
                 <li><a href="#">Collège d'Experts</a></li>
                 <li><a href="#">Agenda Des Associations</a></li>
-                <li><a href="#">Flash Info et Informations Utiles</a></li>
+                <li><a href="/app/infos_utiles">Flash Info et Informations Utiles</a></li>
                 <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']): ?>
                     <li><a href="/app/mon_compte">Mon Compte</a></li>
                 <?php endif; ?>
