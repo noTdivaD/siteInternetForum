@@ -36,7 +36,8 @@ class App {
             'associations_ecologiques' => 'EcologieController',
             'associations_combattants' => 'CombattantController',
             'associations_economie' => 'EconomieController',  
-            'infos_utiles' => 'InfosUtilesController'                     
+            'infos_utiles' => 'InfosUtilesController',
+            'rencontres_associatives' => 'RencontreController'                     
         ];
 
         // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut
