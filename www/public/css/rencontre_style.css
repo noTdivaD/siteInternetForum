@@ -114,7 +114,7 @@
 }
 
 .edit-article-btn {
-    width: 40%;
+    width: 100%;
     padding: 10px 20px;
     background-color: #b21f24;
     color: white;
@@ -127,7 +127,6 @@
 .edit-article-btn:hover {
     background-color: #921b1f;
 }
-
 
 .modal {
     display: none;
@@ -295,4 +294,8 @@ textarea {
 
 .add-image-btn img:hover {
     background-color: #218838;
+}
+
+textarea, input{
+    min-width: 1200px;
 }

@@ -22,10 +22,10 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
     <?php foreach ($content as $contents): ?>
         <div class="container">
             <div class="text">
-                <h1 data-title="<?php echo htmlspecialchars($contents['titre'], ENT_QUOTES, 'UTF-8'); ?>">
-                    <?php echo nl2br(htmlspecialchars_decode($contents['titre'], ENT_QUOTES)); ?>
+                <h1 class="title" data-title="<?php echo htmlspecialchars($contents['title'], ENT_QUOTES, 'UTF-8'); ?>">
+                    <?php echo nl2br(htmlspecialchars_decode($contents['title'], ENT_QUOTES)); ?>
                 </h1>
-                <p data-text-top="<?php echo htmlspecialchars($contents['text_top'], ENT_QUOTES, 'UTF-8'); ?>">
+                <p class="content-top" data-text-top="<?php echo htmlspecialchars($contents['text_top'], ENT_QUOTES, 'UTF-8'); ?>">
                     <?php echo nl2br(htmlspecialchars_decode($contents['text_top'], ENT_QUOTES)); ?>
                 </p>
             </div>
@@ -79,7 +79,7 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
     <?php foreach ($content as $contents): ?>
         <div class="container">
             <div class="text">
-                <p data-text-bottom="<?php echo htmlspecialchars($contents['text_bottom'], ENT_QUOTES, 'UTF-8'); ?>">
+                <p class="content-bottom" data-text-bottom="<?php echo htmlspecialchars($contents['text_bottom'], ENT_QUOTES, 'UTF-8'); ?>">
                     <?php echo nl2br(htmlspecialchars_decode($contents['text_bottom'], ENT_QUOTES)); ?>
                 </p>
                 <?php if ($isAdmin): ?>
@@ -93,33 +93,28 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
         <div id="editArticleModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2>Éditer l'association mise en valeur</h2>
-                <form id="editArticleForm" action="/update_association.php" method="POST">
+                <form id="editArticleForm">
                     <input type="hidden" id="edit-article-id" name="article_id">
-                    <div id="edit_error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
-                    <div class="form-group">
-                        <label for="edit-association">Association mise en valeur:</label>
-                        <select id="edit-association" name="association">
-                            <?php foreach ($associations as $association): ?>
-                                <option value="<?= htmlspecialchars($association['id'], ENT_QUOTES, 'UTF-8') ?>">
-                                    <?= htmlspecialchars($association['nom'], ENT_QUOTES, 'UTF-8') ?>
-                                </option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="edit-title">Titre de l'article:</label>
+                    <div>
+                        <label for="edit-title">Titre</label>
                         <input type="text" id="edit-title" name="title" required>
                     </div>
-                    <div class="form-group">
-                        <label for="edit-content-top">Contenu de l'article (haut):</label>
+                    <label for="association_id">Sélectionnez une association:</label>
+                    <select id="association_id" name="association_id" required>
+                        <?php foreach ($associations as $association): ?>
+                            <option value="<?php echo $association['id']; ?>"><?php echo $association['nom']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <div>
+                        <label for="edit-content-top">Contenu Haut</label>
                         <textarea id="edit-content-top" name="content_top" required></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="edit-content-bottom">Contenu de l'article (bas):</label>
+                    <div>
+                        <label for="edit-content-bottom">Contenu Bas</label>
                         <textarea id="edit-content-bottom" name="content_bottom" required></textarea>
                     </div>
-                    <button type="submit" class="btn">Enregistrer</button>
+                    <div id="edit_error_message" style="color: red;"></div>
+                    <button type="submit">Enregistrer les modifications</button>
                 </form>
             </div>
         </div>

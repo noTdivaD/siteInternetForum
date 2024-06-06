@@ -36,13 +36,22 @@ class RencontreModel {
         }
     }
 
-    public function updateArticle($id, $text_bottom) {
-        $sql = "UPDATE rencontres_associatives SET title = ?, text_top = ?, text_bottom = ? WHERE id = ?";
-        $stmt = $this->db->prepare($sql);
-        if ($stmt->execute([$title, $text_top, $text_bottom, $id])) {
+    public function updateSelectedAssociation($newAssociationId) {
+        try {
+            $this->db->beginTransaction();
+
+            $sql = "UPDATE associations SET rencontre_asso = 0 WHERE rencontre_asso = 1";
+            $this->db->exec($sql);
+
+            $sql = "UPDATE associations SET rencontre_asso = 1 WHERE id = ?";
+            $stmt = $this->db->prepare($sql);
+            $stmt->execute([$newAssociationId]);
+
+            $this->db->commit();
             return true;
-        } else {
-            error_log("SQL Error: " . implode(":", $stmt->errorInfo()));
+        } catch (Exception $e) {
+            $this->db->rollBack();
+            error_log("SQL Error: " . $e->getMessage());
             return false;
         }
     }
