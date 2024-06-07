@@ -22,8 +22,8 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
     <?php foreach ($content as $contents): ?>
         <div class="container">
             <div class="text">
-                <h1 data-title="<?php echo htmlspecialchars($contents['titre'], ENT_QUOTES, 'UTF-8'); ?>">
-                    <?php echo nl2br(htmlspecialchars_decode($contents['titre'], ENT_QUOTES)); ?>
+                <h1 data-title="<?php echo htmlspecialchars($contents['title'], ENT_QUOTES, 'UTF-8'); ?>">
+                    <?php echo nl2br(htmlspecialchars_decode($contents['title'], ENT_QUOTES)); ?>
                 </h1>
                 <p data-text-top="<?php echo htmlspecialchars($contents['text_top'], ENT_QUOTES, 'UTF-8'); ?>">
                     <?php echo nl2br(htmlspecialchars_decode($contents['text_top'], ENT_QUOTES)); ?>
