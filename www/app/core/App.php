@@ -19,12 +19,6 @@ class App {
             'mdp_email_envoye' => 'SentResetEmailController',
             'forum_email_envoye' => 'SentForumEmailController',
             'journee_forum' => 'JourneeForumController',
-            'annuaire_associations' => 'AnnuaireController',
-            'associations_sports' => 'SportsController',
-            'associations_animationsloisirs' => 'AnimationsLoisirsController',
-            'associations_artsculture' => 'ArtsCultureController',
-            'associations_bienetre' => 'BienEtreController',
-            'associations_humanitaires' => 'HumanitaireController',
             'authentification' => 'PasswordProtectController',
             'verify_email' => 'VerifyEmailController',
             'email_verified' => 'EmailConfirmedController',
@@ -33,11 +27,17 @@ class App {
             'inscription_journee_forum_success' => 'RegisterJourneeForumSuccessController',
             'liste_journee_forum' => 'ListJourneeForumController',
             'mon_compte' => 'MonCompteController',
-            'associations_ecologiques' => 'EcologieController',
-            'associations_combattants' => 'CombattantController',
-            'associations_economie' => 'EconomieController',  
             'infos_utiles' => 'InfosUtilesController',
-            'rencontres_associatives' => 'RencontreController'                     
+            'rencontres_associatives' => 'RencontreController',
+            'annuaire_associations' => 'AnnuaireController',
+            'associations_sports' => 'SportsController',
+            'associations_animations_et_loisirs' => 'AnimationsLoisirsController',
+            'associations_arts_et_culture' => 'ArtsCultureController',
+            'associations_bien_etre' => 'BienEtreController',
+            'associations_humanitaire_social_civique_et_environnement' => 'HumanitaireController',
+            'associations_ecologie_et_environnement' => 'EcologieController',
+            'associations_anciens_combattants_et_assimiles' => 'CombattantController',
+            'associations_economie_et_developpement' => 'EconomieController'
         ];
 
         // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut
