@@ -36,7 +36,7 @@ class RencontreModel {
         }
     }
 
-    public function updateSelectedAssociation($newAssociationId) {
+    public function updateAssociation($association_id) {
         try {
             $this->db->beginTransaction();
 
@@ -45,7 +45,7 @@ class RencontreModel {
 
             $sql = "UPDATE associations SET rencontre_asso = 1 WHERE id = ?";
             $stmt = $this->db->prepare($sql);
-            $stmt->execute([$newAssociationId]);
+            $stmt->execute([$association_id]);
 
             $this->db->commit();
             return true;

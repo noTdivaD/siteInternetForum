@@ -113,7 +113,7 @@
     justify-content: center; /* Centre le texte horizontalement */
 }
 
-.edit-article-btn {
+.edit-article-btn, .edit-association-btn {
     width: 100%;
     padding: 10px 20px;
     background-color: #b21f24;
@@ -121,10 +121,10 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
-.edit-article-btn:hover {
+.edit-article-btn:hover, .edit-association-btn:hover {
     background-color: #921b1f;
 }
 
@@ -180,7 +180,7 @@
     margin-bottom: 20px;
 }
 
-#editArticleForm {
+#editArticleForm, #editAssociationForm {
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -212,7 +212,7 @@ textarea {
     height: 200px;
 }
 
-#editArticleForm button.edit-article-btn {
+#editArticleForm button.edit-article-btn, #editAssociationModal button.edit-association-btn {
     width: 40%;
     padding: 10px 20px;
     background-color: #b21f24;
@@ -223,7 +223,7 @@ textarea {
     margin-top: 30px;
 }
 
-#editArticleForm button.edit-article-btn:hover {
+#editArticleForm button.edit-article-btn:hover, #editAssociationModal button.edit-association-btn:hover {
     background-color: #921b1f;
 }
 

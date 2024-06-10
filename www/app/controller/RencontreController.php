@@ -86,28 +86,22 @@ class RencontreController {
     }
 
     public function updateAssociation() {
+        header('Content-Type: application/json');
+
         if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_type'] != 'administrateur') {
             http_response_code(403);
             echo json_encode(['error' => 'Accès refusé.']);
             exit();
         }
     
-        $associationId = $_POST['association_id']; // ID de la nouvelle association sélectionnée
-        $articleId = $_POST['article_id'];
-    
+        // Récupérer le nom de l'association à partir de la requête POST
+        $associationId = $_POST['association_id'];
+        
         // Mettre à jour l'association dans la table "associations"
         $success = $this->model->updateAssociation($associationId, 1);
         if (!$success) {
             echo json_encode(['error' => 'Erreur lors de la mise à jour de l\'association.']);
             exit();
-        }
-    
-        // Mettre à jour l'article avec le nouveau contenu et l'association
-        $success = $this->model->updateArticle($articleId, $title, $content1, $content2);
-        if ($success) {
-            echo json_encode(['success' => true]);
-        } else {
-            echo json_encode(['error' => 'Erreur lors de la mise à jour de l\'article.']);
         }
     }
 }

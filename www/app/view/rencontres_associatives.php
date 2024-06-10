@@ -16,6 +16,7 @@ $association = $rencontreController->getAssociation();
 $associations = $rencontreController->getAll();
 
 $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'administrateur';
+var_dump($_POST)
 ?>
 
 <div class="main-content">
@@ -83,12 +84,32 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                     <?php echo nl2br(htmlspecialchars_decode($contents['text_bottom'], ENT_QUOTES)); ?>
                 </p>
                 <?php if ($isAdmin): ?>
+                    <button class="btn edit-association-btn">Modifier l'association</button>
+                <?php endif; ?>
+                <?php if ($isAdmin): ?>
                     <button class="btn edit-article-btn">Modifier le contenu de la page</button>
                 <?php endif; ?>
             </div>
         </div>
     <?php endforeach; ?>
     
+    <?php if ($isAdmin): ?>
+        <div id="editAssociationModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="editAssociationForm" action="app/controller/RencontreController.php" method="post" enctype="multipart/form-data">
+                    <label for="association-select">Sélectionnez une association:</label>
+                    <select id="association-select" name="association_id" required>
+                        <?php foreach ($associations as $association): ?>
+                            <option value="<?php echo $association['id']; ?>"><?php echo $association['nom']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <button type="submit">Enregistrer les modifications</button>
+                </form>
+            </div>
+        </div>
+    <?php endif; ?>
+
     <?php if ($isAdmin): ?>
         <div id="editArticleModal" class="modal">
             <div class="modal-content">
@@ -99,12 +120,6 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
                         <label for="edit-title">Titre</label>
                         <input type="text" id="edit-title" name="title" required>
                     </div>
-                    <label for="association_id">Sélectionnez une association:</label>
-                    <select id="association_id" name="association_id" required>
-                        <?php foreach ($associations as $association): ?>
-                            <option value="<?php echo $association['id']; ?>"><?php echo $association['nom']; ?></option>
-                        <?php endforeach; ?>
-                    </select>
                     <div>
                         <label for="edit-content-top">Contenu Haut</label>
                         <textarea id="edit-content-top" name="content_top" required></textarea>
