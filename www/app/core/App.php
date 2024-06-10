@@ -28,6 +28,7 @@ class App {
             'liste_journee_forum' => 'ListJourneeForumController',
             'mon_compte' => 'MonCompteController',
             'infos_utiles' => 'InfosUtilesController',
+            'nos_partenaires' => 'NosPartenairesController',
             'rencontres_associatives' => 'RencontreController',
             'annuaire_associations' => 'AnnuaireController',
             'associations_sports' => 'SportsController',

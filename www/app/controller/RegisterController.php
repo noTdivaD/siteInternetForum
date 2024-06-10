@@ -29,7 +29,7 @@
                     $error = "Adresse email non valide.";
                 } elseif ($password !== $confirm_password) {
                     $error = "Les mots de passe ne correspondent pas.";
-                } elseif (strlen($password) < 8 || !preg_match('/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]/', $password)) {
+                } elseif (strlen($password) < 8 || !preg_match('/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/', $password)) {
                     $error = "Le mot de passe doit contenir au moins 8 caractères, incluant une majuscule, un chiffre et un caractère spécial.";
                 } elseif ($userModel->emailExists($email)) {
                     $error = "Email déjà utilisé par un autre compte.";

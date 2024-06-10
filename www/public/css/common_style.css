@@ -25,3 +25,8 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background-color: #921b1f;  /* couleur de fond du thumb lors du survol */
 }
+
+/* Styles pour le mode sombre */
+body.dark-mode {
+    background-color: #000000e2;
+}
