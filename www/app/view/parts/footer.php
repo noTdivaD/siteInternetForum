@@ -9,9 +9,9 @@
             <ul>
                 <!--TODO: À remplir avec les liens pour les autres pages lorsque celles-ci seront disponibles -->
                 <li><a href="/app/contacter">Nous Contacter</a></li>
-                <li><a href="#">Nos Partenaires</a></li>
-                <li><a href="#">Affichage Mobile</a></li>
-                <li><a href="#">Version Imprimable</a></li>
+                <li><a href="/app/nos_partenaires">Nos Partenaires</a></li>
+                <li><a href="#" id="darkModeToggle">Mode Sombre</a></li>
+                <li><a href="#" id="printView">Version Imprimable</a></li>
             </ul>
         </div>
         <div class="social-media">
@@ -22,6 +22,7 @@
         </div>
     </footer>
     <!-- Fichier CSS du pied de page -->
+    <script src="/public/js/footer.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/footer.js'); ?>"></script>
     <script src="/public/js/menu_deroulant.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/menu_deroulant.js'); ?>"></script>
 </body>
 </html>

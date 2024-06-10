@@ -22,8 +22,9 @@ $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'admi
 ?>
 
 <div class="main-content">
-
+    
     <div class="article-section">
+        <h1>Retrouvez des informations diverses et utiles</h1>
         <?php
         if (isset($articles) && is_array($articles)) { // Assurez-vous que les articles existent et forment un tableau
             foreach ($articles as $article) {

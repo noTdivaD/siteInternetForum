@@ -30,7 +30,7 @@ document.getElementById('formInscription').addEventListener('submit', function(e
 
     // Vérification de l'email
     var email = document.getElementById('email').value;
-    var emailRegex = /^(?!.*\.\.)(?!.*\.$)(?!^\.)[A-Za-z0-9_.-]+@[A-Za-z0-9-]+\.[A-Za-z0-9.-]+$/;
+    var emailRegex = /^(?!.*\.\.)(?!.*\.$)(?!^\.)[A-Za-z0-9_.-]+@[A-Za-z0-9-]+\.[A-Za-z0-9.-]+$/;       
     if (!emailRegex.test(email)) {
         showError('email', "L'adresse email n'est pas valide.");
         isValid = false;
