@@ -15,7 +15,7 @@
                 <li><a href="/app/journee_forum">Journée Forum</a></li>
                 <li><a href="/app/annuaire_associations">Annuaire des Associations</a></li>
                 <li><a href="/app/rencontres_associatives">Rencontres Associatives</a></li>
-                <li><a href="#">Collège d'Experts</a></li>
+                <li><a href="/app/college_experts">Collège d'Experts</a></li>
                 <li><a href="#">Agenda Des Associations</a></li>
                 <li><a href="/app/infos_utiles">Flash Info et Informations Utiles</a></li>
                 <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']): ?>

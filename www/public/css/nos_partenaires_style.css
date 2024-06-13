@@ -1,0 +1,336 @@
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px; /* Hauteur du header */
+    padding-bottom: 80px; /* Hauteur du footer */
+    z-index: 1; /* Base z-index for main content */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Vous pouvez ajuster cette valeur selon vos besoins */
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 30px;
+    z-index: 2; /* Ensure it's above the main content */
+}
+
+.text-section {
+    background-color: #b21f24;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    z-index: 3; /* Ensure it's above the content wrapper */
+}
+
+.text-section h1 {
+    margin: 0 0 20px 0;
+    font-size: 2.5em;
+}
+
+.text-section p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.swiper-container {
+    width: 100%;
+    max-width: 800px; /* Set max width to match the text-section */
+    margin: 0 auto; /* Center align */
+    padding-bottom: 40px; /* Add space for pagination bullets */
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflow to prevent seeing adjacent slides */
+    z-index: 2; /* Ensure it's above the main content but below the text-section */
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 100%; /* Ensure slides fit within the container */
+}
+
+.swiper-slide h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #34495e;
+    font-size: 1.5em; /* Increase font size */
+}
+
+.partner-item {
+    text-align: center;
+}
+
+.partner-item img {
+    max-width: 300px; /* Increase max width */
+    height: auto;
+    margin: 20px 0; /* Space between image and text */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.partner-item p {
+    font-size: 1.3em; /* Increase font size */
+    color: #34495e;
+}
+
+.partner-item .description {
+    font-size: 1.1em; /* Smaller font size for description */
+    color: #666;
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+    position: relative;
+    text-align: center;
+    margin-top: 20px; /* Add space above pagination bullets */
+    z-index: 1; /* Lower z-index for pagination bullets */
+}
+
+.swiper-pagination-bullet {
+    background: #b21f24 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #e74c3c !important;
+}
+
+.swiper-container + .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.partner-item button {
+    background-color: #b21f24;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.partner-item button:hover {
+    background-color: darkred;
+}
+
+/* Button styles */
+.button-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #b21f24;
+    width: 100%;
+}
+
+.contents {
+    display: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.contents p {
+    color: white;
+    font-size: 15px;
+}
+
+.contents button {
+    background-color: darkred;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contents button:hover {
+    background-color: #e74c3c;
+}
+
+/* Styles pour les modales */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10; /* Higher z-index for modals */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 25px 50px;
+    border-radius: 5px;
+    border: 2px solid #888;
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.5);
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#addPartenaireForm, #editParagraphForm, #editPartenaireForm {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="file"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 200px;
+}
+
+#addPartenaireForm button.add-article-btn, #editParagraphForm button.edit-article-btn, #editPartenaireForm button.edit-article-btn {
+    width: 40%;
+    padding: 10px 20px;
+    background-color: #b21f24;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+#addPartenaireForm button.add-article-btn:hover, #editParagraphForm button.edit-article-btn:hover, #editPartenaireForm button.edit-article-btn:hover {
+    background-color: #921b1f;
+}
+
+.form-group-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group-checkbox label {
+    margin: 0;
+}
+
+.drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.drop-zone:hover {
+    background-color: #f0f0f0;
+}
+
+.drop-zone .drop-zone__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.drop-zone__thumb {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.drop-zone__prompt {
+    font-size: 16px;
+    color: #999;
+}
+
+.drop-zone.highlight {
+    background-color: #e9e9e9;
+}
+
+.drop-zone.dragover {
+    background-color: #f0f0f0;
+    border-color: #333;
+}
+
+.small-textarea {
+    height: 100px;
+}

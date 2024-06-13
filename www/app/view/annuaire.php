@@ -52,6 +52,10 @@ $themes = $controller->displayPage();
             </div>
         </* ?php endif; ?> -->
     </div>
+    <div class="download-guide">
+        <p>Télécharger ici la dernière version du guide des associations :</p>
+        <a href="/public/pdf/Annuaire Des Associations.pdf" class="download-btn" download>Télécharger</a>
+    </div>
 </div>    
 
 <!-- 

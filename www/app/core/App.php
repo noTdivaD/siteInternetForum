@@ -30,6 +30,7 @@ class App {
             'infos_utiles' => 'InfosUtilesController',
             'nos_partenaires' => 'NosPartenairesController',
             'rencontres_associatives' => 'RencontreController',
+            'college_experts' => 'CollegeExpertsController',
             'annuaire_associations' => 'AnnuaireController',
             'associations_sports' => 'SportsController',
             'associations_animations_et_loisirs' => 'AnimationsLoisirsController',

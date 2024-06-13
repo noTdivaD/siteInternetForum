@@ -1,0 +1,318 @@
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px; /* Hauteur du footer */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 30px;
+    margin-top: -50px;
+}
+
+.text-section {
+    background-color: #b21f24;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+.text-section h1 {
+    margin: 0 0 20px 0;
+    font-size: 2.5em;
+}
+
+.text-section p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.faq-section {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #34495e;
+}
+
+.faq-search-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.faq-search {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.no-results {
+    text-align: center;
+    font-size: 1.2em;
+    color: #b21f24;
+    margin-top: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.faq-item h3 {
+    margin-top: 0;
+    color: #b21f24;
+    font-size: 1.5em;
+}
+
+.faq-item p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.expert-section {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.expert-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #34495e;
+}
+
+.expert {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.expert h3 {
+    margin-top: 0;
+    color: #b21f24;
+    font-size: 1.5em;
+}
+
+.expert p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.expert img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.btn-edit-faq, .btn-delete-faq, .btn-add-faq, .btn-edit-expert, .btn-delete-expert, .btn-add-expert {
+    background-color: #b21f24;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.btn-edit-faq:hover, .btn-delete-faq:hover, .btn-add-faq:hover, .btn-edit-expert:hover, .btn-delete-expert:hover, .btn-add-expert:hover {
+    background-color: darkred;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 25px 50px;
+    border-radius: 5px;
+    border: 2px solid #888;
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.5);
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#addFAQForm, #editFAQForm, #addExpertForm, #editExpertForm {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="file"], textarea, input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 200px;
+}
+
+#addExpertForm textarea,
+#editExpertForm textarea {
+    height: 100px; 
+}
+
+#addFAQForm button.add-faq-btn, #editFAQForm button.edit-faq-btn, #addExpertForm button.add-expert-btn, #editExpertForm button.edit-expert-btn {
+    width: 40%;
+    padding: 10px 20px;
+    background-color: #b21f24;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+#addFAQForm button.add-faq-btn:hover, #editFAQForm button.edit-faq-btn:hover, #addExpertForm button.add-expert-btn:hover, #editExpertForm button.edit-expert-btn:hover {
+    background-color: #921b1f;
+}
+
+.form-group-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group-checkbox label {
+    margin: 0;
+}
+
+.drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.drop-zone:hover {
+    background-color: #f0f0f0;
+}
+
+.drop-zone .drop-zone__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.drop-zone__thumb {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.drop-zone__prompt {
+    font-size: 16px;
+    color: #999;
+}
+
+.drop-zone.highlight {
+    background-color: #e9e9e9;
+}
+
+.drop-zone.dragover {
+    background-color: #f0f0f0;
+    border-color: #333;
+}

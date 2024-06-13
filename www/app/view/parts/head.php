@@ -8,5 +8,6 @@
     <link rel="stylesheet" href="/public/css/header_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/header_style.css'); ?>">
     <link rel="stylesheet" href="/public/css/dropmenu_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/dropmenu_style.css'); ?>">
     <link rel="stylesheet" href="/public/css/footer_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/footer_style.css'); ?>">
+    <link rel="stylesheet" href="/public/css/cookieconsent_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/cookieconsent_style.css'); ?>">
     <link rel="icon" href="/public/images/logo/logo-association-forum-onglet-t48.png" type="/png">
 </head>

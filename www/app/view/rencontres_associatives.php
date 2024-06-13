@@ -36,17 +36,21 @@ var_dump($_POST)
     <div class="association-container">
             <?php foreach ($association as $associationaffiche): ?>
                 <div class="association-item">
-                <h2>Association mise à l'honneur cette semaine</h2>
+                <h2 id="titre_association">Association mise à l'honneur cette semaine</h2>
                     <h2><?= htmlspecialchars($associationaffiche['nom'], ENT_QUOTES, 'UTF-8') ?></h2>
                     <table>
                         <tr>
-                            <th>Domaine(s)</th>
-                            <th>Thèmes</th>
+                            <th class="domaines">Domaine(s)</th>
                         </tr>
                         <tr>
                             <td class="domaines"><?= htmlspecialchars($associationaffiche['domaine'], ENT_QUOTES, 'UTF-8') ?></td>
+                        </tr>
+                        <tr>
+                            <th class="themes">Thèmes</th>
+                        </tr>
+                        <tr>
                             <td class="themes"><?= htmlspecialchars($associationaffiche['themes'], ENT_QUOTES, 'UTF-8') ?></td>
-                        </rd>
+                        </tr>
                     </table>
                     <table>
                         <tr>
@@ -97,6 +101,7 @@ var_dump($_POST)
         <div id="editAssociationModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
+                <h2>Éditer une association</h2>
                 <form id="editAssociationForm" action="app/controller/RencontreController.php" method="post" enctype="multipart/form-data">
                     <label for="association-select">Sélectionnez une association:</label>
                     <select id="association-select" name="association_id" required>
@@ -104,7 +109,7 @@ var_dump($_POST)
                             <option value="<?php echo $association['id']; ?>"><?php echo $association['nom']; ?></option>
                         <?php endforeach; ?>
                     </select>
-                    <button type="submit">Enregistrer les modifications</button>
+                    <button type="submit" class="edit-article-btn">Enregistrer les modifications</button>
                 </form>
             </div>
         </div>
@@ -114,22 +119,23 @@ var_dump($_POST)
         <div id="editArticleModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
+                <h2>Éditer un article</h2>
                 <form id="editArticleForm">
                     <input type="hidden" id="edit-article-id" name="article_id">
-                    <div>
+                    <div id="edit_error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
+                    <div class="form-group">
                         <label for="edit-title">Titre</label>
                         <input type="text" id="edit-title" name="title" required>
                     </div>
-                    <div>
+                    <div class="form-group">
                         <label for="edit-content-top">Contenu Haut</label>
                         <textarea id="edit-content-top" name="content_top" required></textarea>
                     </div>
-                    <div>
+                    <div class="form-group">
                         <label for="edit-content-bottom">Contenu Bas</label>
                         <textarea id="edit-content-bottom" name="content_bottom" required></textarea>
                     </div>
-                    <div id="edit_error_message" style="color: red;"></div>
-                    <button type="submit">Enregistrer les modifications</button>
+                    <button type="submit" class="edit-article-btn">Enregistrer les modifications</button>
                 </form>
             </div>
         </div>

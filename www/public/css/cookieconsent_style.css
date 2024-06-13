@@ -1,0 +1,75 @@
+/* Styles pour la superposition (overlay) */
+.cookie-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond opaque transparent */
+    z-index: 999; /* Juste en dessous de la popup */
+    display: none; /* Masqué par défaut */
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transition pour le fondu */
+}
+
+/* Styles pour la popup de consentement */
+.cookie-banner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000; /* Juste au-dessus de l'overlay */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Masqué par défaut */
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transition pour le fondu */
+}
+
+.cookie-banner.show {
+    display: block;
+    opacity: 1; /* Opacité pour rendre la popup visible */
+}
+
+.cookie-overlay.show {
+    display: block;
+    opacity: 1; /* Opacité pour rendre l'overlay visible */
+}
+
+
+.img { 
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.cookie-banner h1 {
+    color: #333;
+    margin: 0 0 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cookie-banner p {
+    color: black;
+    margin: 0 0 20px 0;
+}
+
+.cookie-banner button {
+    background-color: #b21f24;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 30%;
+}
+
+.cookie-banner button:hover {
+    background-color: #921b1f;
+}
