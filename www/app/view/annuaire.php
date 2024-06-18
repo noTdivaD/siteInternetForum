@@ -3,12 +3,17 @@
 $pageTitle = "Annuaire des associations - Forum du Pays de Grasse";
 $currentPage = "Annuaire des associations";
 
-// Vérifier si l'utilisateur a accès au site
-if (!isset($_SESSION['site_access_granted']) || $_SESSION['site_access_granted'] !== true) {
-    header('Location: /app/authentification');
-    exit();
-}
+// Chemin du fichier default.php
+$defaultFilePath = __DIR__ . '/view/default.php';
 
+// Vérifiez si default.php existe
+if (file_exists($defaultFilePath)) {
+    // Vérifier si l'utilisateur a accès au site
+    if (!isset($_SESSION['site_access_granted']) || $_SESSION['site_access_granted'] !== true) {
+        header('Location: /app/authentification');
+        exit();
+    }
+}
 /*
 // Vérifier si l'utilisateur est connecté et administrateur
 $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'administrateur'; */
@@ -54,7 +59,7 @@ $themes = $controller->displayPage();
     </div>
     <div class="download-guide">
         <p>Télécharger ici la dernière version du guide des associations :</p>
-        <a href="/public/pdf/Annuaire Des Associations.pdf" class="download-btn" download>Télécharger</a>
+        <a href="/public/pdf/annuaire_des_associations.pdf" class="download-btn" download>Télécharger</a>
     </div>
 </div>    
 

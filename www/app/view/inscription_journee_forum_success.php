@@ -2,11 +2,17 @@
     // Titre de la page
     $pageTitle = "Inscription Confirmée - Forum du Pays de Grasse";
     $currentPage = "Inscription Confirmée";
+    
+    // Chemin du fichier default.php
+    $defaultFilePath = __DIR__ . '/view/default.php';
 
-    // Vérifier si l'utilisateur a accès au site
-    if (!isset($_SESSION['site_access_granted']) || $_SESSION['site_access_granted'] !== true) {
-        header('Location: /app/authentification');
-        exit();
+    // Vérifiez si default.php existe
+    if (file_exists($defaultFilePath)) {
+        // Vérifier si l'utilisateur a accès au site
+        if (!isset($_SESSION['site_access_granted']) || $_SESSION['site_access_granted'] !== true) {
+            header('Location: /app/authentification');
+            exit();
+        }
     }
 
     // Inclusion du header
