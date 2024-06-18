@@ -124,11 +124,11 @@ document.addEventListener('DOMContentLoaded', function () {
         return re.test(email);
     }
 
-    // Function to validate phone number (example for French phone numbers)
+    // Function to validate phone number (only digits and spaces)
     function validatePhone(phone) {
         var re = /^[\d\s]+$/;
         return re.test(phone);
-    }    
+    }
 
     // Function to display error messages
     function displayErrorMessage(message, form) {
@@ -181,6 +181,11 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(error => console.error('Error:', error));
     });
 
+    // Function to replace newlines with <br> tags
+    function nl2br(str) {
+        return str.replace(/\n/g, '<br>');
+    }
+
     // Open edit expert modal
     document.querySelectorAll('.btn-edit-expert').forEach(function (btn) {
         btn.addEventListener('click', function () {
@@ -195,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         if (data && data.id) {
                             editExpertId.value = data.id;
                             editTitle.value = data.titre;
-                            editDescription.value = data.description;
+                            editDescription.value = data.description.replace(/<br\s*\/?>/g, '\n');
                             editPhone.value = data.phone;
                             editEmail.value = data.email;
                             document.getElementById('existing-image-url').value = data.image_url;
@@ -232,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
         addExpertModal.style.display = 'flex';
     });
 
-    // Ajouter expert form submission
+    // Add expert form submission
     addExpertForm.addEventListener('submit', function (event) {
         event.preventDefault();
         console.log("Submitting add Expert form");
@@ -263,10 +268,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 newExpert.classList.add('expert');
                 newExpert.innerHTML = `
                     <h3>${data.expert.titre}</h3>
-                    <p class="description">${data.expert.description}</p>
                     ${data.expert.image_url ? `<img src="${data.expert.image_url}" alt="${data.expert.titre}">` : ''}
-                    <p class="phone">Phone: ${data.expert.phone}</p>
-                    <p class="email">Email: ${data.expert.email}</p>
+                    <p class="description">${nl2br(data.expert.description)}</p>
+                    <p class="phone">Numéro de Téléphone : ${data.expert.phone}</p>
+                    <p class="email">Email : ${data.expert.email}</p>
                     ${isAdmin ? `<button class="btn-edit-expert" data-id="${data.expert.id}">Modifier</button>
                     <button class="btn-delete-expert" data-id="${data.expert.id}">Supprimer</button>` : ''}
                 `;
@@ -290,11 +295,11 @@ document.addEventListener('DOMContentLoaded', function () {
         var email = editExpertForm.querySelector('#edit-email').value;
         var phone = editExpertForm.querySelector('#edit-phone').value;
         if (!validateEmail(email)) {
-            displayErrorMessage("Invalid email address.", editExpertForm);
+            displayErrorMessage("Adresse Email Invalide", editExpertForm);
             return;
         }
         if (!validatePhone(phone)) {
-            displayErrorMessage("Invalid phone number.", editExpertForm);
+            displayErrorMessage("Numéro de Téléphone Invalide", editExpertForm);
             return;
         }
 
@@ -311,9 +316,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 var expertItem = document.querySelector(`.expert[data-id='${data.expert.id}']`);
                 if (expertItem) {
                     expertItem.querySelector('h3').textContent = data.expert.titre;
-                    expertItem.querySelector('p.description').textContent = data.expert.description;
-                    expertItem.querySelector('p.phone').textContent = `Phone: ${data.expert.phone}`;
-                    expertItem.querySelector('p.email').textContent = `Email: ${data.expert.email}`;
+                    expertItem.querySelector('p.description').innerHTML = nl2br(data.expert.description);
+                    expertItem.querySelector('p.phone').textContent = `Numéro de Téléphone : ${data.expert.phone}`;
+                    expertItem.querySelector('p.email').textContent = `Email : ${data.expert.email}`;
                     if (data.expert.image_url) {
                         var imgElement = expertItem.querySelector('img');
                         if (imgElement) {

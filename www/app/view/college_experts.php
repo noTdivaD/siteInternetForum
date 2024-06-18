@@ -52,12 +52,12 @@ include 'parts/header.php';
         <div class="expert-section" id="expert-section">
         <h2>Nos Experts</h2>
         <?php foreach ($experts as $expert): ?>
-        <div class="expert" data-id="<?php echo htmlspecialchars($expert['id']); ?>"> <!-- Add data-id attribute -->
+        <div class="expert" data-id="<?php echo htmlspecialchars($expert['id']); ?>">
             <h3><?php echo htmlspecialchars($expert['titre']); ?></h3>
             <?php if (!empty($expert['image_url'])): ?>
             <img src="<?php echo htmlspecialchars($expert['image_url']); ?>" alt="Expert Image" class="expert-image">
             <?php endif; ?>
-            <p class="description"><?php echo htmlspecialchars($expert['description']); ?></p>
+            <p class="description"><?php echo nl2br(htmlspecialchars($expert['description'])); ?></p>
             <p class="phone">Numéro de téléphone : <?php echo htmlspecialchars($expert['phone']); ?></p>
             <p class="email">Email : <?php echo htmlspecialchars($expert['email']); ?></p>
             <?php if ($isAdmin) { ?>
@@ -100,7 +100,7 @@ include 'parts/header.php';
                 <h2>Éditer une Question/Réponse</h2>
                 <form id="editFAQForm">
                     <input type="hidden" id="edit-faq-id" name="faq_id">
-                    <div id="edit_error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
+                    <div id="error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
                     <div class="form-group">
                         <label for="edit-question">Titre de la Question :</label>
                         <input type="text" id="edit-question" name="question" required>
@@ -158,7 +158,7 @@ include 'parts/header.php';
             <form id="editExpertForm">
                 <input type="hidden" id="edit-expert-id" name="expert_id">
                 <input type="hidden" id="existing-image-url" name="existing_image_url">
-                <div id="edit_error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
+                <div id="error_message" style="text-align: center; margin-bottom: 10px; color: red;"></div>
                 <div class="form-group">
                     <label for="edit-title">Titre de l'expert :</label>
                     <input type="text" id="edit-title" name="title" required>

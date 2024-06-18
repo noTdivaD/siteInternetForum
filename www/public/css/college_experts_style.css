@@ -136,7 +136,7 @@
 }
 
 .expert img {
-    max-width: 200px;
+    max-width: 300px;
     height: auto;
     margin-bottom: 10px;
 }
@@ -315,4 +315,118 @@ textarea {
 .drop-zone.dragover {
     background-color: #f0f0f0;
     border-color: #333;
+}
+
+.error_message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #ffe6e6;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+/* Styles responsives */
+@media (max-width: 1200px) {
+    .content-wrapper {
+        padding: 0 20px;
+    }
+
+    .faq-search {
+        width: 70%;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-search {
+        width: 90%;
+    }
+
+    #addFAQForm, #editFAQForm, #addExpertForm, #editExpertForm {
+        width: 90%;
+    }
+
+    #addFAQForm button.add-faq-btn, #editFAQForm button.edit-faq-btn, #addExpertForm button.add-expert-btn, #editExpertForm button.edit-expert-btn {
+        width: 60%;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .text-section h1 {
+        font-size: 2em;
+    }
+
+    .text-section p, .faq-item p, .expert p {
+        font-size: 1em;
+    }
+
+    .faq-item h3, .expert h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-search {
+        width: 100%;
+    }
+
+    #addFAQForm, #editFAQForm, #addExpertForm, #editExpertForm {
+        width: 100%;
+    }
+
+    #addFAQForm button.add-faq-btn, #editFAQForm button.edit-faq-btn, #addExpertForm button.add-expert-btn, #editExpertForm button.edit-expert-btn {
+        width: 80%;
+    }
+
+    .text-section h1 {
+        font-size: 1.5em;
+    }
+
+    .text-section p, .faq-item p, .expert p {
+        font-size: 0.9em;
+    }
+
+    .faq-item h3, .expert h3 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 400px) {
+    .faq-search {
+        width: 100%;
+    }
+
+    #addFAQForm, #editFAQForm, #addExpertForm, #editExpertForm {
+        width: 100%;
+    }
+
+    #addFAQForm button.add-faq-btn, #editFAQForm button.edit-faq-btn, #addExpertForm button.add-expert-btn, #editExpertForm button.edit-expert-btn {
+        width: 100%;
+    }
+
+    .text-section h1 {
+        font-size: 1.2em;
+    }
+
+    .text-section p, .faq-item p, .expert p {
+        font-size: 0.8em;
+    }
+
+    .faq-item h3, .expert h3 {
+        font-size: 0.9em;
+    }
+
+    .expert img {
+        max-width: 100%;
+        height: auto;
+    }
 }
