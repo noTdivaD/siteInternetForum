@@ -4,7 +4,7 @@ $pageTitle = "Annuaire des associations - Forum du Pays de Grasse";
 $currentPage = "Annuaire des associations";
 
 // Chemin du fichier default.php
-$defaultFilePath = __DIR__ . '/view/default.php';
+$defaultFilePath = __DIR__ . '/default.php';
 
 // Vérifiez si default.php existe
 if (file_exists($defaultFilePath)) {

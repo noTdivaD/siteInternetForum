@@ -83,7 +83,7 @@ header {
     height: auto;
     border-radius: 4px;
     margin-top: 10px;
-    max-height: 200px;
+    max-height: 100px;
     object-fit: cover;
 }
 
@@ -172,13 +172,20 @@ h1 {
     justify-content: center; /* Centre le texte horizontalement */
 }
 
+
+
 /* Styles spécifiques pour sports */
 .sports .association-item a,
 .sports .back-to-directory,
 .sports .back-to-top,
 .sports #search-button,
 .sports::-webkit-scrollbar, 
-.sports::-webkit-scrollbar-thumb {
+.sports::-webkit-scrollbar-thumb,
+.sports .edit-button,
+.sports .delete-button,
+.sports .visibility-button,
+.sports .add-association-button button,
+.sports .form-group .modal-button {
     background-color: rgba(144,228,252,1.0);
 }
 
@@ -186,7 +193,12 @@ h1 {
 .sports .back-to-directory:hover,
 .sports .back-to-top:hover,
 .sports #search-button:hover,
-.sports::-webkit-scrollbar-thumb:hover {
+.sports::-webkit-scrollbar-thumb:hover,
+.sports .edit-button:hover,
+.sports .delete-button:hover,
+.sports .visibility-button:hover,
+.sports .add-association-button button:hover,
+.sports .form-group .modal-button:hover {
     background-color: rgb(11, 137, 171);
 }
 
@@ -196,7 +208,12 @@ h1 {
 .animations-loisirs .back-to-top,
 .animations-loisirs #search-button,
 .animations-loisirs::-webkit-scrollbar, 
-.animations-loisirs::-webkit-scrollbar-thumb {
+.animations-loisirs::-webkit-scrollbar-thumb,
+.animations-loisirs .edit-button,
+.animations-loisirs .delete-button,
+.animations-loisirs .visibility-button,
+.animations-loisirs .add-association-button button,
+.animations-loisirs .form-group .modal-button {
     background-color: rgba(222, 107, 48, 1.0);
 }
 
@@ -204,7 +221,12 @@ h1 {
 .animations-loisirs .back-to-directory:hover,
 .animations-loisirs .back-to-top:hover,
 .animations-loisirs #search-button:hover,
-.animations-loisirs::-webkit-scrollbar-thumb:hover {
+.animations-loisirs::-webkit-scrollbar-thumb:hover,
+.animations-loisirs .edit-button:hover,
+.animations-loisirs .delete-button:hover,
+.animations-loisirs .visibility-button:hover,
+.animations-loisirs .add-association-button button:hover,
+.animations-loisirs .form-group .modal-button:hover {
     background-color: rgb(143, 53, 8);
 }
 
@@ -214,7 +236,12 @@ h1 {
 .arts-culture .back-to-top,
 .arts-culture #search-button,
 .arts-culture::-webkit-scrollbar, 
-.arts-culture::-webkit-scrollbar-thumb {
+.arts-culture::-webkit-scrollbar-thumb,
+.arts-culture .edit-button,
+.arts-culture .delete-button,
+.arts-culture .visibility-button,
+.arts-culture .add-association-button button
+.arts-culture .form-group .modal-button {
     background-color: rgba(125, 168, 103, 1.0);
 }
 
@@ -222,7 +249,12 @@ h1 {
 .arts-culture .back-to-directory:hover,
 .arts-culture .back-to-top:hover,
 .arts-culture #search-button:hover,
-.arts-culture::-webkit-scrollbar-thumb:hover {
+.arts-culture::-webkit-scrollbar-thumb:hover,
+.arts-culture .edit-button:hover,
+.arts-culture .delete-button:hover,
+.arts-culture .visibility-button:hover,
+.arts-culture .add-association-button button:hover,
+.arts-culture .form-group .modal-button:hover {
     background-color: rgb(75, 105, 60);
 }
 
@@ -232,7 +264,12 @@ h1 {
 .bien-etre .back-to-top,
 .bien-etre #search-button,
 .bien-etre::-webkit-scrollbar, 
-.bien-etre::-webkit-scrollbar-thumb {
+.bien-etre::-webkit-scrollbar-thumb,
+.bien-etre .edit-button,
+.bien-etre .delete-button,
+.bien-etre .visibility-button,
+.bien-etre .add-association-button button,
+.bien-etre .form-group .modal-button {
     background-color: rgba(71, 165, 153, 1.0);
 }
 
@@ -240,7 +277,12 @@ h1 {
 .bien-etre .back-to-directory:hover,
 .bien-etre .back-to-top:hover,
 .bien-etre #search-button:hover,
-.bien-etre::-webkit-scrollbar-thumb:hover {
+.bien-etre::-webkit-scrollbar-thumb:hover,
+.bien-etre .edit-button:hover,
+.bien-etre .delete-button:hover,
+.bien-etre .visibility-button:hover,
+.bien-etre .add-association-button button:hover,
+.bien-etre .form-group .modal-button:hover {
     background-color: rgb(43, 101, 93);
 }
 
@@ -250,7 +292,12 @@ h1 {
 .humanitaire .back-to-top,
 .humanitaire #search-button,
 .humanitaire::-webkit-scrollbar, 
-.humanitaire::-webkit-scrollbar-thumb {
+.humanitaire::-webkit-scrollbar-thumb,
+.humanitaire .edit-button,
+.humanitaire .delete-button,
+.humanitaire .visibility-button,
+.humanitaire .add-association-button button,
+.humanitaire .form-group .modal-button {
     background-color: rgba(173, 149, 233, 1.0);
 }
 
@@ -258,7 +305,12 @@ h1 {
 .humanitaire .back-to-directory:hover,
 .humanitaire .back-to-top:hover,
 .humanitaire #search-button:hover,
-.humanitaire::-webkit-scrollbar-thumb:hover {
+.humanitaire::-webkit-scrollbar-thumb:hover,
+.humanitaire .edit-button:hover,
+.humanitaire .delete-button:hover,
+.humanitaire .visibility-button:hover,
+.humanitaire .add-association-button button:hover,
+.humanitaire .form-group .modal-button:hover {
     background-color: rgb(89, 77, 121);
 }
 
@@ -268,7 +320,12 @@ h1 {
 .ecologie .back-to-top,
 .ecologie #search-button,
 .ecologie::-webkit-scrollbar, 
-.ecologie::-webkit-scrollbar-thumb {
+.ecologie::-webkit-scrollbar-thumb,
+.ecologie .edit-button,
+.ecologie .delete-button,
+.ecologie .visibility-button,
+.ecologie .add-association-button button,
+.ecologie .form-group .modal-button {
     background-color: rgba(40, 116, 76, 1.0);
 }
 
@@ -276,7 +333,12 @@ h1 {
 .ecologie .back-to-directory:hover,
 .ecologie .back-to-top:hover,
 .ecologie #search-button:hover,
-.ecologie::-webkit-scrollbar-thumb:hover {
+.ecologie::-webkit-scrollbar-thumb:hover,
+.ecologie .edit-button:hover,
+.ecologie .delete-button:hover,
+.ecologie .visibility-button:hover,
+.ecologie .add-association-button button:hover,
+.ecologie .form-group .modal-button:hover {
     background-color: rgb(32, 93, 61);
 }
 
@@ -286,7 +348,12 @@ h1 {
 .combattant .back-to-top,
 .combattant #search-button,
 .combattant::-webkit-scrollbar, 
-.combattant::-webkit-scrollbar-thumb {
+.combattant::-webkit-scrollbar-thumb,
+.combattant .edit-button,
+.combattant .delete-button,
+.combattant .visibility-button,
+.combattant .add-association-button button,
+.combattant .form-group .modal-button {
     background-color: rgba(200, 52, 28, 1.0);
 }
 
@@ -294,7 +361,12 @@ h1 {
 .combattant .back-to-directory:hover,
 .combattant .back-to-top:hover,
 .combattant #search-button:hover,
-.combattant::-webkit-scrollbar-thumb:hover {
+.combattant::-webkit-scrollbar-thumb:hover,
+.combattant .edit-button:hover,
+.combattant .delete-button:hover,
+.combattant .visibility-button:hover,
+.combattant .add-association-button button:hover,
+.combattant .form-group .modal-button:hover {
     background-color: rgb(180, 41, 21);
 }
 
@@ -304,7 +376,12 @@ h1 {
 .economie .back-to-top,
 .economie #search-button,
 .economie::-webkit-scrollbar, 
-.economie::-webkit-scrollbar-thumb {
+.economie::-webkit-scrollbar-thumb,
+.economie .edit-button,
+.economie .delete-button,
+.economie .visibility-button,
+.economie .add-association-button button,
+.economie .form-group .modal-button {
     background-color: rgba(200, 220, 76, 1.0);
 }
 
@@ -312,7 +389,12 @@ h1 {
 .economie .back-to-directory:hover,
 .economie .back-to-top:hover,
 .economie #search-button:hover,
-.economie::-webkit-scrollbar-thumb:hover {
+.economie::-webkit-scrollbar-thumb:hover,
+.economie .edit-button:hover,
+.economie .delete-button:hover,
+.economie .visibility-button:hover,
+.economie .add-association-button button:hover,
+.economie .form-group .modal-button:hover {
     background-color: rgb(180, 176, 60);
 }
 
@@ -326,6 +408,186 @@ h1 {
     color: black;
     width: 100%; /* S'assure que le message occupe toute la largeur disponible */
 }
+
+/* Styles pour les boutons d'administration */
+.admin-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.edit-button,
+.delete-button,
+.visibility-button,
+.add-association-button button {
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+
+.add-association-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+/* Styles pour les modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center; /* Centre le texte horizontalement */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative; /* Pour positionner le bouton de fermeture */
+}
+
+.close {
+    color: #aaa;
+    position: absolute; /* Positionne le bouton de fermeture en haut à droite */
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Texte aligné à gauche pour les labels et inputs */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="url"],
+.form-group input[type="file"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group .modal-button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto; /* Ajuste la largeur du bouton automatiquement */
+    font-size: 16px;
+    text-align: center; /* Centre le texte horizontalement */
+    width: 30%;
+    margin: 0 auto; /* Centre le bouton horizontalement */
+    display: block; /* Assure que le bouton est un élément de bloc pour l'auto-margin */
+}
+
+
+.modal h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group-checkbox label {
+    margin: 0;
+}
+
+.drop-zone {
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.drop-zone:hover {
+    background-color: #f0f0f0;
+}
+
+.drop-zone .drop-zone__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.drop-zone__thumb {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.drop-zone__prompt {
+    font-size: 16px;
+    color: #999;
+}
+
+.drop-zone.highlight {
+    background-color: #e9e9e9;
+}
+
+.drop-zone.dragover {
+    background-color: #f0f0f0;
+    border-color: #333;
+}
+
 
 /* Responsive styles */
 @media (max-width: 1200px) {

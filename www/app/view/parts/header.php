@@ -7,6 +7,7 @@
         <h1>Nous Utilisons des Cookies !</h1>
         <p>Ce site utilise des cookies pour vous garantir la meilleure expérience possible.</p>
         <button id="accept-cookies">Accepter</button>
+        <button id="decline-cookies">Refuser</button>
     </div>
 
     <h1>Test Cookie Consent</h1>

@@ -1,10 +1,10 @@
 <?php
     // Titre de la page
-    $pageTitle = "Associations de bien-être - Forum du Pays de Grasse";
-    $currentPage = "Associations de bien-être";
+    $pageTitle = "Associations d'arts et de culture - Forum du Pays de Grasse";
+    $currentPage = "Associations d'arts et de culture";
 
     // Chemin du fichier default.php
-    $defaultFilePath = __DIR__ . '/view/default.php';
+    $defaultFilePath = __DIR__ . '/default.php';
 
     // Vérifiez si default.php existe
     if (file_exists($defaultFilePath)) {
@@ -14,22 +14,26 @@
             exit();
         }
     }
+
     
+    // Vérifier si l'utilisateur est connecté et administrateur
+    $isAdmin = isset($_SESSION['user_logged_in']) && $_SESSION['user_type'] == 'administrateur';
+        
     // Inclusion du header
     include 'parts/header.php';
     
-    // Inclusion du contrôleur des associations de bien-être
-    require_once BASE_PATH . '/app/controller/BienEtreController.php';
-    $controller = new BienEtreController();
-    $associations = $controller->displayPage();
+    // Inclusion du contrôleur des associations par thème
+    require_once BASE_PATH . '/app/controller/AssociationsController.php';
+    $controller = new AssociationsController();
+    $associations = $controller->getAssociationsByTheme('arts_et_culture');
 ?>
 
-<body class="bien-etre">
+<body class="arts-culture">
     <?php include 'parts/annuaire_associations.php'; ?>
     <link rel="stylesheet" href="/public/css/associations_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/associations_style.css'); ?>">
     <link rel="stylesheet" href="/public/css/dropdown_style.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/css/dropdown_style.css'); ?>">
 
-    <script src="/public/js/annuaire_associations.js"></script>
+    <script src="/public/js/annuaire_associations.js?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'].'/public/js/annuaire_associations.js'); ?>"></script>
 <?php
     // Inclusion du footer
     include 'parts/footer.php';

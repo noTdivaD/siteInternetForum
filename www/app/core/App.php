@@ -32,19 +32,18 @@ class App {
             'rencontres_associatives' => 'RencontreController',
             'college_experts' => 'CollegeExpertsController',
             'annuaire_associations' => 'AnnuaireController',
-            'associations_sports' => 'SportsController',
-            'associations_animations_et_loisirs' => 'AnimationsLoisirsController',
-            'associations_arts_et_culture' => 'ArtsCultureController',
-            'associations_bien_etre' => 'BienEtreController',
-            'associations_humanitaire_social_civique_et_environnement' => 'HumanitaireController',
-            'associations_ecologie_et_environnement' => 'EcologieController',
-            'associations_anciens_combattants_et_assimiles' => 'CombattantController',
-            'associations_economie_et_developpement' => 'EconomieController'
+            'associations_sports' => 'AssociationsController',
+            'associations_animations_et_loisirs' => 'AssociationsController',
+            'associations_arts_et_culture' => 'AssociationsController',
+            'associations_bien_etre' => 'AssociationsController',
+            'associations_humanitaire_social_civique_et_environnement' => 'AssociationsController',
+            'associations_ecologie_et_environnement' => 'AssociationsController',
+            'associations_anciens_combattants_et_assimiles' => 'AssociationsController',
+            'associations_economie_et_developpement' => 'AssociationsController'
         ];
 
         // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut
         if (!empty($url[0])) {
-            // Extrait le nom du contrôleur basé sur l'URL ou utilise un contrôleur par défaut
             $controllerName = $controllerMap[$url[0]] ?? 'HomeController';
         } else {
             $controllerName = 'AccueilController'; // Définir AccueilController comme contrôleur par défaut
@@ -55,25 +54,7 @@ class App {
         // Vérifie si le fichier du contrôleur existe et inclut-le
         if (file_exists($controllerPath)) {
             require_once $controllerPath;
-            switch ($controllerName) {
-                case 'SportsController':
-                    $this->controller = new SportsController();
-                    break;
-                case 'AnimationsLoisirsController':
-                    $this->controller = new AnimationsLoisirsController();
-                    break;
-                case 'ArtsCultureController':
-                    $this->controller = new ArtsCultureController();
-                    break;
-                case 'BienEtreController':
-                    $this->controller = new BienEtreController();
-                    break;
-                case 'HumanitaireController':
-                    $this->controller = new HumanitaireController();
-                    break;
-                default:
-                    $this->controller = new $controllerName();
-            }
+            $this->controller = new $controllerName();
             error_log("Controller {$controllerName} loaded successfully.");
         } else {
             throw new Exception("Controller file not found: {$controllerPath}");
@@ -82,9 +63,10 @@ class App {
         // Vérifie et appelle la méthode du contrôleur avec d'éventuels paramètres supplémentaires
         if (isset($url[1])) {
             $this->method = $url[1];
+        } else if (strpos($url[0], 'associations_') === 0) {
+            $this->method = 'getAssociationsByTheme';
+            $this->params = [str_replace('associations_', '', $url[0])];
         }
-
-        $this->params = array_slice($url, 2);
 
         if (method_exists($this->controller, $this->method)) {
             error_log("Calling method {$this->method} on controller {$controllerName}.");
@@ -107,3 +89,4 @@ class App {
         return [];
     }
 }
+?>

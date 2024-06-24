@@ -4,7 +4,7 @@ $pageTitle = "Collège d'Experts - Forum du Pays de Grasse";
 $currentPage = "Collège d'Experts";
 
 // Chemin du fichier default.php
-$defaultFilePath = __DIR__ . '/view/default.php';
+$defaultFilePath = __DIR__ . '/default.php';
 
 // Vérifiez si default.php existe
 if (file_exists($defaultFilePath)) {
